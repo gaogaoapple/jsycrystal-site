@@ -1,0 +1,10 @@
+{
+  "name": "jsy-crystal-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "apply-content": "node scripts/apply-content.mjs",
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  }
+}
