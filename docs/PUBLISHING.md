@@ -97,3 +97,16 @@ The owner approved the faceted bracelet advertising artwork. Website hero uses a
 Rollback baseline: source 454f93d381a69c8be6314158b7d601ad16c45dc4; production 7653e18e68258432dcf8116ed5222f6e4745d73e. Restore all five HTML entrypoints together in a new commit; retain versioned assets. No email sent. Browser connection was unavailable for final live visual verification; do not claim it was performed.
 
 Validation: pnpm check passed; pnpm test 23 passed / 1 skipped; pnpm build passed (existing analytics/font/bundle-size warnings). Patched JS parses; original static commerce adapter unchanged. Source page image path and pre-rendered HTML path agree. No new external service configuration required.
+
+
+## Mobile contact and native email inquiry · 2026-10-20
+
+Owner updated WhatsApp to +86 136 8898 0405 (URL digits 8613688980405). Replaced the historical 12499029053 number in the shop and retired legacy float. Global mobile bottom bar offers WhatsApp and Send inquiry. Brand and travel primary CTAs open context-specific WhatsApp drafts; no message is sent until the visitor sends it. A WhatsApp click is not a confirmed conversation and does not send an email.
+
+/inquiry and /contact now offer a native POST form with only email and message required; name, organization, quantity and country are optional. Form action is https://formsubmit.co/marketing@jsycrystal.com, not mailto or the unavailable Manus API. FormSubmit is an external processor, disclosed next to the submit button with its privacy link. Default spam check remains enabled, honeypot and named fields included. No local fabricated receipt, no autoresponse to visitors, no new server secrets. Legacy server/routers/inquiry.ts remains a historical Manus-dependent backend and is not the deployed form service.
+
+IMPORTANT OWNER SETUP: automated email delivery is NOT verified/activated by this deployment. First submit a test via https://jsycrystal.com/inquiry#inquiry-form, then the owner must confirm FormSubmit's activation email in marketing@jsycrystal.com (check spam), then submit another test and verify receipt and Reply-To. The agent has not sent a test, clicked activation, or accessed the mailbox. Official instructions: https://formsubmit.co/ and https://formsubmit.co/help . Until activation/receipt verification, report email delivery as pending; WhatsApp remains the direct alternative. Do not disable spam checks or restore fake success to avoid activation.
+
+Current assets: assets/whatsapp-20261020.js and .css; six HTML entrypoints (root,404,private-label,travel,inquiry,contact) share these refs. Existing static commerce adapter is byte-for-byte preserved. Type check/build pass; tests 23 passed, 1 skipped. JS parse, server rendering, native form action/method, required fields and URL checks pass. Final browser visual/app handoff not verified because browser connection unavailable. No actual WhatsApp or form message sent.
+
+Rollback baseline: source d9f9e148ea72c855e15c9dddf1e77957685c2c90; production 70b969ef24e0d60a75ac95a9336f5ca3c7ecd07a. Restore five existing HTML entrypoints and remove or restore contact/index.html together in a new commit; preserve assets and git history. No DNS or hosting changes.
