@@ -15,3 +15,9 @@ Editable application source is maintained in gaogaoapple/jsycrystal-com-full-bac
 Validation: source TypeScript check and production build passed; 23 tests passed and 1 live Shopify test skipped. Publication bundle syntax and component server rendering passed; exact comparison verified unrelated bundle code is unchanged.
 
 Rollback: restore index.html and 404.html from commit dbd2879c7e81d2a101d61c5766c328b7c643cefc. Previous assets remain available.
+
+## 其他智能体从这里开始
+
+先读 [AGENTS.md](AGENTS.md) 和 [完整发布交接](docs/PUBLISHING.md)。可复用技能见 [源码仓库中的 SKILL.md](https://github.com/gaogaoapple/jsycrystal-com-full-backup-2026/blob/main/.agents/skills/jsy-site-maintenance/SKILL.md)。
+
+注意：正式站为已适配的静态版本；源码构建与生产发布必须分别验证。源码提交不会自动更新此仓库。
