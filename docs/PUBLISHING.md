@@ -66,3 +66,15 @@
 ## 7. 其他智能体的入口
 
 先读发布仓库 AGENTS.md，再读本文。可复用技能位于源码仓库 .agents/skills/jsy-site-maintenance/SKILL.md；支持该目录的客户端可自动发现，其他智能体直接读取文件并遵循即可。没有仓库/发布权限的智能体仍需用户授权；仓库可读不意味着任何智能体都自动有写入权限。
+
+
+## 2026-10-20 · Email-first inquiries and travel groups
+
+- Goal: an email received at marketing@jsycrystal.com. A mailto click is an intent signal, not confirmed delivery.
+- Jewelry ads continue to /private-label-jewelry. Separate /travel-group-gifts is for travel groups, retreats and event organizers; do not mix ad intent.
+- /inquiry now builds an editable email draft. The visitor must send it from their email app; the visible address and copy buttons support webmail users. No inquiry is stored or delivered by this static site.
+- Removed the production static adapter's fabricated inquiry.submit success fallback. Do not restore a success toast without a working delivery service.
+- Generated travel image is explicitly labeled a design concept; do not call it a delivered customer project.
+- Versioned assets: assets/email-first-20261020.js and .css. Preserved static catalog and existing assets. Added pre-rendered HTML for private-label-jewelry, travel-group-gifts and inquiry, robots.txt and sitemap.xml. Search indexing is not guaranteed.
+- Source check/build pass; tests: 23 pass, 1 skip. Component server-render and JS parse pass. No real email sent, and mailbox delivery is not verified.
+- Rollback: create a new commit restoring index.html and 404.html from a83edfd39c59462f61f111c5f294e5b1ef556364 and remove or restore the new per-route index.html files together. Do not force-push or delete old assets. Restoring the old bundle also restores the old inquiry defect, so prefer a forward fix.
