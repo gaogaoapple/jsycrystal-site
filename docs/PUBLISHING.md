@@ -78,3 +78,13 @@
 - Versioned assets: assets/email-first-20261020.js and .css. Preserved static catalog and existing assets. Added pre-rendered HTML for private-label-jewelry, travel-group-gifts and inquiry, robots.txt and sitemap.xml. Search indexing is not guaranteed.
 - Source check/build pass; tests: 23 pass, 1 skip. Component server-render and JS parse pass. No real email sent, and mailbox delivery is not verified.
 - Rollback: create a new commit restoring index.html and 404.html from a83edfd39c59462f61f111c5f294e5b1ef556364 and remove or restore the new per-route index.html files together. Do not force-push or delete old assets. Restoring the old bundle also restores the old inquiry defect, so prefer a forward fix.
+
+### Verified publication and brand reference
+
+First email-first publication: source 7004b9acdea8003beb3ec6fb2902fba39ce4cb93; production e1e33107a49cffa5223c18a572c53b29331131ec; Pages run 39401713468 completed/success. Live desktop travel hero and loaded image verified, mobile width 390 had no horizontal overflow; FAQ expansion, travel inquiry routing, populated mailto draft and copy action verified. Jewelry page rendered the expected brand content and email CTAs without console errors. No email was sent. Subsequent browser connection became unavailable, so further visual checks must be stated separately.
+
+Owner supplied official JSY Crystal Jewelry logo, 2026-10-20. Deep purple and gold, serif JSY, circular crystal-bracelet motif. Reference asset: media/jsy-official-logo-reference.webp (source client/public/media/). Generated branded travel concept: media/jsy-custom-gift-collection.webp. Use the official reference for future company branding; small tags may use legible JSY initials. Generated concepts must be labeled; customer branding replaces example branding for actual projects. Keep previous concepts for rollback. Do not change the site's official logo identity into a newly invented mark.
+
+Current JS entry: assets/email-first-brand-20261020.js. CSS remains assets/email-first-20261020.css. All HTML entrypoints must reference that JS version together.
+
+Full official logo must retain its lower row of three marks: Factory Direct (factory), OEM / ODM (handshake), Global Partner (globe), plus the Wholesale Supplier lower arc. Do not replace the full logo with a bracelet-ring-only approximation. JSY initials alone are acceptable on tiny tags as an intentional simplified wordmark.
