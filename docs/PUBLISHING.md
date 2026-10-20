@@ -88,3 +88,12 @@ Owner supplied official JSY Crystal Jewelry logo, 2026-10-20. Deep purple and go
 Current JS entry: assets/email-first-brand-20261020.js. CSS remains assets/email-first-20261020.css. All HTML entrypoints must reference that JS version together.
 
 Full official logo must retain its lower row of three marks: Factory Direct (factory), OEM / ODM (handshake), Global Partner (globe), plus the Wholesale Supplier lower arc. Do not replace the full logo with a bracelet-ring-only approximation. JSY initials alone are acceptable on tiny tags as an intentional simplified wordmark.
+
+
+## Brand buyer hero image · 2026-10-20
+
+The owner approved the faceted bracelet advertising artwork. Website hero uses a text-free adaptation in media/brand-collection-faceted-20261020.webp: amethyst, tiger-eye and rose-quartz bracelets, YOUR BRAND tag and gift packaging. Keep headline and email CTA as real HTML; do not embed the full poster with a nonfunctional button as the website hero. Caption explicitly says customization concept. Current JS: assets/brand-collection-20261020.js; CSS: assets/email-first-20261020.css. Updated all five HTML entrypoints plus the private label pre-render and Open Graph image. Travel page and static commerce adapter remain unchanged.
+
+Rollback baseline: source 454f93d381a69c8be6314158b7d601ad16c45dc4; production 7653e18e68258432dcf8116ed5222f6e4745d73e. Restore all five HTML entrypoints together in a new commit; retain versioned assets. No email sent. Browser connection was unavailable for final live visual verification; do not claim it was performed.
+
+Validation: pnpm check passed; pnpm test 23 passed / 1 skipped; pnpm build passed (existing analytics/font/bundle-size warnings). Patched JS parses; original static commerce adapter unchanged. Source page image path and pre-rendered HTML path agree. No new external service configuration required.
