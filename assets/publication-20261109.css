@@ -1,0 +1,9 @@
+@import url('./whatsapp-20261020.css');
+/* Only the preserved, server-readable content pages use these refinements. */
+html[data-jsy-render-mode="static"] header.jsy-shell { padding-bottom: 24px; line-height: 2; }
+html[data-jsy-render-mode="static"] details summary { cursor: pointer; }
+html[data-jsy-render-mode="static"] .jsy-table { display: block; max-width: 100%; overflow-x: auto; }
+@media (max-width: 600px) {
+  html[data-jsy-render-mode="static"] h1.jsy-h1 { font-size: clamp(2rem, 9vw, 3rem); overflow-wrap: break-word; }
+  html[data-jsy-render-mode="static"] .py-24 { padding-top: 3rem; padding-bottom: 3rem; }
+}
