@@ -173,3 +173,8 @@
 - Apple 已在 marketing@jsycrystal.com 收到 FormSubmit 激活邮件并点了 Activate。
 - 按 FormSubmit 建议，把 contact、inquiry、custom-gemstone-bracelet 静态表单和 home-image、whatsapp 两个 React 包里的表单地址，从明文邮箱换成 FormSubmit 别名（不再在表单 action 里暴露邮箱）。mailto 链接保持不变。
 - 待办：Apple 再提交一次真实测试，确认收信和跳转 /thank-you/。
+
+## 2026-11-09 23:59 陌生客户全站测试 + 去掉 "Apple" 人名
+- 自测（硬刷新后）：首页导航、两条客户线卡片、浮动按钮、页脚、3 个产品页、custom/private-label/travel/corporate 全部正常，无 404。
+- 真实提交 1 条测试询盘（标注 TEST），提交后跳到 /thank-you/，不再出现 FormSubmit 验证页。
+- 按 Apple 要求，对客户可见文案里不出现 "Apple" 人名：travel-group-gifts、choose-supplier、about 的静态页和 React 包字符串，统一改成 our team / JSY Crystal team。

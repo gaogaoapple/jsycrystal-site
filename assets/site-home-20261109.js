@@ -78,10 +78,10 @@ export function stripWhatsApp(root) {
       el.textContent = text
         .replace(/WhatsApp\s*\/\s*Social Media/gi, 'Other contact')
         .replace(/WhatsApp\s*\/\s*Social/gi, 'Other contact')
-        .replace(/Chat with Apple on WhatsApp[^\n]*/gi, '')
+        .replace(/Email our team[^\n]*/gi, '')
         .replace(/Chat on WhatsApp Now/gi, '')
         .replace(/Ask Apple on WhatsApp/gi, '')
-        .replace(/WhatsApp Apple[^\n]*/gi, '')
+        .replace(/Email us[^\n]*/gi, '')
         .replace(/Hi,? Apple,? ?/gi, '')
         .replace(/on WhatsApp/gi, '')
         .replace(/WhatsApp/gi, '')
@@ -217,7 +217,7 @@ export function patchContactCopy(doc) {
     // Only rewrite leaf-ish nodes
     if (el.childElementCount === 0) {
       el.textContent = t
-        .replace(/Send Apple a reference photo or a quick message\.\s*/gi, 'Send our team a reference photo or a short brief. ')
+        .replace(/Send us a reference photo or a quick message\.\s*/gi, 'Send our team a reference photo or a short brief. ')
         .replace(/Start with\s*,?\s*or send your inquiry here[^.]*/gi, 'Use the form below — no email app needed')
         .replace(/Start with WhatsApp,?\s*or send your inquiry here[^.]*/gi, 'Use the form below — no email app needed')
         .replace(/Your contact\s*[·•]\s*Apple/gi, 'Your contact · JSY Crystal')
