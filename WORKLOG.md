@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-11-10 · 目录索取 CTA + 询价表单升级 + 日历对标重排
+
+执行：Grok Bot（对标十佳行动 1/3；Apple KPI = 网站带来的真实询盘）。本批不 force push。
+
+### 改了什么
+1. **内容日历**（`content/content-calendar.md`）按 `benchmarks-top10.md` 重排：11-11 批发主词落地页、11-12 目录/表单升级（本日完成标 ✅）、11-13 企业礼品升级、11-14 贴牌、11-15 节日交期指引、11-22 紫水晶批发产品页、11-25 Why Ketang；「澳洲进口」「OEM vs 贴牌」移入 backlog。
+2. **内部文档防抓取**：仓库有 `.nojekyll`（Jekyll 关闭），`_config.yml` exclude 不可用。已在 `robots.txt` 增加 `Disallow: /content/`、`/AGENTS.md`、`/WORKLOG.md`、`/README.md`、`/docs/`；sitemap 本就不含这些 md。
+3. **Get Catalog & Price Ranges**：静态页头/`jsx-cta-catalog`、React 原始顶栏、页脚、表单旁均链到 `/inquiry/?intent=catalog`；承诺 24 小时内邮件发送目录与价格区间（尚无 PDF）。
+4. **询价表单升级**（`/inquiry/`、`/contact/`、`/custom-gemstone-bracelet/`、`/oem-crystal-bracelet-manufacturer/` + 运行时 JS）：可选买家类型、数量档、needed-by、是否要包装；按钮旁 “We reply within 24 hours”；FormSubmit `_subject` 按页面/intent 区分；保留 alias、`_captcha=false`、绝对 `_next`、`_honey`。
+5. **资源**：`assets/site-20261111.js`、`assets/site-home-20261111.js`；`tools/jsy_site.py` 指向新文件并刷新 shell。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0
+- 推送后 curl 线上页头 CTA、询价页字段、robots Disallow
+- curl POST FormSubmit 测试一单（标记 TEST），确认跳转 `/thank-you/`
+
+### 待办
+- 11-11 写 `/wholesale-crystal-bracelets/`（from 10 pcs, mixed；价格区间 on request）
+- 目录 PDF / 可公开价格带（需 Apple 提供或授权制作）
+- 11-13 企业礼品 mockup 与交期表；节日截单具体日期仍待 Apple 确认
+
+---
+
 ## 2026-11-10 · 一站式定位（one-stop custom bracelet solution）
 
 执行：Grok Bot（Apple 确认：独家海外代理可保留作背景；主推一站式，合作多家可塘工厂，客户不必分开找珠子/配件/包装）。本批不 force push。

@@ -1,35 +1,62 @@
-# jsycrystal.com — all search engines and AI assistants are welcome to crawl.
+# jsycrystal.com — public pages welcome; internal ops docs blocked from crawling.
 User-agent: *
 Allow: /
+Disallow: /content/
+Disallow: /AGENTS.md
+Disallow: /WORKLOG.md
+Disallow: /README.md
+Disallow: /docs/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /content/
+Disallow: /AGENTS.md
+Disallow: /WORKLOG.md
+Disallow: /README.md
+Disallow: /docs/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /content/
+Disallow: /AGENTS.md
+Disallow: /WORKLOG.md
+Disallow: /README.md
+Disallow: /docs/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /content/
+Disallow: /AGENTS.md
+Disallow: /WORKLOG.md
+Disallow: /README.md
+Disallow: /docs/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /content/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /content/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /content/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /content/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /content/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /content/
 
 User-agent: Applebot
 Allow: /
+Disallow: /content/
 
 Sitemap: https://jsycrystal.com/sitemap.xml
