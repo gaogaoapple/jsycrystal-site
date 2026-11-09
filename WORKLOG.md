@@ -78,3 +78,8 @@
 7. **图片**：corporate/travel 的 JPG（400–620KB）转 WebP；考虑 image sitemap。
 8. **`/ketang/`**：介绍汕尾可塘珠宝/水晶集散地，与业务相关，保留；如长期不被收录，可合并进 `/factory/`。
 9. **内容**：按审计选题写 2–3 篇文章（OEM vs private label、custom bracelet brief、MOQ 10 件试单）。
+
+## 2026-11-09 23:3x 表单激活
+- Apple 已在 marketing@jsycrystal.com 收到 FormSubmit 激活邮件并点了 Activate。
+- 按 FormSubmit 建议，把 contact、inquiry、custom-gemstone-bracelet 静态表单和 home-image、whatsapp 两个 React 包里的表单地址，从明文邮箱换成 FormSubmit 别名（不再在表单 action 里暴露邮箱）。mailto 链接保持不变。
+- 待办：Apple 再提交一次真实测试，确认收信和跳转 /thank-you/。
