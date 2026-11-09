@@ -6,6 +6,96 @@
 
 ---
 
+## 2026-11-09 · 去掉 WhatsApp、表单直达感谢页、首页双客群路径
+
+执行：Grok Bot（Apple 授权：全站可改可发）。本批不 force push。
+
+### 目标
+询盘只走邮件/表单；提交后直达 `/thank-you/`（不再卡 FormSubmit 验证码页）；首页突出两类买家路径。
+
+### 改了什么
+1. **全站去掉 WhatsApp / 手机号对外露出**
+   - `tools/jsy_site.py` 页头/页脚/悬浮条不再生成 wa.me；改为 Email + Send inquiry。
+   - 静态 HTML、JSON-LD `telephone`、llms.txt、产品页 CTA、about 正文中的 WhatsApp 说法已清掉。
+   - React 包（`whatsapp-20261020.js` / `home-image-20261109.js`）不改压缩源码；由 `assets/site-20261109.js` 与 `site-home-20261109.js` 运行时隐藏/删除 `a[href*="wa.me"]`、`.jsy-whatsapp`，并注入 Email 悬浮条。
+2. **FormSubmit 跳过验证码页**
+   - 所有表单（静态 + React 注入）增加 `name="_captcha" value="false"`；保留绝对地址 `_next=https://jsycrystal.com/thank-you/` 与蜜罐 `_honey`。
+   - **未改** FormSubmit 别名 `84de44e7c16b22f5baa08c38d60c1461`（不回退到明文邮箱）。
+   - 未加 `_autoresponse`。
+3. **`/thank-you/` 文案**
+   - “We'll reply to the email address you entered within 24 hours.”
+   - 说明中国时区（GMT+8）时差；提醒查垃圾箱；不出现 “Apple” 人名；无 WhatsApp。
+4. **联系/询盘页文案**
+   - 标题与导语改为邮件/表单；React 渲染后也会被脚本改成 “our team / JSY Crystal”。
+5. **首页双路径（hero 正下方）**
+   - A. Custom for end clients → travel / corporate / boutique custom
+   - B. Wholesale for distributors → shop + private label
+   - 各有 Get a quote → `/inquiry/`；静态预渲染 + React 加载后注入；样式 `assets/buyer-paths-20261109.css`
+   - 静态页导航改为 Travel Groups / Corporate Gifts / Custom Bracelets / Wholesale / Private Label / Contact；页脚两列对应两类买家；React 页另加 `jsy-subnav` 次级导航。
+   - DIY 未做（预留空间、无占位文案）。
+
+### 涉及文件
+- 修改：几乎全部 `*/index.html`、`404.html`、`index.html`、`llms.txt`、`tools/jsy_site.py`、`assets/site-20261109.js`、`assets/site-home-20261109.js`、`assets/static-shell-20261109.css`
+- 新增：`assets/buyer-paths-20261109.css`
+- 未改压缩包文件名（仍引用 `whatsapp-20261020.*` 作为旧 bundle 文件名，仅品牌样式，页面上不再露出 WhatsApp 联系方式）
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0
+- 本地 headless：home/inquiry/contact/custom 可见 DOM 无 wa.me/WhatsApp/8898；inquiry/contact/custom 表单含 `_captcha=false` 与绝对 `_next`；别名保留
+- 截图：`/workspace/jsy-verify/home-buyer-paths.png`、`home-buyer-paths-mobile.png`、`inquiry-desktop.png`、`thankyou-desktop.png`、`home-desktop.png`、`home-mobile.png`
+- **未真实提交表单**（避免打进真实邮箱）
+
+### 待办
+- React 顶栏仍是旧的 Products/Services（压缩包内）；已用 `jsy-subnav` 与静态壳导航补两类路径。若要彻底改顶栏，需改源码仓重建 bundle。
+- Apple 之前的 FormSubmit 送达测试若已完成可在下轮确认；HTTP→HTTPS 500 仍在域名侧。
+
+---
+
+## 2026-11-09 · 去掉 WhatsApp、表单直达感谢页、首页双客群路径
+
+执行：Grok Bot（Apple 授权：全站可改可发）。本批不 force push。
+
+### 目标
+询盘只走邮件/表单；提交后直达 `/thank-you/`（不再卡 FormSubmit 验证码页）；首页突出两类买家路径。
+
+### 改了什么
+1. **全站去掉 WhatsApp / 手机号对外露出**
+   - `tools/jsy_site.py` 页头/页脚/悬浮条不再生成 wa.me；改为 Email + Send inquiry。
+   - 静态 HTML、JSON-LD `telephone`、llms.txt、产品页 CTA、about 正文中的 WhatsApp 说法已清掉。
+   - React 包（`whatsapp-20261020.js` / `home-image-20261109.js`）不改压缩源码；由 `assets/site-20261109.js` 与 `site-home-20261109.js` 运行时隐藏/删除 `a[href*="wa.me"]`、`.jsy-whatsapp`，并注入 Email 悬浮条。
+2. **FormSubmit 跳过验证码页**
+   - 所有表单（静态 + React 注入）增加 `name="_captcha" value="false"`；保留绝对地址 `_next=https://jsycrystal.com/thank-you/` 与蜜罐 `_honey`。
+   - **未改** FormSubmit 别名 `84de44e7c16b22f5baa08c38d60c1461`（不回退到明文邮箱）。
+   - 未加 `_autoresponse`。
+3. **`/thank-you/` 文案**
+   - “We'll reply to the email address you entered within 24 hours.”
+   - 说明中国时区（GMT+8）时差；提醒查垃圾箱；不出现 “Apple” 人名；无 WhatsApp。
+4. **联系/询盘页文案**
+   - 标题与导语改为邮件/表单；React 渲染后也会被脚本改成 “our team / JSY Crystal”。
+5. **首页双路径（hero 正下方）**
+   - A. Custom for end clients → travel / corporate / boutique custom
+   - B. Wholesale for distributors → shop + private label
+   - 各有 Get a quote → `/inquiry/`；静态预渲染 + React 加载后注入；样式 `assets/buyer-paths-20261109.css`
+   - 静态页导航改为 Travel Groups / Corporate Gifts / Custom Bracelets / Wholesale / Private Label / Contact；页脚两列对应两类买家；React 页另加 `jsy-subnav` 次级导航。
+   - DIY 未做（预留空间、无占位文案）。
+
+### 涉及文件
+- 修改：几乎全部 `*/index.html`、`404.html`、`index.html`、`llms.txt`、`tools/jsy_site.py`、`assets/site-20261109.js`、`assets/site-home-20261109.js`、`assets/static-shell-20261109.css`
+- 新增：`assets/buyer-paths-20261109.css`
+- 未改压缩包文件名（仍引用 `whatsapp-20261020.*` 作为旧 bundle 文件名，仅品牌样式，页面上不再露出 WhatsApp 联系方式）
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0
+- 本地 headless：home/inquiry/contact/custom 可见 DOM 无 wa.me/WhatsApp/8898；inquiry/contact/custom 表单含 `_captcha=false` 与绝对 `_next`；别名保留
+- 截图：`/workspace/jsy-verify/home-buyer-paths.png`、`home-buyer-paths-mobile.png`、`inquiry-desktop.png`、`thankyou-desktop.png`、`home-desktop.png`、`home-mobile.png`
+- **未真实提交表单**（避免打进真实邮箱）
+
+### 待办
+- React 顶栏仍是旧的 Products/Services（压缩包内）；已用 `jsy-subnav` 与静态壳导航补两类路径。若要彻底改顶栏，需改源码仓重建 bundle。
+- Apple 之前的 FormSubmit 送达测试若已完成可在下轮确认；HTTP→HTTPS 500 仍在域名侧。
+
+---
+
 ## 2026-11-09 · 第一批：修坏链接、静态可读、定制落地页、询盘成功页
 
 执行：Grok Bot（受 Apple 授权：网站全权负责，可直接修改并发布）。改前基线提交：`f7ea9fac4aa22756326d29b67b74ff5757727f9c`（`git log` 中 “fix: restore homepage hero…”）。回滚方式：新建提交恢复受影响文件，**不要 force push**。

@@ -19,8 +19,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-WA = "https://wa.me/8613688980405"
-WA_TEXT = WA + "?text=Hi%20Apple%2C%20I%20am%20interested%20in%20custom%20gemstone%20bracelets.%20Could%20we%20discuss%20stone%20choices%2C%20logo%20tags%20and%20packaging%3F"
 SITE_JS = "/assets/site-20261109.js"
 SITE_HOME_JS = "/assets/site-home-20261109.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
@@ -28,17 +26,17 @@ LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
 SKIP_DIRS = {".git", "tools", "assets", "media", "fonts", "manus-storage", "__manus__", "docs"}
 
 NAV = [
-    ("/shop/", "Products"),
+    ("/travel-group-gifts/", "Travel Groups"),
+    ("/corporate-gifts/", "Corporate Gifts"),
     ("/custom-gemstone-bracelet/", "Custom Bracelets"),
+    ("/shop/", "Wholesale"),
     ("/private-label-jewelry/", "Private Label"),
-    ("/how-it-works/", "How It Works"),
-    ("/factory/", "Factory"),
     ("/contact/", "Contact"),
 ]
 
-WA_ICON = ('<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">'
-           '<path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"></path>'
-           '<path d="M8.5 9h7M8.5 13h5"></path></svg>')
+MAIL_ICON = ('<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">'
+             '<rect x="3" y="5" width="18" height="14" rx="2"></rect>'
+             '<path d="m3 7 9 7 9-7"></path></svg>')
 
 
 def header(current=""):
@@ -54,7 +52,6 @@ def header(current=""):
         '<a class="jsx-cta" href="/inquiry/">Submit Your Inquiry</a>'
         '<details class="jsx-mnav"><summary>Menu</summary><nav aria-label="Mobile">'
         f'<a href="/">Home</a>{mlinks}<a href="/inquiry/">Submit Your Inquiry</a>'
-        f'<a href="{WA}" target="_blank" rel="noopener noreferrer">WhatsApp +86 136 8898 0405</a>'
         f'<a href="mailto:{EMAIL}">{EMAIL}</a></nav></details>'
         '</div></header><!--/jsy:header-->')
 
@@ -64,22 +61,21 @@ def footer():
         '<!--jsy:footer--><footer class="jsx-ft"><div class="jsx-ft-in">'
         '<div><p class="jsx-ft-name">JSY Crystal Jewelry</p>'
         '<p>Natural stone bracelet manufacturer in Shanwei, Guangdong, China. Custom, OEM and private label gemstone bracelets for jewelry brands, boutiques and wholesale buyers.</p>'
-        f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="{WA}" target="_blank" rel="noopener noreferrer">WhatsApp Apple · +86 136 8898 0405</a></p></div>'
-        '<div><h3>Products</h3><ul><li><a href="/shop/">Wholesale catalog</a></li>'
+        f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/inquiry/#inquiry-form">Send an inquiry</a></p></div>'
+        '<div><h3>Custom for end clients</h3><ul>'
+        '<li><a href="/travel-group-gifts/">Travel &amp; tour group gifts</a></li>'
+        '<li><a href="/corporate-gifts/">Corporate &amp; annual meeting gifts</a></li>'
+        '<li><a href="/custom-gemstone-bracelet/">Boutique exclusive custom</a></li>'
+        '<li><a href="/how-it-works/">How it works</a></li></ul></div>'
+        '<div><h3>Wholesale for distributors</h3><ul>'
+        '<li><a href="/shop/">Wholesale catalog</a></li>'
+        '<li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>'
         '<li><a href="/products/amethyst-crystal-bracelet/">Amethyst bracelets</a></li>'
-        '<li><a href="/products/rose-quartz-crystal-bracelet/">Rose quartz bracelets</a></li>'
-        '<li><a href="/products/strawberry-quartz-crystal-bracelet/">Strawberry quartz bracelets</a></li>'
-        '<li><a href="/gemstone-bracelet-bead-size-guide/">Bead size guide</a></li></ul></div>'
-        '<div><h3>Services</h3><ul><li><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a></li>'
-        '<li><a href="/private-label-jewelry/">Private label</a></li>'
-        '<li><a href="/how-it-works/">How it works</a></li>'
-        '<li><a href="/choose-gemstone-bracelet-wholesale-supplier/">Choosing a supplier</a></li>'
-        '<li><a href="/importing-crystal-bracelets-from-china/">Importing from China</a></li>'
-        '<li><a href="/about/">About</a> · <a href="/factory/">Factory</a></li>'
-        '<li><a href="/inquiry/">Submit an inquiry</a></li></ul></div>'
+        '<li><a href="/factory/">Factory</a> · <a href="/about/">About</a></li>'
+        '<li><a href="/inquiry/">Get a quote</a></li></ul></div>'
         '</div><small style="max-width:1180px;margin:0 auto;padding:0 24px 24px">© 2026 JSY Crystal · 汕尾市晶燊缘珠宝有限公司</small></footer>'
         '<nav class="jsy-contact-dock" aria-label="Quick contact">'
-        f'<a class="jsy-whatsapp" href="{WA_TEXT}" target="_blank" rel="noopener noreferrer">{WA_ICON}WhatsApp Apple</a>'
+        f'<a class="jsy-dock-email" href="mailto:{EMAIL}">{MAIL_ICON}Email us</a>'
         '<a class="jsy-dock-secondary" href="/inquiry/#inquiry-form">Send inquiry</a></nav><!--/jsy:footer-->')
 
 
@@ -185,7 +181,7 @@ def raw_nav():
 def raw_footer():
     return ('<!--jsy:rawfooter--><footer class="jsy-shell" style="padding:32px 24px 120px">'
             f'<p><strong>JSY Crystal Jewelry</strong> — natural stone bracelet manufacturer in Shanwei, China. '
-            f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="{WA}">WhatsApp +86 136 8898 0405</a> · '
+            f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · '
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
             '<p><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a> · <a href="/private-label-jewelry/">Private label</a> · '
             '<a href="/shop/">Wholesale catalog</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '

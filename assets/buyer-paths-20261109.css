@@ -1,0 +1,26 @@
+
+/* Two buyer paths (home + reusable) */
+.jsy-buyer-paths{background:#f7f5f2;padding:72px 0;border-bottom:1px solid #e7e5e4}
+.jsy-buyer-paths-inner{max-width:1180px;margin:0 auto;padding:0 24px}
+.jsy-buyer-paths h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(1.9rem,4vw,2.8rem);color:#1c1917;margin:0 0 12px;line-height:1.15}
+.jsy-buyer-paths-lead{max-width:40rem;color:#57534e;line-height:1.7;margin:0 0 28px}
+.jsy-buyer-paths-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.jsy-buyer-card{background:#fff;border:1px solid #e7e5e4;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.jsy-buyer-card img{width:100%;height:200px;object-fit:cover;border-radius:12px;background:#f5f5f4}
+.jsy-buyer-card h3{font-family:"Cormorant Garamond",serif;font-size:1.55rem;margin:4px 0 0;color:#1c1917}
+.jsy-buyer-card p{color:#57534e;line-height:1.65;margin:0}
+.jsy-buyer-card ul{margin:0;padding-left:1.1rem;color:#44403c;line-height:1.7}
+.jsy-buyer-card a{color:#92600a}
+.jsy-buyer-card-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:auto;padding-top:8px}
+.jsy-buyer-quote{font-size:.9rem;color:#1c1917;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:760px){.jsy-buyer-paths-grid{grid-template-columns:1fr}.jsy-buyer-card img{height:180px}}
+
+.jsy-buyer-card-actions .jsx-btn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border-radius:6px;font-size:.88rem;text-decoration:none;background:#c79a3f;color:#fff}
+.jsy-buyer-card-actions .jsx-btn:hover{filter:brightness(.95)}
+.jsy-subnav{background:#1c1917;color:#e7e5e4;font-size:.8rem}
+.jsy-subnav-inner{max-width:1180px;margin:0 auto;padding:8px 24px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.jsy-subnav strong{color:#c79a3f;font-weight:600;letter-spacing:.04em;margin-right:4px}
+.jsy-subnav a{color:#f5f5f4;text-decoration:none;border-bottom:1px solid transparent}
+.jsy-subnav a:hover{border-bottom-color:#a8a29e}
+.jsy-subnav .jsy-subnav-sep{opacity:.35}
+@media (max-width:760px){.jsy-subnav-inner{gap:6px 12px;padding:10px 16px}}
