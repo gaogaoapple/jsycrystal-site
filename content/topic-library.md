@@ -11,6 +11,9 @@
 ## 目标市场（2026-11-10 Apple 最终决定）
 美国为主（选题最多）→ 澳洲若干 → 马来西亚 1–2 篇（Google 搜索少）→ 欧洲轻量 1–2 篇（只写给想做定制/贴牌天然石手链的欧洲设计品牌和精品店；**不写欧盟法规/合规**，不做意大利专题）。
 
+## 定位（Positioning · 2026-11-10）
+一站式定制手链方案供应商：客户只需找 JSY 一家，珠子/石材、配件、刻字吊牌、包装盒、卡片由我们对接可塘多家合作工厂，打样、质检、合并出货。独家海外代理作背景，不写自有工厂、不编造工厂数量。后续每篇文章都带一句 one-stop 利益点（尤其礼盒套装、贴牌、OEM、旅行团）。
+
 ## 客户痛点 Top 10（来自真实沟通，已去名）
 1. 要带价格的目录/价格表（多家首次回复就要）。
 2. 寄样费和运费谁出（有客户因 US$20 寄样费放弃；有客户要求样品全额预付）。
@@ -46,7 +49,7 @@
 | 7 | Sampling Custom Bracelets: Fees, Photos, Video and Approval | custom bracelet sample | A/B | 商业调研 | /custom-gemstone-bracelet/ | US | P0 |
 | 8 | Wholesale Crystal Jewellery for Australian Shops: Small Mixed Orders | wholesale crystal jewellery australia / crystal wholesale australia no minimum order | B | 交易 | /shop/ | AU | P0 |
 | 9 | Boutique Exclusive Bracelet Designs for Crystal Shops | custom crystal bracelets for boutiques | A | 商业调研 | /custom-gemstone-bracelet/ | US/AU | P1 |
-| 10 | Gift Box Sets for Bracelets: Box, Card and Pouch Options for Holiday Orders | bracelet gift box wholesale | A/B | 商业调研 | /corporate-gifts/ | US/AU | P1 |
+| 10 | Gift Box Sets for Bracelets: Box, Card and Pouch Options for Holiday Orders（突出 one-stop：盒+卡+手链同一家协调） | bracelet gift box wholesale | A/B | 商业调研 | /corporate-gifts/ | US/AU | P1 |
 | 11 | Natural Stone Bracelets as Corporate Door Gifts (Malaysia) | corporate door gift malaysia | A | 商业调研 | /corporate-gifts/ | MY | P1 |
 | 12 | Bracelet Sizes for Group and Bulk Orders: Inches, cm and Bead Counts | bracelet size chart bulk order | A | 信息 | /gemstone-bracelet-bead-size-guide/ | US/AU | P1 |
 | 13 | Ordering Crystal Bracelets into Australia: Shipping Options and What to Ask Your Broker | import crystal bracelets australia | B | 信息 | /importing-crystal-bracelets-from-china/ | AU | P1 |
@@ -76,5 +79,5 @@
 - 只写天然石；不写 925 银、珍珠；不写 ethical / fair-trade / sustainable / eco / charity；不写疗效。
 - 不出现 WhatsApp、电话、Apple 人名（用 our team）。
 - 数字只用仓库已有：MOQ 10 件可混；珠径 6/8/10/12mm；手围约 15–20cm；大货 15–30 天；DHL/FedEx 约 7–10 天，海运约 25–35 天；24 小时回复；NDA 可签；样品费与运费按项目报价。关税/清关只写“问你的货代/报关行”，或引用官方来源。
-- 身份口径：JSY 是汕尾可塘合作工厂的独家海外代理（不写“我们自己的工厂”）。
+- 身份口径：JSY = 一站式定制手链方案供应商；合作汕尾可塘多家 partner factories（不写“我们自己的工厂”）。独家海外代理可作 About/factory/FAQ 背景；正文主推 one-stop（珠子/配件/吊牌/礼盒/卡片/打样/质检/合并出货，客户不必分开找供应商）。
 - 每篇：FAQ JSON-LD、面包屑、链到转化页、/inquiry/ CTA，加入 sitemap 和 llms.txt。

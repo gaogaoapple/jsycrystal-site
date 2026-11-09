@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-11-10 · 一站式定位（one-stop custom bracelet solution）
+
+执行：Grok Bot（Apple 确认：独家海外代理可保留作背景；主推一站式，合作多家可塘工厂，客户不必分开找珠子/配件/包装）。本批不 force push。
+
+### 改了什么
+1. **定位主句**：JSY = one-stop custom bracelet solution supplier；合作 Shanwei/Ketang **partner factories**（复数）；不宣称自有工厂。独家海外代理保留在 About、`/factory/`、OEM「factory or trading company?」FAQ。
+2. **首页**：hero 副标题改为 One partner… coordinated across our Shanwei partner factories…；双客群卡片与 lead 同步；新增 “What we handle for you” 区块；`assets/site-home-20261110b.js` 运行时 reinject/patch。
+3. **转化页**写入 one-stop 导语 + What we handle 列表 + FAQ “Do I need separate suppliers for boxes, tags and beads?”（含 FAQ JSON-LD，凡原有 FAQPage 的页面）：`/custom-gemstone-bracelet/`、`/oem-crystal-bracelet-manufacturer/`、`/custom-bracelets-for-tour-groups/`、`/travel-group-gifts/`、`/corporate-gifts/`、`/private-label-jewelry/`（至少原始 HTML）、`/about/`、`/factory/`。
+4. **Organization JSON-LD description**、`llms.txt`、页脚/`tools/jsy_site.py` shell 文案同步。
+5. **`AGENTS.md` 增加 Positioning 节**；`content/topic-library.md`、`content/content-calendar.md` 注明后续文章（含 11-20 礼盒）带 one-stop 角度。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0（THIN 提示为原有 React 页）
+- 推送后 curl 线上转化页 200 并抽查新文案
+
+### 待办
+- React 顶栏 Products/Services 仍待源码仓重建；private-label 可见层仍以 React 为主，one-stop 已写入原始 HTML，静态化时一并放进可见页。
+
+---
+
 ## 2026-11-09 · 去掉 WhatsApp、表单直达感谢页、首页双客群路径
 
 执行：Grok Bot（Apple 授权：全站可改可发）。本批不 force push。
