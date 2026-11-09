@@ -65,7 +65,8 @@
 ### 验证（本批）
 - 本地静态服务器：站内链接 0 死链；全部 JSON-LD 可解析；每页原始 HTML 有且只有 1 个 H1；红线词 0 命中。
 - 本地 headless Chrome：React 页面（首页、contact、inquiry、private-label、产品、shop、how-it-works）正常渲染；React 表单已带 `_next`。
-- 线上验证结果见本批提交后的报告（commit 信息里有链接）。
+- 线上（提交 2765299，Pages run 42633567446 success，2026-11-09 22:21 北京时间部署完成）：GSC 列出的坏 URL 全部变为 200，或 301 → 200，跳转页 200 + meta refresh；sitemap 27 个 URL；首页原始 HTML 正文约 7,800 字符（改前约 190）；custom 页 JSON-LD 为 Organization / Service / FAQPage / BreadcrumbList；渲染后的 /contact/ 表单带 `_next`。
+- 仍然：`http://jsycrystal.com/` 返回 500（见待办 3）。
 
 ### 待办（按优先级）
 1. **【必须，Apple 本人做】FormSubmit 送达测试**：用自己的另一个邮箱在 https://jsycrystal.com/inquiry/ 提交一条测试；去 marketing@jsycrystal.com（含垃圾箱）找 FormSubmit 的激活邮件并点确认；再提交一次，确认收到邮件、能直接回复客户、提交后跳到 thank-you 页。没做这一步之前，表单是否能收到询盘都不能保证。

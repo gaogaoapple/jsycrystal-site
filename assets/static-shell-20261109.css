@@ -100,3 +100,4 @@ html[data-jsy-render-mode="static"] .jsy-inline-links a{color:#92600a}
 .jsx-sec ul{list-style:disc;padding-left:1.2rem}
 .jsx-sec ol.jsx-steps{list-style:none}
 .jsx-mnav nav,.jsx-sec .jsx-facts{list-style:none}
+.jsx-sec ul.jsx-facts{padding-left:0}
