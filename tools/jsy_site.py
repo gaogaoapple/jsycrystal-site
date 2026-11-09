@@ -19,8 +19,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-SITE_JS = "/assets/site-20261109.js"
-SITE_HOME_JS = "/assets/site-home-20261109.js"
+SITE_JS = "/assets/site-20261110.js"
+SITE_HOME_JS = "/assets/site-home-20261110.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
 LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
 SKIP_DIRS = {".git", "tools", "assets", "media", "fonts", "manus-storage", "__manus__", "docs"}
@@ -64,11 +64,13 @@ def footer():
         f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/inquiry/#inquiry-form">Send an inquiry</a></p></div>'
         '<div><h3>Custom for end clients</h3><ul>'
         '<li><a href="/travel-group-gifts/">Travel &amp; tour group gifts</a></li>'
+        '<li><a href="/custom-bracelets-for-tour-groups/">Tour group ordering guide</a></li>'
         '<li><a href="/corporate-gifts/">Corporate &amp; annual meeting gifts</a></li>'
         '<li><a href="/custom-gemstone-bracelet/">Boutique exclusive custom</a></li>'
         '<li><a href="/how-it-works/">How it works</a></li></ul></div>'
         '<div><h3>Wholesale for distributors</h3><ul>'
         '<li><a href="/shop/">Wholesale catalog</a></li>'
+        '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
         '<li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>'
         '<li><a href="/products/amethyst-crystal-bracelet/">Amethyst bracelets</a></li>'
         '<li><a href="/factory/">Factory</a> · <a href="/about/">About</a></li>'
@@ -217,7 +219,7 @@ def rawshell():
 
 
 # ---------------------------------------------------------------- sitemap
-PRIORITY = {"/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9",
+PRIORITY = {"/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9",
             "/shop/": "0.8", "/inquiry/": "0.7", "/contact/": "0.7", "/how-it-works/": "0.7"}
 
 

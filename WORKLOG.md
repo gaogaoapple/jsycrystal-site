@@ -178,3 +178,14 @@
 - 自测（硬刷新后）：首页导航、两条客户线卡片、浮动按钮、页脚、3 个产品页、custom/private-label/travel/corporate 全部正常，无 404。
 - 真实提交 1 条测试询盘（标注 TEST），提交后跳到 /thank-you/，不再出现 FormSubmit 验证页。
 - 按 Apple 要求，对客户可见文案里不出现 "Apple" 人名：travel-group-gifts、choose-supplier、about 的静态页和 React 包字符串，统一改成 our team / JSY Crystal team。
+
+## 2026-11-10 00:5x 选题库 + 16 天日历 + OEM 落地页 + 旅行团下单指南
+- **研究**：11 个同行/竞品站（Aeva、Peiax、Crystalrocc、Auranova、Customcy、Bestone 等）；Google 自动补全（US/AU/MY/UK）；Notion「JSY 已回复客户」库只读提炼 10 个客户痛点（不含客户名）。结果写在 `content/topic-library.md`（34 题）和 `content/content-calendar.md`（11-10～11-25 每天 1 项）。
+- **市场**（Apple 最终决定）：美国为主；澳洲若干；马来西亚 1–2 篇；欧洲轻量 1–2 篇只写定制/贴牌，不写欧盟法规，不做意大利专题。
+- **新页 1**：`/oem-crystal-bracelet-manufacturer/`（静态）。Title 对准 OEM crystal bracelet manufacturer；规格表、4 类买家、6 步流程、复购一致性、可塘位置、8 条 FAQ（含“是工厂还是贸易公司”的如实回答：合作工厂独家海外代理）、页内询盘表单（_subject = OEM crystal bracelet inquiry）。JSON-LD：Organization / Service / FAQPage / BreadcrumbList。
+- **新页 2**：`/custom-bracelets-for-tour-groups/`（静态文章，原定 11-11，提前上线）。倒推时间线、选石、珠径与手围、吊牌字要短、包装、看样、统一收货、报价清单、6 条 FAQ。图片：复用仓库已有概念图，另存为 `media/custom-bracelets-for-tour-groups-tiger-eye-tag-concept.webp`，alt 准确并标注 Concept visualization，lazy load。JSON-LD：BlogPosting / FAQPage / BreadcrumbList。
+- **“其他材质”一句话**（Apple 要求）：custom 页（正文 + FAQ + FAQ JSON-LD）、private-label 和 shop 的原始 HTML 预渲染里加了“Need other bead materials or crystal items? Tell us…”。注意：private-label、shop 仍是 React 页，浏览器里看到的是 React 渲染内容，这句目前只在爬虫读到的原始 HTML 里；等 11-12 private-label 静态化时一起放进可见页面。
+- **内链**：静态页页脚加 “OEM manufacturing”“Tour group ordering guide”；React 页原始页脚加 OEM；travel-group-gifts 原始 HTML 加指南链接；custom 页 Related 加 OEM。llms.txt 加两页和“其他材质”说明。sitemap 29 个 URL。
+- **JS 版本**：`assets/site-20261110.js`、`assets/site-home-20261110.js`（STATIC_ROUTES 加两条新路径），全站 HTML 和 `tools/jsy_site.py` 引用已换；旧 20261109 文件保留回滚。
+- **验证**：`jsy_site.py check` 0 问题（THIN 提示为原有 React 页）；本地 headless Chrome 截图两页正常渲染。
+- **下一步**：11-12 把 private-label 改成静态页 + FAQ；之后按日历每天 1 篇。
