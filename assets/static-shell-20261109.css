@@ -1,0 +1,102 @@
+/* JSY static shell (2026-11-09). Used by pages rendered without React
+   (html[data-jsy-render-mode="static"]). Brand tokens come from whatsapp-20261020.css. */
+@import url('./publication-20261109.css');
+
+html[data-jsy-render-mode="static"] body{background:#fdfcfa;color:#292524;font-family:Lato,system-ui,sans-serif}
+.jsx-hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid #e7e5e4}
+.jsx-hd-in{max-width:1180px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:20px}
+.jsx-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#1c1917;flex-shrink:0}
+.jsx-logo img{width:48px;height:48px;border-radius:999px;background:#fff}
+.jsx-logo span{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;line-height:1.1}
+.jsx-logo small{display:block;font-family:Lato,sans-serif;font-size:.68rem;letter-spacing:.06em;color:#78716c;font-weight:400}
+.jsx-nav{display:flex;gap:22px;margin-left:auto;font-size:.875rem}
+.jsx-nav a{color:#57534e;text-decoration:none;letter-spacing:.02em;padding:6px 0;border-bottom:1px solid transparent}
+.jsx-nav a:hover,.jsx-nav a[aria-current="page"]{color:#1c1917;border-bottom-color:#a8a29e}
+.jsx-cta{background:#292524;color:#fff;text-decoration:none;font-size:.8rem;padding:9px 18px;border-radius:6px;letter-spacing:.03em;white-space:nowrap}
+.jsx-cta:hover{background:#1c1917}
+.jsx-mnav{display:none;margin-left:auto;position:relative}
+.jsx-mnav summary{list-style:none;cursor:pointer;border:1px solid #d6d3d1;border-radius:6px;padding:8px 14px;font-size:.85rem}
+.jsx-mnav summary::-webkit-details-marker{display:none}
+.jsx-mnav nav{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid #e7e5e4;border-radius:10px;box-shadow:0 10px 30px #0002;padding:10px;min-width:240px;display:flex;flex-direction:column}
+.jsx-mnav nav a{padding:10px 12px;color:#292524;text-decoration:none;border-radius:6px}
+.jsx-mnav nav a:hover{background:#f5f5f4}
+@media (max-width:980px){.jsx-nav,.jsx-hd .jsx-cta{display:none}.jsx-mnav{display:block}}
+
+/* Content blocks shared by static pages */
+.jsy-article{max-width:48rem;margin:0 auto;padding:0 1.25rem}
+.jsy-article p{color:#44403c;line-height:1.85;margin:0 0 1.1rem;font-size:1rem}
+.jsy-article h2{font-family:"Cormorant Garamond",serif;font-size:1.9rem;line-height:1.2;color:#1c1917;margin:2.4rem 0 .9rem}
+.jsy-article h3{font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:#1c1917;margin:1.6rem 0 .5rem}
+.jsy-article ul,.jsy-article ol{color:#44403c;line-height:1.8;margin:0 0 1.1rem;padding-left:1.3rem}
+.jsy-article a{color:#92600a;text-decoration:underline}
+.jsy-crumbs{max-width:1180px;margin:0 auto;padding:1rem 24px 0;font-size:.8rem;color:#78716c}
+.jsy-crumbs a{color:#78716c;text-decoration:none}
+.jsx-sec{max-width:1180px;margin:0 auto;padding:64px 24px}
+.jsx-sec h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;line-height:1.15;color:#1c1917;margin:0 0 14px}
+.jsx-sec h3{font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:600;color:#1c1917;margin:0 0 8px}
+.jsx-sec p,.jsx-sec li{color:#57534e;line-height:1.75;font-size:.98rem}
+.jsx-sec .jsx-intro{max-width:46rem;margin-bottom:28px}
+.jsx-eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dark,#92600a);margin:0 0 10px}
+.jsx-soft{background:#f7f5f2}
+.jsx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.jsx-card{background:#fff;border:1px solid #e7e5e4;border-radius:14px;padding:22px}
+.jsx-card ul{margin:0;padding-left:1.1rem}
+.jsx-steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.jsx-steps li{background:#fff;border:1px solid #e7e5e4;border-radius:14px;padding:22px;counter-increment:s}
+.jsx-steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--gold-dark,#92600a);margin-bottom:6px}
+.jsx-table{width:100%;border-collapse:collapse;font-size:.95rem;background:#fff}
+.jsx-table th,.jsx-table td{border:1px solid #e7e5e4;padding:.7rem .8rem;text-align:left;vertical-align:top;line-height:1.55}
+.jsx-table th{background:#fafaf9;font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:#1c1917}
+.jsx-tablewrap{overflow-x:auto}
+.jsx-faq details{background:#fff;border:1px solid #e7e5e4;border-radius:12px;padding:16px 20px;margin-bottom:10px}
+.jsx-faq summary{cursor:pointer;font-weight:700;color:#1c1917}
+.jsx-faq details p{margin:10px 0 0}
+.jsx-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.jsx-btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 24px;border-radius:6px;font-size:.88rem;letter-spacing:.02em;text-decoration:none;background:var(--gold,#c79a3f);color:#fff}
+.jsx-btn:hover{filter:brightness(.95)}
+.jsx-btn-wa{background:#146c43}
+.jsx-btn-ghost{background:transparent;border:1px solid currentColor;color:inherit}
+.jsx-hero{background:#1c1917;color:#fff}
+.jsx-hero .jsx-sec{padding-top:72px;padding-bottom:72px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+.jsx-hero h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(2.3rem,5.5vw,3.8rem);line-height:1.08;margin:0 0 18px;color:#fff}
+.jsx-hero h1 em{color:var(--gold,#c79a3f)}
+.jsx-hero p{color:#e7e5e4;line-height:1.7;max-width:40rem}
+.jsx-hero .jsx-eyebrow{color:var(--gold,#c79a3f)}
+.jsx-hero img{width:100%;max-width:320px;border-radius:999px;justify-self:center;background:#fff}
+.jsx-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.jsx-facts li{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:.8rem;color:#f5f5f4}
+@media (max-width:760px){.jsx-hero .jsx-sec{grid-template-columns:1fr}.jsx-hero img{max-width:180px}.jsx-sec{padding:44px 20px}}
+.jsx-contact{background:#1c1917;color:#e7e5e4}
+.jsx-contact .jsx-sec{text-align:center}
+.jsx-contact h2{color:#fff}
+.jsx-contact p{color:#d6d3d1;margin-left:auto;margin-right:auto;max-width:40rem}
+.jsx-contact .jsx-btns{justify-content:center}
+.jsx-contact a.jsx-plain{color:#fff}
+
+/* Footer */
+.jsx-ft{background:#1c1917;color:#a8a29e;border-top:1px solid #44403c;font-size:.88rem}
+.jsx-ft-in{max-width:1180px;margin:0 auto;padding:48px 24px 110px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+.jsx-ft h3{color:var(--gold,#c79a3f);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px;font-family:Lato,sans-serif}
+.jsx-ft ul{list-style:none;margin:0;padding:0}
+.jsx-ft li{margin-bottom:8px}
+.jsx-ft a{color:#d6d3d1;text-decoration:none}
+.jsx-ft a:hover{color:#fff;text-decoration:underline}
+.jsx-ft .jsx-ft-name{font-family:"Cormorant Garamond",serif;color:#fff;font-size:1.3rem;margin:0 0 6px}
+.jsx-ft small{display:block;margin-top:18px;color:#78716c}
+@media (max-width:760px){.jsx-ft-in{grid-template-columns:1fr}}
+.jsx-sec p a,.jsx-sec li a,.jsx-sec td a,.jsx-faq a{color:#92600a;text-decoration:underline;text-underline-offset:2px}
+.jsx-contact .jsx-sec p a{color:#fff}
+a.jsx-card{color:inherit}
+a.jsx-card:hover{border-color:var(--gold,#c79a3f)}
+/* Typography for the older pre-rendered static pages (about, factory, guides, ketang, corporate gifts) */
+html[data-jsy-render-mode="static"] .jsy-section{padding-top:56px;padding-bottom:56px}
+html[data-jsy-render-mode="static"] .jsy-shell h2,html[data-jsy-render-mode="static"] .jsy-soft h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:400;line-height:1.2;color:#1c1917;margin:0 0 18px}
+html[data-jsy-render-mode="static"] .jsy-eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dark,#92600a);margin:0 0 10px}
+html[data-jsy-render-mode="static"] .jsy-card h3{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;color:#1c1917;margin:0 0 6px}
+html[data-jsy-render-mode="static"] .jsy-steps strong{font-family:"Cormorant Garamond",serif;font-size:1.2rem;color:#1c1917}
+html[data-jsy-render-mode="static"] .jsy-section .jsy-article{margin:0 0 24px;padding:0}
+html[data-jsy-render-mode="static"] details.jsy-faq summary{font-weight:700;color:#1c1917}
+html[data-jsy-render-mode="static"] .jsy-inline-links a{color:#92600a}
+.jsx-sec ul{list-style:disc;padding-left:1.2rem}
+.jsx-sec ol.jsx-steps{list-style:none}
+.jsx-mnav nav,.jsx-sec .jsx-facts{list-style:none}

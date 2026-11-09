@@ -1,6 +1,6 @@
 # JSY 正式网站：智能体操作入口
 
-先读 [docs/PUBLISHING.md](docs/PUBLISHING.md)。本仓库是 jsycrystal.com 的 GitHub Pages 正式发布仓库；源码仓库为 gaogaoapple/jsycrystal-com-full-backup-2026。不要将仅修改源码误报为上线。
+先读 [WORKLOG.md](WORKLOG.md)（最新交接日记，2026-11-09 起）和 [docs/PUBLISHING.md](docs/PUBLISHING.md)。本仓库是 jsycrystal.com 的 GitHub Pages 正式发布仓库；源码仓库为 gaogaoapple/jsycrystal-com-full-backup-2026。不要将仅修改源码误报为上线。
 
 - 保留现有静态商品数据、图片、字体、CNAME、.nojekyll 和深链接404入口。
 - 不用依赖Manus后端的全栈构建直接覆盖静态站。
