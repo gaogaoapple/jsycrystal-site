@@ -19,4 +19,7 @@ JSY Crystal Jewelry = **one-stop custom bracelet solution supplier**（一站式
 - 「汕尾可塘合作工厂的独家海外代理」可保留在 About、`/factory/`、以及 “factory or trading company?” FAQ 作背景；**转化页主句突出 one-stop**，不要把“代理”当唯一卖点。
 - 红线不变：天然石优先；不写 925 银/珍珠；不写 ethical/fair-trade/sustainable/eco/charity；无 WhatsApp/电话；客户可见文案不出现 Apple 人名；不写欧盟法规专题。
 - 不编造工厂数量、年限、产能、认证或客户名单。
+- Never offer or promise a catalog or price list on the site. 目录只在与买家多轮沟通、需求明确之后由人工发送，网站不提供、不承诺发送目录或价格表。
+- Never publish prices or price ranges. 全站不写单价、起售价、价格档或 JSON-LD `offers`/`price`/`priceRange`。统一口径：Pricing depends on quantity, design and packaging; we quote each inquiry. 样品费可以提到“有样品费、大货时可说明是否抵扣”，但不要写金额。
+
 

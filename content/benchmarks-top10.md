@@ -2,7 +2,9 @@
 
 Built: 2026-11-10 (Asia/Shanghai) · Owner: Grok Bot (website ops) · Definition used: a site that **wins B2B inquiries through its website**, not one that looks good.
 
-**中文摘要**：用 16 组买家搜索词查了一遍，反复出现在第一页的供应商站点，就是最接近"真在接询盘"的信号。前 3 名是 Aeva（同在汕尾，6/16 组词上榜）、Peiax 和 Crystalrocc（各 4 组）。它们拿询盘靠的不是好看，而是这 4 招：①大量"某石头/某产品 + manufacturer/wholesale"落地页，每页带规格表、FAQ 和询价表单；②页头的"Get Catalog / Get Free Sample"诱饵；③在按钮旁边写明回复时间（24 小时或 1 个工作日）；④MOQ、交期、样品政策写成明确的数字。"旅行团手链"这个词，第一页没有一家天然石供应商，是我们的空白机会。JSY 最缺的是：一个专门做 "wholesale crystal bracelets" 主词的 MOQ/价格页、一个目录/价格表索取入口，以及一个能按客户类型分流的询价表单。
+**中文摘要**：用 16 组买家搜索词查了一遍，反复出现在第一页的供应商站点，就是最接近"真在接询盘"的信号。前 3 名是 Aeva（同在汕尾，6/16 组词上榜）、Peiax 和 Crystalrocc（各 4 组）。它们拿询盘靠的不是好看，而是这 4 招：①大量"某石头/某产品 + manufacturer/wholesale"落地页，每页带规格表、FAQ 和询价表单；②页头的"Get Catalog / Get Free Sample"诱饵；③在按钮旁边写明回复时间（24 小时或 1 个工作日）；④MOQ、交期、样品政策写成明确的数字。"旅行团手链"这个词，第一页没有一家天然石供应商，是我们的空白机会。JSY 仍缺一个专门做 "wholesale crystal bracelets" 主词的落地页，以及把已有询价表单用好。
+
+> **业主规则（2026-11-10 晚间，必须遵守，后续每日发文不得违反）：Never offer or promise a catalog or price list on the site. Never publish prices or price ranges.** 对标里看到的“Get Catalog / 价格表 / 公开价格档”只是竞品做法，**不要搬到 JSY 网站上**。目录只在与买家多轮沟通、需求明确之后由人工发送。全站不写单价、起售价或价格区间；统一口径：Pricing depends on quantity, design and packaging; we quote each inquiry.
 
 ## Method and honesty notes
 - 16 buyer queries were run through WebSearch (a web index; **a proxy for Google page 1, not literally Google**) on 2026-11-10, plus Google autocomplete (`suggestqueries.google.com`, gl=us) and each site's sitemap.xml, inquiry forms and page structure, all fetched the same day.
@@ -51,7 +53,7 @@ Built: 2026-11-10 (Asia/Shanghai) · Owner: Grok Bot (website ops) · Definition
 - **Page types:** one strong category page per product. The blog answers the buyer questions behind those category pages, e.g. `/bracelet-sizes/`, `/types-of-crystals/`, `/what-is-amethyst/`, `/crystal-meanings/`.
 - **Funnel [observed]:** the header has **"Get Catalog"** plus **"Get Free Sample"** (lead magnets). A "Get Quick Quote" form sits at the top of the page, and another at the bottom asks for Name, Phone, Email and Service Description, with the line "our sales team will **reply within 24 hours**". USPs come as short chips: "Low MOQ Mix Batch · One Stop Custom Service · Fast Delivery".
 - **Red-line note:** claims AAA grade, REACH/CPSIA and "free sample", and has 925 articles. JSY should not copy the grade, certification or free-sample claims.
-- **What JSY lacks:** a **catalog lead magnet in the header**. Peiax also uses "one-stop" as a headline USP, which matches JSY's new positioning.
+- **What JSY used to lack:** a header lead magnet. Peiax uses "Get Catalog"; **JSY must not copy that.** Use a needs-based “Tell Us What You Need” CTA instead. Peiax also uses "one-stop" as a headline USP, which matches JSY's positioning.
 
 ### 3. Crystalrocc — https://crystalrocc.com/crystal-jewellery-wholesale/ (Dongguan studio)
 - **Queries seen:** 1, 4, 7, 14.
@@ -99,7 +101,7 @@ Built: 2026-11-10 (Asia/Shanghai) · Owner: Grok Bot (website ops) · Definition
 - **Queries seen:** 10 (UK and BE domains both rank).
 - **Inquiry evidence [observed]:** "200+ client companies in the 2025 Christmas campaign", "35,000+ employees received their gift", "8.4/10 score from 2,888 employees". A named sales contact ("Juan, Sales") with "reply within 24 working hours".
 - **Funnel [observed]:** a **public tier price table** (100 = £4.40 … 2,500 = £1.35), a **delivery-days table by quantity** (21–24 working days) with "Estimated delivery in United Kingdom: 9 December", a sample option (photo proof or physical sample), "proof before production or your money back", a downloadable data sheet and a 35 EUR sample box of bead options. The FAQ answers price, minimum, quote time, logo format, sample, customs (DAP), VAT and returns.
-- **What JSY lacks:** **a dated "order by X, arrive by Y" line and tier prices.** These two remove the top blockers in the Notion notes (price list, Christmas timing).
+- **What JSY lacks:** **a dated "order by X, arrive by Y" line.** Do **not** add public tier prices or a price list; quote each inquiry.
 
 ### 10. 4ocean Corporate Gifting — https://4oceancorporategifting.com/pages/custom-bracelet (adjacent: US corporate bracelets)
 - **Queries seen:** 6.
@@ -132,12 +134,12 @@ Built: 2026-11-10 (Asia/Shanghai) · Owner: Grok Bot (website ops) · Definition
 
 Reality check: a page published on day 1 of 16 often isn't indexed and ranking by day 16. Inquiries inside the window are most likely to come from pages Google **already shows**: `/custom-gemstone-bracelet/` (89 impressions, 52 from the US), the 11 product pages and the homepage. So the actions that raise conversion on existing pages come first, and new pages come second.
 
-1. **Catalog and price-range lead magnet, sitewide (Peiax, Qstomize).** Add a "Get the wholesale catalog + price ranges" CTA in the header and on every product page. It opens a 3-field form (email, buyer type: wholesale / brand / corporate / tour group / boutique, country) and the reply is sent within 24 h. Customer pain #1 in Notion is "a catalog with prices". *Needs from the owner: a PDF catalog and price ranges by bead size (6/8/10/12 mm).* Until the PDF exists, the team sends it by hand within 24 h, so the CTA can go live before the file is ready.
-2. **New head-term page `/wholesale-crystal-bracelets/` with MOQ and price ranges (Crystalrocc, Peiax).** Title pattern: "Wholesale Crystal Bracelets — from 10 pcs, mixed stones". Include a spec table (stone / 6–12 mm / ~15–20 cm / cord / tag / packaging / MOQ / lead time), a "what to send us" box, a price-range table if the owner approves, and an inline form. It targets the highest-demand autocomplete family (`wholesale crystal bracelets`, `bulk crystal bracelets`, `crystal bracelet wholesale price`). JSY has no page for this term today.
+1. **~~Catalog and price-range lead magnet~~ — cancelled (owner rule, 2026-11-10 evening).** Do **not** add a "Get Catalog" or "price list / price ranges" CTA, and do not promise to email a catalog or price list. Replace that idea with a needs-based CTA: **"Tell Us What You Need"** → `/inquiry/?intent=custom`, with the line "Tell us your quantity, stones, packaging and timeline. We'll reply within 24 hours with suggestions and next steps." A catalog is shared only after several rounds of talks with a buyer who has clear needs, by hand, never as a site offer.
+2. **New head-term page `/wholesale-crystal-bracelets/` with MOQ, no published prices (Crystalrocc, Peiax — borrow structure only).** Title pattern: "Wholesale Crystal Bracelets — from 10 pcs, mixed stones". Include a spec table (stone / 6–12 mm / ~15–20 cm / cord / tag / packaging / MOQ / lead time), a "what to send us" box, and an inline form. **Do not publish prices, price ranges, or a catalog offer.** Use: "Pricing depends on quantity, design and packaging; we quote each inquiry." It still targets the head term `wholesale crystal bracelets`. JSY has no page for this term today.
 3. **Upgrade the inquiry form for qualification and reply speed (Auranova, 4ocean, Crystalrocc).** Keep email + message required. Add optional selects: buyer type, quantity band (10–49 / 50–199 / 200–999 / 1000+), **needed-by date**, packaging (none / pouch / box / tag). Set `_subject` per page (already planned). Put "We reply within 24 hours (Mon–Sat, China time)" right next to the button. Add a "what to include" line above the form.
 4. **"Send your logo → free design mockup in 24 h" offer on corporate and tour-group pages (Qstomize, 4ocean, Customcy).** Add a file/link field ("logo or reference photo") to the form. JSY can make concept images, so the offer costs little and gives a concrete reason to submit now. Only promise what the team can deliver in 24 h.
 5. **Christmas and Chinese New Year deadline line (Pekata).** Add a banner and a FAQ line to the corporate, tour, gift-box and product pages: "Order by [date] for Christmas delivery by express to US/AU". Use only the repo's lead times (production 15–30 days, DHL/FedEx about 7–10 days) and let the owner confirm the cut-off date. For Malaysia, frame door gifts around CNY and annual dinners. This is time-sensitive: it only works in November.
-6. **Upgrade the 11 existing product pages into wholesale landing pages (Aeva, Peiax, Magic Life).** Retitle to "Amethyst Bracelets Wholesale | from 10 pcs mixed". Add the spec table, 4–6 FAQs, a mini-RFQ and the catalog CTA. These URLs are already indexed, so they'll rank faster than new ones. Do the four highest-demand stones first: amethyst, rose quartz, clear quartz, citrine.
+6. **Upgrade the 11 existing product pages into wholesale landing pages (Aeva, Peiax, Magic Life).** Retitle to "Amethyst Bracelets Wholesale | from 10 pcs mixed". Add the spec table, 4–6 FAQs and a mini-RFQ. **No catalog CTA, no published prices or price ranges** — use the same quote-per-inquiry line. These URLs are already indexed, so they'll rank faster than new ones. Do the four highest-demand stones first: amethyst, rose quartz, clear quartz, citrine.
 7. **Case studies and proof block (Auranova, 4ocean, Pekata).** Write three anonymised real projects from Notion in Client type → Need → What we did → Result format (e.g. tour group with name tags, a mixed 50–100 pcs boutique order, a gift-box set), with real photos. Add the true years-in-business line if the owner confirms it. Do not invent reviews, grades or certifications. This raises the conversion of every page.
 8. **Occasion hubs for group A, with tour groups first (Magic Life; SERP gap).** No natural-stone supplier is in the top 5 for tour-group bracelet searches. Strengthen `/custom-bracelets-for-tour-groups/` and `/travel-group-gifts/` with a Pekata-style quantity → delivery-days table, a "needed by" CTA and the mockup offer. Then add the corporate annual-meeting hub. Group B already gets #2 and #6.
 
@@ -150,8 +152,8 @@ The tour-group article went live early on 11-10, so the **11-11 slot is free**. 
 
 | Date | Current | Proposed | Why |
 |---|---|---|---|
-| 11-11 | (freed: tour-group article done) | **/wholesale-crystal-bracelets/ MOQ and price-range landing page** (merges topic #5 "from 10 pieces mixed") | Head term; JSY has no page for it; Crystalrocc and Peiax win on it |
-| 11-12 | Private label page upgrade | **Catalog/price-list request page and sitewide CTA + form upgrade (actions 1, 3)** | Highest-impact conversion fix on pages that already rank |
+| 11-11 | (freed: tour-group article done) | **/wholesale-crystal-bracelets/ MOQ landing page — no prices, no catalog offer** (merges topic #5 "from 10 pieces mixed") | Head term; JSY has no page for it; borrow structure only, never publish prices |
+| 11-12 | Private label page upgrade | **Form upgrade only (action 3). Catalog/price-list CTA withdrawn** — sitewide CTA is “Tell Us What You Need” | Highest-impact conversion fix on pages that already rank, without promising a catalog |
 | 11-13 | Corporate events article | **Make it a landing page:** "Custom Logo Bracelets for Corporate Gifts & Annual Meetings": free mockup in 24 h, quantity/lead-time table, Christmas/CNY cut-off; fold in the custom-logo-tag content | Adjacent winners (Qstomize, Pekata, 4ocean) convert with mockup, tiers and dates |
 | 11-14 | Wholesale from 10 pcs article | **Private label page upgrade** (moved from 11-12) | Topic #5 already absorbed on 11-11 |
 | 11-15 | Custom logo tags article | **Holiday order timeline: last order dates for Christmas and CNY (US/AU/MY)** (library #26) | Time-sensitive; pain #8; content on tags moves into 11-13 and 11-14 |
@@ -168,9 +170,8 @@ The tour-group article went live early on 11-10, so the **11-11 slot is free**. 
 
 Moved to backlog: Import into Australia (#13), OEM vs Private Label (#16). Nothing for US, AU or MY is dropped.
 
-## Owner inputs needed (blockers for actions 1, 2, 5, 7)
-- A catalog PDF, or approval for the team to build one from existing product photos.
-- Price ranges by bead size and quantity band that JSY is willing to publish (or "from US$X" only).
+## Owner inputs needed (blockers for actions 5, 7)
 - The Christmas cut-off date to promise for US/AU express delivery.
 - Years in business (true figure) and 2–3 real project photos for case studies.
-- Whether to state "sample fee credited against the bulk order".
+- Whether to state "sample fee credited against the bulk order" (**no amount** on the site).
+- Catalog / published price ranges are **not** requested for the website. Do not add them.

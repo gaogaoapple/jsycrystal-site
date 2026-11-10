@@ -19,8 +19,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-SITE_JS = "/assets/site-20261111.js"
-SITE_HOME_JS = "/assets/site-home-20261111.js"
+SITE_JS = "/assets/site-20261111b.js"
+SITE_HOME_JS = "/assets/site-home-20261111b.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
 LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
 SKIP_DIRS = {".git", "tools", "assets", "media", "fonts", "manus-storage", "__manus__", "docs", "content"}
@@ -49,11 +49,11 @@ def header(current=""):
         f'<a class="jsx-logo" href="/"><img src="{LOGO}" alt="JSY Crystal Jewelry logo" width="48" height="48">'
         '<span>JSY Crystal Jewelry<small>One-stop custom bracelet partner</small></span></a>'
         f'<nav class="jsx-nav" aria-label="Main">{links}</nav>'
-        '<a class="jsx-cta jsx-cta-catalog" href="/inquiry/?intent=catalog">Get Catalog &amp; Price Ranges</a>'
+        '<a class="jsx-cta jsx-cta-need" href="/inquiry/?intent=custom">Tell Us What You Need</a>'
         '<a class="jsx-cta" href="/inquiry/">Submit Your Inquiry</a>'
         '<details class="jsx-mnav"><summary>Menu</summary><nav aria-label="Mobile">'
         f'<a href="/">Home</a>{mlinks}'
-        '<a href="/inquiry/?intent=catalog">Get Catalog &amp; Price Ranges</a>'
+        '<a href="/inquiry/?intent=custom">Tell Us What You Need</a>'
         '<a href="/inquiry/">Submit Your Inquiry</a>'
         f'<a href="mailto:{EMAIL}">{EMAIL}</a></nav></details>'
         '</div></header><!--/jsy:header-->')
@@ -72,12 +72,12 @@ def footer():
         '<li><a href="/custom-gemstone-bracelet/">Boutique exclusive custom</a></li>'
         '<li><a href="/how-it-works/">How it works</a></li></ul></div>'
         '<div><h3>Wholesale for distributors</h3><ul>'
-        '<li><a href="/shop/">Wholesale catalog</a></li>'
+        '<li><a href="/shop/">Wholesale bracelets</a></li>'
         '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
         '<li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>'
         '<li><a href="/products/amethyst-crystal-bracelet/">Amethyst bracelets</a></li>'
         '<li><a href="/factory/">Factory</a> · <a href="/about/">About</a></li>'
-        '<li><a href="/inquiry/">Get a quote</a></li>''<li><a href="/inquiry/?intent=catalog">Get catalog &amp; price ranges</a></li></ul></div>'
+        '<li><a href="/inquiry/">Get a quote</a></li>''<li><a href="/inquiry/?intent=custom">Tell Us What You Need</a></li></ul></div>'
         '</div><small style="max-width:1180px;margin:0 auto;padding:0 24px 24px">© 2026 JSY Crystal · 汕尾市晶燊缘珠宝有限公司</small></footer>'
         '<nav class="jsy-contact-dock" aria-label="Quick contact">'
         f'<a class="jsy-dock-email" href="mailto:{EMAIL}">{MAIL_ICON}Email us</a>'
@@ -144,13 +144,15 @@ def clean():
         s = s.replace("/assets/publication-home-20261109.js", SITE_HOME_JS)
         s = s.replace("/assets/publication-20261109.js", SITE_JS)
         for old in (
+            "/assets/site-home-20261111.js",
             "/assets/site-home-20261110b.js",
             "/assets/site-home-20261110.js",
             "/assets/site-home-20261109.js",
+            "/assets/site-20261111.js",
             "/assets/site-20261110.js",
             "/assets/site-20261109.js",
         ):
-            if old.endswith("home-20261110b.js") or "home" in old:
+            if "home" in old:
                 s = s.replace(old, SITE_HOME_JS)
             else:
                 s = s.replace(old, SITE_JS)
@@ -190,7 +192,7 @@ def shell():
 
 # ---------------------------------------------------------------- raw nav for React pages
 def raw_nav():
-    links = " · ".join(f'<a href="{h}">{t}</a>' for h, t in [("/", "JSY Crystal Jewelry")] + NAV + [("/inquiry/?intent=catalog", "Get Catalog & Price Ranges"), ("/inquiry/", "Submit Your Inquiry")])
+    links = " · ".join(f'<a href="{h}">{t}</a>' for h, t in [("/", "JSY Crystal Jewelry")] + NAV + [("/inquiry/?intent=custom", "Tell Us What You Need"), ("/inquiry/", "Submit Your Inquiry")])
     return f'<!--jsy:rawnav--><header class="jsy-shell" style="padding-top:24px">{links}</header><!--/jsy:rawnav-->'
 
 
@@ -200,7 +202,7 @@ def raw_footer():
             f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · '
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
             '<p><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a> · <a href="/private-label-jewelry/">Private label</a> · '
-            '<a href="/shop/">Wholesale catalog</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
+            '<a href="/shop/">Wholesale bracelets</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
             '<a href="/about/">About</a> · <a href="/contact/">Contact</a></p></footer><!--/jsy:rawfooter-->')
 
 

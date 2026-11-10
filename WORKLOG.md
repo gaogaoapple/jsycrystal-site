@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-11-10 · 去掉目录/价格表承诺，并撤掉全站标价
+
+执行：Grok Bot（Apple 说明：产品目录要等与客户多轮沟通、需求明确之后才给，网站不要管目录；同时全站不得公布价格或价格区间）。本批不 force push。
+
+### 改了什么
+1. **撤掉目录/价格表承诺**：页头、菜单、页脚、表单旁的 “Get Catalog & Price Ranges”（原链到 `/inquiry/?intent=catalog`，承诺 24 小时内发目录和价格区间）全部改为需求导向入口。
+   - 按钮文案：**Tell Us What You Need**，链到 `/inquiry/?intent=custom`。
+   - 表单旁说明：Tell us your quantity, stones, packaging and timeline. We'll reply within 24 hours with suggestions and next steps.
+   - 旧链接 `/inquiry/?intent=catalog` 仍可用，但按普通询盘处理，`_subject` 为 `Website inquiry – General`，页面上不再出现 catalog 文案。
+   - “Wholesale catalog / View Full Catalog / Browse the catalog” 等买家可见说法改为 wholesale bracelets / Browse wholesale 等。
+2. **撤掉全站标价**：产品页、批发页上的 “From x.xx USD”、价格区间、示例单价，以及 Product JSON-LD 里的 `offers` / `lowPrice` / `highPrice` 全部删除。统一口径：Pricing depends on quantity, design and packaging; we quote each inquiry. 样品费仍可提及，但不写金额。
+3. **规则写入**：`AGENTS.md`、`content/content-calendar.md`、`content/benchmarks-top10.md` 注明后续每日发文（尤其 11-11 批发页）不得再加目录/价格表入口，也不得公布价格。
+4. **资源**：`assets/site-20261111b.js`、`assets/site-home-20261111b.js`（旧版 20261111 保留回滚）；运行时会改写 React 包里残留的目录按钮和标价。表单本身未改：仍用原 FormSubmit 别名、`_captcha=false`、绝对 `_next`、`_honey`、按 intent 的 `_subject`、选填项和 “We reply within 24 hours”。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0
+- 推送后 curl 首页、`/inquiry/`、`/inquiry/?intent=catalog`、`/custom-gemstone-bracelet/`、`/corporate-gifts/`，用 grep 确认买家可见文案不再出现 catalog，也不再出现标价
+- 本次未再提交测试询盘（表单字段未改）
+
+### 待办
+- 11-11 写 `/wholesale-crystal-bracelets/`（10 件起、可混石种；**不写价格、不提供目录**）
+- 11-13 企业礼品 mockup 与交期表；节日截单具体日期仍待 Apple 确认
+
+---
 ## 2026-11-10 · 目录索取 CTA + 询价表单升级 + 日历对标重排
 
 执行：Grok Bot（对标十佳行动 1/3；Apple KPI = 网站带来的真实询盘）。本批不 force push。
