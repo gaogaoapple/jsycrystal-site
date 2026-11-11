@@ -19,7 +19,7 @@
 ### 验证
 - `python3 tools/jsy_site.py check`：problems 0（THIN 为原有 /thank-you/）
 - 本地 headless Chrome 截图：新页正常渲染（改 JS 前曾显示 React 404，已修复）；首页正常
-- 推送后 curl 线上新页（结果见下）
+- 线上（提交 db40098，约 2 分钟后）：新页 200、title 正确；site-20261111c.js 200；首页 200；线上 sitemap 已含新页
 
 ### 待办
 - 11-12 已完成；下一项 11-13 corporate gifts 升级
