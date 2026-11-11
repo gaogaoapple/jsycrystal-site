@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-11-11 · 新落地页：/custom-beaded-bag-charms-keychains/ 天然石串珠包挂与钥匙扣定制
+
+执行：Grok Bot（Apple 同意做包挂和钥匙扣定制落地页，并授权后续同类事项自行决定）。本批不 force push。
+
+### 改了什么
+1. **新页** `/custom-beaded-bag-charms-keychains/`（静态）。目标词 bag charm wholesale、custom keychain charms、beaded keychain、crystal bag charm、custom logo keychain。Title「Bag Charm Wholesale and Custom Keychain Charms」；H1 对准定制串珠包挂和钥匙扣，10 件起、可加 logo。内容：可做的产品（包挂、钥匙扣、手腕钥匙扣、手机挂/挂绳、流苏、logo 吊牌，可配不锈钢配件）、规格表、one-stop「What we handle」、6 类买家（精品/礼品/水晶店，普拉提和瑜伽馆，跑团和赛事，匹克球/帕德尔/网球和读书会，企业与活动礼，品牌贴牌）、6 步流程（发想法/logo → 效果图 → 样品确认 → 生产 → 质检 → 合并出货）、护理说明、询价清单、可塘位置、9 条 FAQ、页内表单（`_subject` = Website inquiry – Bag charms & keychains；alias、`_captcha=false`、绝对 `_next`、`_honey`；按钮旁 “We reply within 24 hours”）。CTA「Tell Us What You Need」。
+2. **红线**：无价格/价格区间/目录或价格表；JSON-LD 只有 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长沿用站内已有口径（10 件可混；打样后 15–30 天；快递约 7–10 天；海运约 25–35 天）。不宣称自有工厂。天然石写明远离汗液、泳池和长时间浸水，不写天然石防水；不锈钢配件可写防水、不褪色；黄铜镀金只写防水。不写儿童款，不写 925 银/珍珠，不写 ethical 等用语。
+3. **同线产品（正文提及，暂不链未上线页）**：车挂、手机挂/挂绳、包带/手机链/眼镜链/挂绳等串珠链。后续这些落地页上线后再回补内链。
+4. **图片**：仓库没有现成包挂/钥匙扣实拍，用 4 张概念图（标 Concept visualization；无文字、无 logo、无珍珠、无 925 银；以赠送/分享场景为主，已检查手部）：`media/custom-beaded-bag-charm-tote-gift-concept.webp`、`media/custom-beaded-keychains-keys-concept.webp`、`media/custom-beaded-charm-gift-boxes-concept.webp`、`media/custom-beaded-bag-and-phone-charms-concept.webp`。已压成 webp。
+5. **内链**：首页双客群卡片（预渲染 + `site-home` 注入/补链）和 “What we handle” 的 charms 一行；页脚（静态壳 + React 原始页脚）；`/corporate-gifts/`、`/custom-gemstone-bracelet/`、`/wholesale-crystal-bracelets/` 相关链接。sitemap 优先级 0.9；llms.txt 已加入。
+6. **JS 版本**：新建 `assets/site-20261111d.js`、`assets/site-home-20261111d.js`（STATIC_ROUTES 加新路径），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261111c 保留回滚。
+7. **日历**（`content/content-calendar.md`）延长并重排：生日石套装放 11-13（赶 12 月高峰）；企业礼品升级和节日交期指引仍留 11-14、11-15；其后交错插入车挂、叠戴套装、手机挂、混搭金属、串珠链、字母款；11-22～11-24 为三篇社群落地页（普拉提/瑜伽馆、跑团和赛事含 HYROX、匹克球/帕德尔/网球俱乐部），写之前先调研买家真实用语，并内链到配件产品页；原 11-14 起未写条目后移至 11-25～12-05。混搭金属页在 Apple 确认新线细节前只写通用口径。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0（THIN 为原有 /thank-you/）
+- 推送后 curl 新页 200、缓存穿透渲染、点击内链；表单提交 1 条标明 TEST 的询盘，确认 302 到 `/thank-you/`（不二次跟 POST）；线上结果将补记
+
+### 待办
+- 后续配件页上线时，回补本页内链
+- 11-13 生日石套装落地页；11-14 企业礼品升级（节日截单具体日期仍待 Apple 确认）
+- 车挂页写明高温车内限制，不承诺不褪色
+- 混搭金属页等 Apple 确认新线具体款式后再写细
+
+---
+
 ## 2026-11-11 · 每日发文：/wholesale-crystal-bracelets/ 批发主词落地页
 
 执行：Grok Bot（每日发文例程，日历 11-11 项）。本批不 force push。
