@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-11-11 · 每日发文：/wholesale-crystal-bracelets/ 批发主词落地页
+
+执行：Grok Bot（每日发文例程，日历 11-11 项）。本批不 force push。
+
+### 改了什么
+1. **新页** `/wholesale-crystal-bracelets/`（静态）。目标词 `wholesale crystal bracelets`，市场 US（AU/UK/CA 通用英文）。Title「Wholesale Crystal Bracelets from 10 Pieces, Mixed Stones」；H1 同主题。内容：10 件起混石的意义、4 个常见石种（复用仓库已有产品图 `media/products/*.webp`，alt 准确，lazy load）、规格表（石种/珠径/长度/绳/配件/吊牌卡片/包装/MOQ/交期/定价口径）、one-stop「What we handle」、4 类买家、5 步流程、「What to send us」清单、可塘位置、9 条 FAQ、页内表单（`_subject` = Website inquiry – Wholesale）、CTA「Tell Us What You Need」→ 表单与 `/inquiry/?intent=custom`。
+2. **红线**：无任何价格/价格区间/目录或价格表承诺，统一「Pricing depends on quantity, design and packaging; we quote each inquiry.」；JSON-LD 只有 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长只用站内已有口径（10 件混、打样后 15–30 天、快递约 7–10 天、海运约 25–35 天）。
+3. **内链**：`tools/jsy_site.py` 页脚「Wholesale for distributors」加「Wholesale from 10 pcs, mixed」，React 页原始页脚同步；sitemap 优先级 0.9；llms.txt Main pages 加入。sitemap 30 个 URL。
+4. **JS 版本**：新页必须进 STATIC_ROUTES，否则 React 接管显示 404。新建 `assets/site-20261111c.js`、`assets/site-home-20261111c.js`（只加一条路由），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261111b 保留回滚。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0（THIN 为原有 /thank-you/）
+- 本地 headless Chrome 截图：新页正常渲染（改 JS 前曾显示 React 404，已修复）；首页正常
+- 推送后 curl 线上新页（结果见下）
+
+### 待办
+- 11-12 已完成；下一项 11-13 corporate gifts 升级
+- GSC：对新页请求编入索引（需 Apple 在 Search Console 操作或授权）
+
+---
+
 ## 2026-11-10 · 去掉目录/价格表承诺，并撤掉全站标价
 
 执行：Grok Bot（Apple 说明：产品目录要等与客户多轮沟通、需求明确之后才给，网站不要管目录；同时全站不得公布价格或价格区间）。本批不 force push。

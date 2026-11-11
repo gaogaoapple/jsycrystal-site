@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | 11-10 | 落地页 | OEM Crystal Bracelet Manufacturer, for brands and wholesalers | oem crystal bracelet manufacturer | B | US | /oem-crystal-bracelet-manufacturer/ | ✅ |
 | 11-10 | 文章 | How to Order Custom Bracelets for a Tour Group: Timeline, Name Tags and Packaging | custom bracelets for tour groups | A | US | /custom-bracelets-for-tour-groups/ | ✅（提前上线；原 11-11 槽位腾出） |
-| 11-11 | 落地页 | Wholesale Crystal Bracelets — from 10 pcs, mixed stones（规格表 + 站内表单；**不写任何价格或价格区间**，统一 “Pricing depends on quantity, design and packaging; we quote each inquiry.”；不要提供目录或价格表） | wholesale crystal bracelets | B | US | /wholesale-crystal-bracelets/ | ⏳ |
+| 11-11 | 落地页 | Wholesale Crystal Bracelets — from 10 pcs, mixed stones（规格表 + 站内表单；**不写任何价格或价格区间**，统一 “Pricing depends on quantity, design and packaging; we quote each inquiry.”；不要提供目录或价格表） | wholesale crystal bracelets | B | US | /wholesale-crystal-bracelets/ | ✅（2026-11-11 上线） |
 | 11-12 | 转化升级 | ~~目录/价格表索取 CTA~~ 已撤销。保留询价表单升级（买家类型 / 数量档 / needed-by / 包装；按 intent 设 FormSubmit `_subject`）。页头改为 “Tell Us What You Need” → `/inquiry/?intent=custom`。 | tell us what you need / custom inquiry | A/B | US | /inquiry/?intent=custom（全站页头 CTA） | ✅（2026-11-10 完成表单；同日晚间去掉目录承诺） |
 | 11-13 | 落地页升级 | Corporate gifts：免费 logo mockup 承诺 + 数量→交期表 + 节日截单占位（不写具体日期） | custom bracelets for corporate gifts | A | US | /corporate-gifts/ | ⏳ |
 | 11-14 | 落地页升级 | Private Label Gemstone Bracelets（静态化 + FAQ + 包装/吊牌细节） | private label crystal bracelets | B | US | /private-label-jewelry/ | ⏳ |
