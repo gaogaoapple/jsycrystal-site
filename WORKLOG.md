@@ -21,7 +21,8 @@
 
 ### 验证
 - `python3 tools/jsy_site.py check`：problems 0（THIN 为原有 /thank-you/）
-- 推送后 curl 新页 200、缓存穿透渲染、点击内链；表单提交 1 条标明 TEST 的询盘，确认 302 到 `/thank-you/`（不二次跟 POST）；线上结果将补记
+- 提交 `76b7579`（完整 `76b75798ecc0cc12c7a9d175d2728c6e4b5d1705`），Pages run 43010418324 success。线上（约 19:16 Asia/Shanghai）：新页 200、title/H1 正确、静态渲染（非 React 404）；`site-20261111d.js` 与 4 张概念图均为 200；sitemap 31 个 URL 且含新页；页内全部站内链接 200；首页/企业礼品/定制/批发页已有回链。
+- 从表单提交 1 条标明 TEST 的询盘（name「TEST – JSY site check」，email marketing@，message「TEST ONLY, please ignore」）：FormSubmit 返回 302，Location 为 `https://jsycrystal.com/thank-you/`（未跟随后续 POST）。
 
 ### 待办
 - 后续配件页上线时，回补本页内链
