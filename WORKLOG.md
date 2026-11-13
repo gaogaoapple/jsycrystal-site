@@ -6,6 +6,45 @@
 
 ---
 
+## 2026-11-13 · 虎眼石专题页 /tiger-eye-bracelets-wholesale/ + /shop/ 改静态并上架 13 款虎眼石商品卡
+
+执行：Grok Bot（大总管转达 Apple 要求；已有发布授权）。本批不 force push。提交 `aa6af6e`，Pages run 43500368914 success（约 12:19 PT 上线）。
+
+### 改了什么
+1. **新页** `/tiger-eye-bracelets-wholesale/`（静态）。目标词 wholesale tiger eye bracelets。Title「Wholesale Tiger Eye Bracelets, 7A Graded」；H1「Wholesale Tiger Eye Bracelets — 7A graded, ready to stack」。内容：7A 是行业分级不是证书的说明、男款 7A 亮面素圈 4 色、男款叠戴三件套、女款、规格表、私牌礼盒、one-stop（明确写 JSY 不自有工厂）、询价清单、11 条 FAQ、页内表单（`_subject` = Website inquiry – Tiger eye bracelets）、CTA「Tell Us What You Need」。JSON-LD：Organization / Service / FAQPage / ItemList / BreadcrumbList（无 offers/price）。
+2. **/shop/ 改为静态页**（原为 React 渲染，首屏还写着 "Indicative unit prices below"，与禁价规则冲突，一并去掉）。保留原 8 款水晶手串卡片（链接原产品页），新增「Wholesale tiger eye bracelets」区：男款 8 张、女款 5 张卡片，卡片链接到专题页对应锚点（#m-01 等）。CollectionPage ItemList 21 项。
+3. **商品卡（13 款，款号与 2026-11-13 报价单一致）**
+   - 男款 8：M-01 黄 / M-02 金 / M-03 红 / M-04 蓝 7A 亮面弹力素圈（8/10 mm，12 mm 可加选）；M-05 虎眼+火山石+木珠三件套；M-06 虎眼隔片+火山石隔片+木珠三件套；M-07 虎眼+金曜石（黑曜石）+火山石三件套；M-10 7A 黄红蓝三色三件套。
+   - 女款 5：T-39 葫芦链条手链、T-52 爱心蝴蝶结耳坠、T-53 葫芦耳钉、T-59 圆珠耳钉、T-69 太阳花开口戒。
+   - 英文名按「材质 + 石头 + 造型」；规格写珠径/颗数、7A（只在报价单写明 7A 的 M-01~04、M-10）、颜色、绳/金属。女款金属写 gold-tone（报价单只写"铜锆/金色合金理解"，未确认镀金黄铜，故不写防锈防水）。
+4. **图片**：`media/tiger-eye/*.webp`，13 张 1000×1000 白底。用 rembg 去背景后放白底；三件套为三张白底单条图竖排拼合。M-03 报价单用的是模特腕拍，改用同一 1688 链接的红虎眼白底主图；M-02 原图为深色底，去背景后放白底。T-69 原图带卖家卡片文字，已裁掉并补白。
+5. **Logo**：新页面页头和私牌区只用徽章上半部分（`media/jsy-crystal-jewelry-logo-top-160.webp` / `-600.webp`，来自 `/workspace/brand/JSY_logo_top.png`）；`tools/jsy_site.py` 新增：`<html data-jsy-logo="top">` 的页面页头自动用上半部分 logo。其他旧页面仍是完整徽章（未动）。
+6. **内链**：首页 Wholesale 卡片（预渲染 + `site-home-20261113b.js` 的 `ensureTigerEyeHomeLink`）、静态页页脚与 React 原始页脚、/shop/、/wholesale-crystal-bracelets/ 和 /birthstone-bracelet-sets/ 的 Related。sitemap 33 个 URL（新页 0.9）；llms.txt 已加。
+7. **JS 版本**：新建 `assets/site-20261113b.js`、`assets/site-home-20261113b.js`（STATIC_ROUTES 加 `/tiger-eye-bracelets-wholesale/` 和 `/shop/`），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261113 保留回滚。
+
+### 没放进来的（及原因）
+- M-08 / M-09 / M-11 / M-12（可调绳款）：主珠是"磨砂石"，材质未核实，市面常见为磨砂黑玛瑙，按"不用黑玛瑙"规则先不上。
+- 女款其余 61 款：卖家原图都是带道具/卡片文字的场景图，没有白底图；去背景效果差（项链被画框截断、残留文字或灰底）的不上。含珍珠点缀的（T-02/04/06/07/41/38/44/11 等）一律不上。T-66、T-68、T-16 去背景后有残影/灰底/截断，未用。
+- 黑胆石、黑玛瑙款：报价单本来就未收录。
+
+### 规则冲突与处理
+- 简报要求写"可塘合作天然石工厂直供"。核对来源：这批货源是 1688 上的义乌商家和连云港（东海）店铺，不是可塘工厂。为不写不实信息，页面改写为：JSY 不自有工厂；以汕尾可塘为基地，协调中国天然石珠行业的合作工坊和供应商，统一负责打样、质检、包装、出货。没写"factory direct"。
+- 7A：写明是行业分级、不是证书。红/蓝虎眼常见热处理或染色，FAQ 写"已知处理会在报价单注明"。
+- 防水：FAQ 明确天然石不防水，建议洗澡、游泳、运动前摘下。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0
+- 线上：新页、/shop/、首页、两个新 JS、13 张商品图、logo、sitemap、llms.txt 全部 200；/shop/ 为静态渲染；首页渲染后有 1 个指向新页的链接；新页 FAQ 11 条，表单 `_next` 正确；手机 390px 无横向溢出。
+- 全页截图：`/workspace/tigereye_screens/live_tiger-eye-bracelets-wholesale_full.png`、`/workspace/tigereye_screens/live_shop_full.png`
+- 测试询盘：从新页表单字段提交 1 条（name「TEST – JSY site check」，email marketing@，message「TEST ONLY, please ignore」），FormSubmit 返回 302 → `https://jsycrystal.com/thank-you/`。
+
+### 待办
+- GSC：对新页和 /shop/ 请求编入索引。
+- 有实拍白底图后补女款（项链、耳圈等）；拿到磨砂石材质确认后再决定可调绳款。
+- 是否把全站页头 logo 都换成上半部分，待 Apple 定。
+
+---
+
 ## 2026-11-13 · 每日发文：/birthstone-bracelet-sets/ 生日石手链套装批发落地页
 
 执行：Grok Bot（每日发文例程，日历 11-13 项）。本批不 force push。
