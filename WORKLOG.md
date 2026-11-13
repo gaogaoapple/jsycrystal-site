@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-11-13 · 每日发文：/birthstone-bracelet-sets/ 生日石手链套装批发落地页
+
+执行：Grok Bot（每日发文例程，日历 11-13 项）。本批不 force push。
+
+### 改了什么
+1. **新页** `/birthstone-bracelet-sets/`（静态）。目标词 birthstone bracelet sets wholesale / birthstone bracelet set，市场 US（CA/AU/GB 通用）。Title「Birthstone Bracelet Sets Wholesale, 12 Months」；H1 对准给店铺的 12 个月套装、10 件起。内容：店铺为什么备货（只需知道生日月份，节日和生日都能卖；10 件起按整单算，一套 12 条即达标）、按月份的天然石起点表（现代生日石 + 珠子常用替代石，如 4 月用白水晶代钻石、6 月用月光石；客户可给自己的清单；每种石头如实命名）、3 个已有产品图示例、规格表、one-stop、4 类买家、5 步流程（节日倒推时间只写站内已有口径）、询价清单、可塘位置、9 条 FAQ（含绿松石常见为染色菱镁/再造、黄水晶多为热处理紫晶，报价单如实标注）、页内表单（`_subject` = Website inquiry – Birthstone bracelet sets）、CTA「Tell Us What You Need」。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。6 月不写珍珠（初稿 FAQ 提到 pearl，被 check 标出后整条删除）。不写儿童。MOQ、交期、运费时长沿用站内口径。
+3. **图片**：复用已有紫水晶产品图另存为 `media/birthstone-bracelet-sets-february-amethyst.webp`（首图）；示例区用已有紫水晶/白水晶/黄水晶产品图，alt 准确，lazy load。
+4. **内链**：静态页页脚与 React 原始页脚「Wholesale for distributors」加 Birthstone bracelet sets；`/wholesale-crystal-bracelets/` Related 加链接；页内链到 wholesale、custom、private label、产品页、bead size guide、factory、ketang、inquiry。sitemap 32 个 URL（优先级 0.9）；llms.txt Main pages 加入。
+5. **JS 版本**：新建 `assets/site-20261113.js`、`assets/site-home-20261113.js`（STATIC_ROUTES 加新路径），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261111d 保留回滚。
+6. **顺手修红线**：`/wholesale-crystal-bracelets/` 询价清单的 "women, men, kids" 改为 "women or men"；`/custom-gemstone-bracelet/` 规格表去掉 children's sizing。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0（THIN 为原有 /thank-you/）
+- 线上结果见下方补记
+
+### 待办
+- 11-14 企业礼品升级（节日截单具体日期仍待 Apple 确认，先写占位不写日期）
+- 生日石其他月份暂无实拍图，有真实产品图后补进示例区
+
+---
+
 ## 2026-11-11 · 新落地页：/custom-beaded-bag-charms-keychains/ 天然石串珠包挂与钥匙扣定制
 
 执行：Grok Bot（Apple 同意做包挂和钥匙扣定制落地页，并授权后续同类事项自行决定）。本批不 force push。
