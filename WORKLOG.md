@@ -20,7 +20,7 @@
 
 ### 验证
 - `python3 tools/jsy_site.py check`：problems 0（THIN 为原有 /thank-you/）
-- 线上结果见下方补记
+- 提交 `b729ccb`，Pages run 43342959888 success。线上（约 09:13 Asia/Shanghai）：新页 200、title/H1 正确；`site-20261113.js`、首图均 200；线上 sitemap 已含新页
 
 ### 待办
 - 11-14 企业礼品升级（节日截单具体日期仍待 Apple 确认，先写占位不写日期）
