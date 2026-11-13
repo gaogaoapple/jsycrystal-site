@@ -19,10 +19,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-SITE_JS = "/assets/site-20261113.js"
-SITE_HOME_JS = "/assets/site-home-20261113.js"
+SITE_JS = "/assets/site-20261113b.js"
+SITE_HOME_JS = "/assets/site-home-20261113b.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
 LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
+LOGO_TOP = "/media/jsy-crystal-jewelry-logo-top-160.webp"  # upper half of the badge; pages with data-jsy-logo="top"
 SKIP_DIRS = {".git", "tools", "assets", "media", "fonts", "manus-storage", "__manus__", "docs", "content"}
 
 NAV = [
@@ -39,14 +40,16 @@ MAIL_ICON = ('<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke
              '<path d="m3 7 9 7 9-7"></path></svg>')
 
 
-def header(current=""):
+def header(current="", logo_top=False):
+    logo_html = (f'<a class="jsx-logo" href="/"><img src="{LOGO_TOP}" alt="JSY Crystal Jewelry logo" width="62" height="48" style="width:62px;height:48px;border-radius:0;object-fit:contain">' if logo_top
+                 else f'<a class="jsx-logo" href="/"><img src="{LOGO}" alt="JSY Crystal Jewelry logo" width="48" height="48">')
     cur_attr = ' aria-current="page"'
     links = "".join(
         f'<a href="{h}"{cur_attr if h == current else ""}>{t}</a>' for h, t in NAV)
     mlinks = "".join(f'<a href="{h}">{t}</a>' for h, t in NAV)
     return (
         '<!--jsy:header--><header class="jsx-hd"><div class="jsx-hd-in">'
-        f'<a class="jsx-logo" href="/"><img src="{LOGO}" alt="JSY Crystal Jewelry logo" width="48" height="48">'
+        f'{logo_html}'
         '<span>JSY Crystal Jewelry<small>One-stop custom bracelet partner</small></span></a>'
         f'<nav class="jsx-nav" aria-label="Main">{links}</nav>'
         '<a class="jsx-cta jsx-cta-need" href="/inquiry/?intent=custom">Tell Us What You Need</a>'
@@ -76,6 +79,7 @@ def footer():
         '<li><a href="/wholesale-crystal-bracelets/">Wholesale from 10 pcs, mixed</a></li>'
         '<li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>'
         '<li><a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a></li>'
+        '<li><a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a></li>'
         '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
         '<li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>'
         '<li><a href="/products/amethyst-crystal-bracelet/">Amethyst bracelets</a></li>'
@@ -147,12 +151,16 @@ def clean():
         s = s.replace("/assets/publication-home-20261109.js", SITE_HOME_JS)
         s = s.replace("/assets/publication-20261109.js", SITE_JS)
         for old in (
+            "/assets/site-home-20261113.js",
+            "/assets/site-home-20261111d.js",
             "/assets/site-home-20261111c.js",
             "/assets/site-home-20261111b.js",
             "/assets/site-home-20261111.js",
             "/assets/site-home-20261110b.js",
             "/assets/site-home-20261110.js",
             "/assets/site-home-20261109.js",
+            "/assets/site-20261113.js",
+            "/assets/site-20261111d.js",
             "/assets/site-20261111c.js",
             "/assets/site-20261111b.js",
             "/assets/site-20261111.js",
@@ -179,7 +187,7 @@ def shell():
             continue
         o = s
         cur = url_of(p)
-        hdr = header(cur)
+        hdr = header(cur, logo_top='data-jsy-logo="top"' in s)
         if "<!--jsy:header-->" in s:
             s = re.sub(r"<!--jsy:header-->.*?<!--/jsy:header-->", lambda m: hdr, s, flags=re.S)
         else:
@@ -209,7 +217,7 @@ def raw_footer():
             f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · '
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
             '<p><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a> · <a href="/private-label-jewelry/">Private label</a> · '
-            '<a href="/shop/">Wholesale bracelets</a> · <a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets from 10 pcs</a> · <a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · <a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
+            '<a href="/shop/">Wholesale bracelets</a> · <a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets from 10 pcs</a> · <a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · <a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a> · <a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
             '<a href="/about/">About</a> · <a href="/contact/">Contact</a></p></footer><!--/jsy:rawfooter-->')
 
 
@@ -242,7 +250,7 @@ def rawshell():
 
 
 # ---------------------------------------------------------------- sitemap
-PRIORITY = {"/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9",
+PRIORITY = {"/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9", "/tiger-eye-bracelets-wholesale/": "0.9",
             "/shop/": "0.8", "/inquiry/": "0.7", "/contact/": "0.7", "/how-it-works/": "0.7"}
 
 
