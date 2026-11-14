@@ -6,6 +6,34 @@
 
 ---
 
+## 2026-11-14 · 每日发文：/corporate-gifts/ 企业礼品落地页升级（custom bracelets for corporate gifts）
+
+执行：Grok Bot（每日发文例行任务）。提交 `a6071c0`，Pages run 43538455729 success（约 09:06 Asia/Shanghai 上线）。
+
+### 改了什么
+1. **主词**：custom bracelets for corporate gifts（美国）。Title「Custom Bracelets for Corporate Gifts — Logo Tags, Gift Boxes & Holiday Timelines」；H1 改为「Custom bracelets for corporate gifts」；meta / og / twitter 描述同步；面包屑改为同名。
+2. **新增 4 段**：
+   - Logo mockup 先确认再打样（4 步：发 logo 和卡片文字 → 我们回 mockup → 客户改/批 → 按 mockup 打实物样）。**没写“免费”或“24 小时内”**——这两点 Apple 尚未确认，确认后可加。
+   - 交期阶段表（回复 24 小时内 / mockup 和样品按项目确认 / 大货 15–30 天（样品确认后）/ 快递约 7–10 天 / 海运约 25–35 天），全部沿用站内已有口径；没有编造“数量档→天数”，用“什么会让它变长”一栏代替；加倒推示例；关税一句交给报关行。
+   - 圣诞与春节：只写规划思路和“春节前后工坊放缓、停工一段时间”，**不写具体截单日期**，写明发需求时由我们确认本季最后生产日。
+   - 询价清单（人数、日期、石头/颜色、logo 与卡片文字、包装、收货地址），价格口径「Pricing depends on quantity, design and packaging; we quote each inquiry.」
+3. **CTA**：首屏和底部按钮改为「Tell Us What You Need」→ `/inquiry/?intent=corporate`；清单段落后再加一个。
+4. **FAQ**：7 → 10 条（新增 logo mockup、圣诞/春节下单时间、价格怎么算）；FAQ JSON-LD 同步；Service 名称改为 Custom Bracelets for Corporate Gifts。无 offers/price。
+5. **内链**：how-it-works、importing 指南、bead size guide、factory、wholesale、OEM、inquiry（原有 travel、bag charms、private label 保留）。
+6. **sitemap**：`tools/jsy_site.py` PRIORITY 加 `/corporate-gifts/` = 0.9，重建 sitemap（33 个 URL）。**llms.txt**：corporate 条目改为带说明的新标题。
+7. 图片：沿用页面原有图片，未新增。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；JSON-LD 全部可解析；1 个 H1；FAQ 10 条。
+- 线上 https://jsycrystal.com/corporate-gifts/ 返回 200，title / H1 / 新段落均已更新。
+
+### 待办
+- 请 Apple 确认：logo mockup 能否写“免费”、能否承诺“24 小时内回 mockup”；以及今年圣诞、春节前最后生产日。确认后补进页面。
+- GSC：对 /corporate-gifts/ 请求重新编入索引。
+- 明天 11-15：/holiday-bracelet-order-timeline/，上线后从本页节日段加内链。
+
+---
+
 ## 2026-11-13 · 虎眼石专题页 /tiger-eye-bracelets-wholesale/ + /shop/ 改静态并上架 13 款虎眼石商品卡
 
 执行：Grok Bot（大总管转达 Apple 要求；已有发布授权）。本批不 force push。提交 `aa6af6e`，Pages run 43500368914 success（约 12:19 PT 上线）。
