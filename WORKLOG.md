@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-11-14 · 全站文案：不写免费、不承诺回复时限、圣诞改全年下单
+
+执行：Grok Bot（Apple 2026-11-14 决定：不写免费、不承诺、只说尽快，赶不上圣诞了，关注全年）。本批为文案修订，未发测试询盘。提交 `7dccd7b`，Pages run 43540673447 success（约 09:27 Asia/Shanghai 上线）。
+
+### 改了什么
+1. **不再承诺回复时限。** 全站去掉 “within 24 hours / 24h / same day / within one business day” 等回复承诺，改成自然的英文说法 “as soon as possible” 或 “promptly”。涉及：各页正文和 CTA、FAQ、FAQ JSON-LD、询价表单旁说明（“We reply as soon as possible”）、thank-you 页及 meta、llms.txt、`how-it-works` 页头数据（原 “24 Hours / Inquiry Response” 改为 “Promptly”）和步骤徽章、交期表里的 “Reply to your brief” 一行。要点列表里的 “Reply within 24 hours” 改为 “Prompt replies”。
+2. **不写免费。** 全站检索后，公开页本身没有 “free mockup / free sample / free shipping”。企业礼品页的 logo mockup 段原本就没写免费，保持只写先出效果图再打样。样品费和运费收费的既有说法未改。
+3. **圣诞改全年。** `/corporate-gifts/` 去掉 “Holiday Timelines / holiday orders / Christmas and Lunar New Year” 截单规划块（原 `#holiday-orders`）。改为 `#year-round-orders`：按客户自己的送礼日历规划（客户答谢、入职礼盒、公司周年、活动、春节和其他季节），预留样品时间和生产时间；交期仍用站内已有口径（大货 15–30 天、快递约 7–10 天、海运约 25–35 天），不写具体日期。Title / meta / FAQ（含 JSON-LD）同步。生日石套装页里 “圣诞节和母亲节前柜台好卖” 属于常年礼品场景，未改。
+4. **资源**：新建 `assets/site-20261114.js`、`assets/site-home-20261114.js`（表单旁 SLA 同步；用于清除旧目录文案的正则仍匹配 “within 24 hours”，以免残留旧句，替换句已改为 as soon as possible）。`tools/jsy_site.py` 指向新 JS，20261113b 保留回滚。`content/content-calendar.md`：11-14 条目标记已按决定改完；11-15 圣诞截单文取消（全年指引已写在企业礼品页）；转化说明里的 24 小时回复承诺已改掉。
+
+### 改到的页面
+about、birthstone-bracelet-sets、choose-gemstone-bracelet-wholesale-supplier、contact、corporate-gifts（含节日段重写）、custom-beaded-bag-charms-keychains、custom-bracelets-for-tour-groups、custom-gemstone-bracelet、factory、gemstone-bracelet-bead-size-guide、how-it-works、importing-crystal-bracelets-from-china、首页、inquiry、ketang、oem-crystal-bracelet-manufacturer、private-label-jewelry、products/snow-phantom-quartz、strawberry-quartz、super-seven、projects、shop、thank-you、tiger-eye-bracelets-wholesale、wholesale-crystal-bracelets，以及 llms.txt。其余产品页、404、travel-group-gifts 只换了 JS 文件名。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0。
+- 线上抽查（均为 200）：首页、/corporate-gifts/、/shop/、/thank-you/、/inquiry/、/contact/、/how-it-works/、/custom-gemstone-bracelet/、/wholesale-crystal-bracelets/、/private-label-jewelry/、/factory/、/about/、/birthstone-bracelet-sets/、/tiger-eye-bracelets-wholesale/、/oem-crystal-bracelet-manufacturer/、/custom-beaded-bag-charms-keychains/、/importing-crystal-bracelets-from-china/、/products/strawberry-quartz-crystal-bracelet/、llms.txt、两个新 JS。公开 HTML 中已无 “24 hours” 和 “free mockup”；/corporate-gifts/ 可见 Year-Round Orders、全年下单段和 “As soon as possible”。新 JS 里仅清理旧目录文案的匹配正则仍含 “within 24 hours”，替换句已是 as soon as possible。
+
+### 待办
+- 11-15 原计划的 `/holiday-bracelet-order-timeline/` 已取消，不要再做今年圣诞截单页；当日若发文请改其他选题。
+- 全站页头 logo 是否都换成徽章上半部分，仍待 Apple 定。
+
+---
+
 ## 2026-11-14 · 每日发文：/corporate-gifts/ 企业礼品落地页升级（custom bracelets for corporate gifts）
 
 执行：Grok Bot（每日发文例行任务）。提交 `a6071c0`，Pages run 43538455729 success（约 09:06 Asia/Shanghai 上线）。
