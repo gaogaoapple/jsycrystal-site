@@ -250,7 +250,7 @@ def rawshell():
 
 
 # ---------------------------------------------------------------- sitemap
-PRIORITY = {"/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9", "/tiger-eye-bracelets-wholesale/": "0.9",
+PRIORITY = {"/corporate-gifts/": "0.9", "/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9", "/tiger-eye-bracelets-wholesale/": "0.9",
             "/shop/": "0.8", "/inquiry/": "0.7", "/contact/": "0.7", "/how-it-works/": "0.7"}
 
 
