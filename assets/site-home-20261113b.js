@@ -178,7 +178,7 @@ export function upgradeInquiryForms(doc, win) {
       const btn = form.querySelector('button[type="submit"], button.jsy-primary');
       const sla = form.ownerDocument.createElement('p');
       sla.className = 'jsy-reply-sla';
-      sla.textContent = 'We reply within 24 hours';
+      sla.textContent = 'We reply as soon as possible';
       if (btn && btn.parentNode) btn.insertAdjacentElement('afterend', sla);
       else form.appendChild(sla);
     }
@@ -188,7 +188,7 @@ export function upgradeInquiryForms(doc, win) {
       const old = section.querySelector('.jsy-catalog-near, .jsy-need-near');
       const p = old || form.ownerDocument.createElement('p');
       p.className = 'jsy-need-near';
-      p.textContent = 'Tell us your quantity, stones, packaging and timeline. We\'ll reply within 24 hours with suggestions and next steps.';
+      p.textContent = 'Tell us your quantity, stones, packaging and timeline. We\'ll reply as soon as possible with suggestions and next steps.';
       if (!old) form.insertAdjacentElement('beforebegin', p);
     }
   }
@@ -233,7 +233,7 @@ export function rewriteCatalogAndPrices(doc) {
     if (!text) continue;
     let next = text
       .replace(/we'll email you our catalog and price ranges within 24 hours\.?/ig, '')
-      .replace(/Leave your email and a short note\. We'll email you our catalog and price ranges within 24 hours\. No PDF download on this page yet\./ig, 'Tell us your quantity, stones, packaging and timeline. We\'ll reply within 24 hours with suggestions and next steps.')
+      .replace(/Leave your email and a short note\. We'll email you our catalog and price ranges within 24 hours\. No PDF download on this page yet\./ig, 'Tell us your quantity, stones, packaging and timeline. We\'ll reply as soon as possible with suggestions and next steps.')
       .replace(/Request our catalog & price ranges/ig, 'Tell us what you need')
       .replace(/Pick stones and styles from our catalog/ig, 'Pick stones and styles from our existing range')
       .replace(/\ba catalog style\b/ig, 'a standard style')

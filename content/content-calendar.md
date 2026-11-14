@@ -14,8 +14,8 @@
 | 11-11 | 落地页 | Custom Beaded Bag Charms and Keychains（B2B：精品店/礼品店/水晶店、俱乐部和工作室、企业与活动礼、品牌贴牌；页内表单 `_subject` = Website inquiry – Bag charms & keychains；10 件起可混；无价格、无目录。正文简要提到车挂、手机挂、串珠链/挂绳，暂不链未上线页面，后续上线后再补内链。天然石远离汗液、泳池和长时间浸水，不写天然石防水；不锈钢配件可写防水、不褪色；黄铜镀金只写防水。） | bag charm wholesale / custom keychain charms / beaded keychain / crystal bag charm / custom logo keychain | A/B | US | /custom-beaded-bag-charms-keychains/ | ✅（2026-11-11 晚间上线） |
 | 11-12 | 转化升级 | ~~目录/价格表索取 CTA~~ 已撤销。保留询价表单升级（买家类型 / 数量档 / needed-by / 包装；按 intent 设 FormSubmit `_subject`）。页头改为 “Tell Us What You Need” → `/inquiry/?intent=custom`。 | tell us what you need / custom inquiry | A/B | US | /inquiry/?intent=custom（全站页头 CTA） | ✅（2026-11-10 完成表单；同日晚间去掉目录承诺） |
 | 11-13 | 落地页 | Birthstone Bracelet Sets — 12-month sets for shops（赶在 12 月热度高峰前；B2B，页内表单，自有 `_subject`；无价格、无目录） | birthstone bracelet sets wholesale / birthstone bracelet set | B | US | /birthstone-bracelet-sets/ | ✅ 2026-11-13 已上线 |
-| 11-14 | 落地页升级 | Corporate gifts：免费 logo mockup 承诺 + 数量→交期表 + 节日截单占位（不写具体日期） | custom bracelets for corporate gifts | A | US | /corporate-gifts/ | ✅ 2026-11-14 已上线（logo mockup 先确认再打样，未写“免费/24 小时”，待 Apple 确认后可加；交期按阶段表，沿用站内已有时长；节日只写占位不写截单日期） |
-| 11-15 | 文章 | Holiday Order Timeline: Christmas and Chinese New Year guidance for US / AU / MY（只写一般交期指引，不承诺具体截单日） | christmas corporate bracelet order / cny door gift | A | US/AU/MY | /holiday-bracelet-order-timeline/ | ⏳（保持原日，圣诞时效） |
+| 11-14 | 落地页升级 | Corporate gifts：logo mockup 先确认再打样 + 交期阶段表 + 全年下单指引 | custom bracelets for corporate gifts | A | US | /corporate-gifts/ | ✅ 2026-11-14 已上线；同日按 Apple 决定改文案：不写免费 mockup、不承诺 24 小时回复（改 as soon as possible / promptly），圣诞已赶不上、节日截单段改为全年下单指引 |
+| 11-15 | 文章 | ~~Holiday Order Timeline: Christmas and Chinese New Year guidance~~ 已取消。2026 圣诞已赶不上，不另做截单页；全年下单指引已写入 /corporate-gifts/#year-round-orders。当日选题可改做其他页，不要写今年圣诞还能赶上。 | — | A | US/AU/MY | ~~/holiday-bracelet-order-timeline/~~ | ❌ 取消（2026-11-14 Apple 决定） |
 | 11-16 | 落地页 | Crystal Car Charms and Rearview Mirror Suncatchers（B2B，页内表单，自有 `_subject`；注明天然石在高温车内使用的限制，**不承诺不褪色**；无价格、无目录；内链包挂/钥匙扣页） | crystal car charms / rearview mirror charms / crystal suncatcher | A/B | US | /crystal-car-charms/ | ⏳ |
 | 11-17 | 落地页 | Wholesale Stackable Bracelet Sets（B2B，页内表单，自有 `_subject`；无价格、无目录） | wholesale stackable bracelet sets / bracelet stack sets | B | US | /wholesale-stackable-bracelet-sets/ | ⏳ |
 | 11-18 | 落地页 | Beaded Phone Charms and Phone Straps（B2B，页内表单，自有 `_subject`；无价格、无目录；内链包挂/钥匙扣页） | beaded phone charm / phone strap wholesale / custom phone charm | A/B | US | /beaded-phone-charms-straps/ | ⏳ |
@@ -56,6 +56,6 @@
 **硬性规则（后续每日发文必须遵守）：**
 - Never offer or promise a catalog or price list on the site. 网站不提供、不承诺发送产品目录或价格表。目录只在与买家多轮沟通、需求明确之后由人工发送。
 - Never publish prices or price ranges. 不要写单价、起售价（from $X）、价格档、FAQ 里的价格区间，也不要在 JSON-LD 里写 `offers`/`price`/`priceRange`。统一口径：Pricing depends on quantity, design and packaging; we quote each inquiry.
-- 页头 CTA 为 **Tell Us What You Need** → `/inquiry/?intent=custom`。表单旁说明：Tell us your quantity, stones, packaging and timeline. We'll reply within 24 hours with suggestions and next steps.
+- 页头 CTA 为 **Tell Us What You Need** → `/inquiry/?intent=custom`。表单旁说明：Tell us your quantity, stones, packaging and timeline. We'll reply as soon as possible with suggestions and next steps. 不要承诺 24 小时或具体回复时限；不要写 free mockup / free sample / free shipping。
 - 询价表单可选填买家类型、数量档、needed-by、是否要包装；`_subject` 按页面/intent 区分。`?intent=catalog` 旧链接仍可用，但按普通询盘处理（`Website inquiry – General`），页面上不出现 catalog 文案。
 - 不写儿童款。天然石不写防水、不防汗；不锈钢配件可写防水、不褪色；黄铜镀金只写防水，不写永久不褪色。车挂页不承诺高温下不褪色。
