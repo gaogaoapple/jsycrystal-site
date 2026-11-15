@@ -6,6 +6,35 @@
 
 ---
 
+## 2026-11-16 · 旧 React 包运行时覆盖文案：去掉功效说法、24 小时承诺、Factory direct、WhatsApp；8 个旧产品页移除 Product 结构化数据
+
+执行：Grok Bot（Apple 已授权改站发布；起因是 Dot 2026-11-16 核实：首页源码写“尽快回复”，浏览器渲染后却显示“24 小时内回复”，产品卡还有 stress relief / Master Healer，页脚有 Factory Direct；Google 也提示旧产品页结构化数据缺价格、评价）。提交 `1d29c42`，Pages run 43738446102 success（约 00:58 Asia/Shanghai 上线）。
+
+### 原因
+非静态页（首页、/contact/、/inquiry/、/how-it-works/、/private-label-jewelry/、/projects/、/travel-group-gifts/、404 和 8 个旧产品页）加载 site JS 后，会再懒加载旧 React 包（首页 `home-image-20261109.js`，其他页 `whatsapp-20261020.js`）。旧包里编译了 Home.tsx / Shop.tsx / ProductDetail / JSYContactV2 / Footer 的老文案和 8 个产品的老描述，运行时整块渲染覆盖静态 HTML，所以只改静态文字不够。
+
+### 改了什么
+1. **新版旧包（保留旧文件回滚）**：`tools/patch_legacy_bundle_20261116.py` 由旧包生成 `assets/home-image-20261116.js`（首页）和 `assets/legacy-20261116.js`（其他非静态页），逐条替换文案并对每条做“必须命中”检查。新入口 `assets/site-20261116.js`、`assets/site-home-20261116.js` 只改了 import 路径；`tools/jsy_site.py` 指向新 JS，20261114 加入回滚替换表；全站 HTML 引用已更新。
+2. **回复时限**：所有 within 24 hours / 24h / 24 Hours / “48 hours” 改为 as soon as possible / Promptly / Prompt Replies。
+3. **功效说法**：8 款产品描述改为客观描述（颜色、天然包裹体、6–12mm 珠径、弹力绳、尺寸/logo 吊牌/包装可定制），去掉 Brazilian / Madagascar 等未核实产地；产品标签 healing/spiritual/protection 改为 custom/wholesale/gift；private label 与 projects 页的“石头-寓意”表（Tranquility & Protection、Abundance & Prosperity、Manifestation 等）改为颜色/外观；wellness/crystal healing 改为 lifestyle；图片 alt 去掉 Master Healer、Venus Hair Stone。
+4. **不宣称自有工厂**：Factory Direct / Factory-direct 全部改为 One-Stop Supplier / Partner Workshops / “One-stop custom bracelet supplier in Shanwei, Guangdong, coordinating partner workshops”；页脚 “manufacturer … world's premier colored gemstone hub” 改为一站式口径；`/factory/` 标题去掉 Factory-Direct（改为 Coordinated Crystal Bracelet Production in Shanwei），“Factory-direct terms” 卡片改为 “One coordinated order”；`/choose-gemstone-bracelet-wholesale-supplier/` 中“由那一家工厂 factory-direct 供货”改为一站式协调合作工坊。
+5. **未核实数字**：“20+ Years Experience / Years of Experience / 20+ years of experience” 全部去掉（改为 One-stop、Prompt replies 等）。
+6. **WhatsApp**：旧包里 wa.me 链接、电话号码、“Chat on WhatsApp Now”“Copy WhatsApp number”等改为邮箱 / 询价页；表单旧的“WhatsApp / Social”字段文案改为 Other contact。源码中已无 wa.me 和电话号码，site JS 里的 WhatsApp 清理代码保留作保险。
+7. **价格**：旧包里残留的 Shopify 演示价格（priceRange、variant price）全部置 0（页面本不显示）；旧询价表单里的预算档 “Under $5 USD / pc … Above $50” 改为 Entry level / Mid-range / Premium / Not sure yet。“Children's sizing available” 改为 Custom wrist sizes；“catalog” 类标签改为 Shop / All Styles / standard designs。
+8. **结构化数据**：8 个旧产品页（amethyst、citrine、clear-quartz、rose-quartz、golden-obsidian、silver-obsidian、gold-rutilated-quartz、four-seasons-phantom-quartz）删除 Product JSON-LD，保留 Organization 和 BreadcrumbList，未加任何 price/offers/rating/review；与 3 个新产品页一致。meta / og / twitter 描述同步去掉功效和产地说法。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；两个新包 `node --check` 通过。
+- 线上 headless Chrome 渲染 18 个页面（首页、/shop/、/inquiry/、/contact/、/factory/、/how-it-works/、8 个旧产品页、/private-label-jewelry/、/projects/、/travel-group-gifts/、/choose-gemstone-…/）：违禁词（24 hours、24h、within 24、healer、stress、calming、protection、negative energy、wealth、manifestation、abundance、prosperity、unconditional love、factory direct、years experience、whatsapp、wa.me、healing、spiritual）可见文字命中 **改前 135 处 → 改后 0 处**；属性和 JSON-LD 也为 0；页面无 “$数字” 价格。
+- 首页截图 `/workspace/jsy_home_check_20261116.png`（1280×4000）和整页截图 `/workspace/jsy_home_check_20261116_fullpage.png`，布局与改前一致。
+- 测试询盘：从线上 /inquiry/ 表单提交 1 条（name「TEST – JSY site check」，email marketing@，message 写明 TEST ONLY），跳转到 `https://jsycrystal.com/thank-you/`。
+
+### 待办
+- 静态页里个别 “manufacturer” 类 SEO 用词（如 /oem-crystal-bracelet-manufacturer/）未动，属于既有关键词策略。
+- GSC：可对 8 个旧产品页请求重新抓取，让 Google 更新结构化数据报告。
+
+---
+
 ## 2026-11-14 · 全站文案：不写免费、不承诺回复时限、圣诞改全年下单
 
 执行：Grok Bot（Apple 2026-11-14 决定：不写免费、不承诺、只说尽快，赶不上圣诞了，关注全年）。本批为文案修订，未发测试询盘。提交 `7dccd7b`，Pages run 43540673447 success（约 09:27 Asia/Shanghai 上线）。
