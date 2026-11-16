@@ -6,6 +6,35 @@
 
 ---
 
+## 2026-11-16 · 每周 SEO 复盘（GSC 数据截至 11-13）+ 两个高展示页改标题和描述
+
+执行：Grok Bot（每周 SEO 复盘例程）。
+
+### GSC 读数（sc-domain:jsycrystal.com，只读，2026-11-16 读取，数据最新到 11-13）
+- 近 7 天（11-07～11-13）：0 点击，90 展示，平均排名 15.1；美国 68 展示。
+- 近 28 天（10-17～11-13）：3 点击，163 展示，CTR 1.8%，平均排名 17.1；美国 2/114。
+- 搜索词（28 天，展示/排名）：custom stone-set bracelet manufacturer 32/13.9（7 天 13/9.0）；custom gemstone bracelet design 10/32.9（7 天 8.3）；custom gemstone bracelets 10/34.0（7 天 21.7）；custom gemstone bracelet 5/10.8；jsy designs 4/9.0；新出现 wholesale stone bracelets 2/72.5、wholesale crystal bracelets 1/11.0、custom stone bracelets 1/13.0。
+- 落地页（7 天，展示/排名）：/custom-gemstone-bracelet/ 52/10.6；/ 15/17.3；/oem-crystal-bracelet-manufacturer/ 11/15.7；/private-label-jewelry/ 4/6.3；/wholesale-crystal-bracelets/ 4/62.8；/choose-gemstone-bracelet-wholesale-supplier/ 3/6.3。全部 0 点击。
+- 收录：已编入索引 22（11-09 基线 8），未编入 61；「已发现未编入」10（/about/、/how-it-works/、/ketang/、7 个旧产品页）；「已抓取未编入」3，验证失败（/products/citrine-crystal-bracelet/、无斜杠 /importing-crystal-bracelets-from-china、/ketang）；重定向错误/5xx/404/软 404 验证进行中。
+- Sitemap：成功，11-15 读取，发现 33 个 URL。
+- 和 11-09 基线（08-13～11-07：20 点击/189 展示/排名 21.2）比：排名从 21 升到 15～17，收录 8→22；点击仍少，询盘 0。
+
+### 抽查（web 搜索工具，非 Google 原始排名）
+- 能看到 jsycrystal.com：OEM crystal bracelet manufacturer（第 1）、private label crystal bracelets（第 3）、custom crystal bracelet manufacturer China（第 1）、"best custom crystal bracelet factory for small boutiques with low MOQ"（第 1）、品牌词。
+- 看不到：custom gemstone bracelets、wholesale natural stone bracelets、wholesale crystal bracelets、custom beaded bag charms wholesale、wholesale tiger eye bracelets、crystal car charms wholesale。
+
+### 改了什么（有展示没点击 → 改标题和描述，正文不动）
+1. /custom-gemstone-bracelet/：title、og/twitter title 改为「Custom Gemstone Bracelets: Your Design, Logo & Box, from 10 Pcs | JSY Crystal」；description 改为买家视角（选天然石、珠径、长度、配件、logo 吊牌、礼盒；先打样；10 件起；发想法来询价）。
+2. /oem-crystal-bracelet-manufacturer/：title 改为「OEM Crystal Bracelet Manufacturer in China — Your Brand, from 10 Pcs | JSY Crystal」，description 同步收紧。
+- 红线检查：无价格、无目录、无 free、无回复时限、无 925 银/珍珠/ethical 类词。`python3 tools/jsy_site.py check` problems 0。
+
+### 下周看什么
+- 这两个页 7 天 CTR 是否从 0 变化；custom gemstone bracelets 排名（7 天 21.7）。
+- GSC：对改过的两页和 /crystal-car-charms/ 请求编入索引；「已发现未编入」的 /about/、/how-it-works/ 继续加内链。
+- 每日发文继续按日历。
+
+---
+
 ## 2026-11-16 · 每日发文：/crystal-car-charms/ 天然石车挂与后视镜挂饰落地页
 
 执行：Grok Bot（每日发文例程，日历 11-16 项）。提交 `d3b48d7`，约 09:3x Asia/Shanghai 线上确认 200。
