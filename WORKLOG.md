@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-11-16 · 每日发文：/crystal-car-charms/ 天然石车挂与后视镜挂饰落地页
+
+执行：Grok Bot（每日发文例程，日历 11-16 项）。提交 `d3b48d7`，约 09:3x Asia/Shanghai 线上确认 200。
+
+### 改了什么
+1. **新页** `/crystal-car-charms/`（静态）。目标词 crystal car charms / rearview mirror charms / crystal suncatcher，市场 US（CA/AU/GB 通用）。Title「Crystal Car Charms and Rearview Mirror Charms, Wholesale」；H1 对准车挂、10 件起。内容：可做的产品（后视镜挂饰、suncatcher、车挂+钥匙扣套装、车挂+手链礼盒、logo 吊牌/卡片）；**日晒与高温**一节如实写：紫水晶、粉晶、黄水晶及染色珠长时间直晒会褪色，**不承诺不褪色**，可建议较稳定的石头（白水晶、虎眼、黑曜石）并在样品上确认；不锈钢配件不生锈不褪色，黄铜镀金只写防锈、不写不褪色；挂饰尽量短轻、不挡视线，提醒店家让顾客自查当地对后视镜挂物的规定（未写具体州法）；suncatcher 的多面棱镜一般是玻璃，按需做（其他材质只简短提）。规格表、one-stop、4 类买家、6 步流程、询价清单、可塘位置、9 条 FAQ、页内表单（`_subject` = Website inquiry – Car charms）、CTA「Tell Us What You Need」。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长沿用站内口径。不写 925 银/珍珠、ethical 类、WhatsApp/电话、Apple 人名、儿童、欧盟法规、圣诞截单。
+3. **图片**：仓库没有车挂实拍或合适的图，本页不放正文图片；og:image 用官方 logo。
+4. **内链**：静态页页脚与 React 原始页脚加 Car charms；`/custom-beaded-bag-charms-keychains/` 正文“we also make crystal car charms”和 Related 回链本页；本页链到包挂、批发、定制、私标、OEM、企业礼品、factory、ketang、inquiry。sitemap 34 个 URL（优先级 0.9）；llms.txt 已加入。
+5. **JS 版本**：新建 `assets/site-20261116b.js`（STATIC_ROUTES 加新路径），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261116 加入回滚替换表并保留。site-home 未变。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1。
+- 线上：/crystal-car-charms/、site-20261116b.js、包挂页、sitemap、llms.txt 均 200；title 正确；线上 sitemap 已含新页；页内全部站内链接 200；表单 `_subject` 正确。
+- 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的包挂页相同）。
+
+### 待办
+- 有车挂实拍或概念图后补图（标注 Concept visualization）。
+- GSC：对 /crystal-car-charms/ 请求编入索引。
+- 明天 11-17：/wholesale-stackable-bracelet-sets/。
+
+---
+
 ## 2026-11-16 · 旧 React 包运行时覆盖文案：去掉功效说法、24 小时承诺、Factory direct、WhatsApp；8 个旧产品页移除 Product 结构化数据
 
 执行：Grok Bot（Apple 已授权改站发布；起因是 Dot 2026-11-16 核实：首页源码写“尽快回复”，浏览器渲染后却显示“24 小时内回复”，产品卡还有 stress relief / Master Healer，页脚有 Factory Direct；Google 也提示旧产品页结构化数据缺价格、评价）。提交 `1d29c42`，Pages run 43738446102 success（约 00:58 Asia/Shanghai 上线）。
