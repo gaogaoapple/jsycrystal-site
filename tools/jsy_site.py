@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-SITE_JS = "/assets/site-20261116.js"
+SITE_JS = "/assets/site-20261116b.js"
 SITE_HOME_JS = "/assets/site-home-20261116.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
 LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
@@ -78,6 +78,7 @@ def footer():
         '<li><a href="/shop/">Wholesale bracelets</a></li>'
         '<li><a href="/wholesale-crystal-bracelets/">Wholesale from 10 pcs, mixed</a></li>'
         '<li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>'
+        '<li><a href="/crystal-car-charms/">Car charms &amp; suncatchers</a></li>'
         '<li><a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a></li>'
         '<li><a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a></li>'
         '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
@@ -161,6 +162,7 @@ def clean():
             "/assets/site-home-20261110b.js",
             "/assets/site-home-20261110.js",
             "/assets/site-home-20261109.js",
+            "/assets/site-20261116.js",
             "/assets/site-20261114.js",
             "/assets/site-20261113b.js",
             "/assets/site-20261113.js",
@@ -221,7 +223,7 @@ def raw_footer():
             f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · '
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
             '<p><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a> · <a href="/private-label-jewelry/">Private label</a> · '
-            '<a href="/shop/">Wholesale bracelets</a> · <a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets from 10 pcs</a> · <a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · <a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a> · <a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
+            '<a href="/shop/">Wholesale bracelets</a> · <a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets from 10 pcs</a> · <a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · <a href="/crystal-car-charms/">Car charms</a> · <a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a> · <a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
             '<a href="/about/">About</a> · <a href="/contact/">Contact</a></p></footer><!--/jsy:rawfooter-->')
 
 
@@ -254,7 +256,7 @@ def rawshell():
 
 
 # ---------------------------------------------------------------- sitemap
-PRIORITY = {"/corporate-gifts/": "0.9", "/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9", "/tiger-eye-bracelets-wholesale/": "0.9",
+PRIORITY = {"/corporate-gifts/": "0.9", "/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9", "/tiger-eye-bracelets-wholesale/": "0.9", "/crystal-car-charms/": "0.9",
             "/shop/": "0.8", "/inquiry/": "0.7", "/contact/": "0.7", "/how-it-works/": "0.7"}
 
 
