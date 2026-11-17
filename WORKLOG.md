@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-11-17 · 每日发文：/wholesale-stackable-bracelet-sets/ 批发叠戴手链套装落地页
+
+执行：Grok Bot（每日发文例程，日历 11-17 项）。提交 `53447de`，约 09:13 Asia/Shanghai 线上确认 200。
+
+### 改了什么
+1. **新页** /wholesale-stackable-bracelet-sets/（静态）。目标词 wholesale stackable bracelet sets / bracelet stack sets，市场 US（CA/AU/GB 通用）。Title「Wholesale Stackable Bracelet Sets, from 10 Pieces」；H1 对准叠戴套装、10 件起可混。内容：为何店铺卖套装（成套造型、可整套或拆开单卖）；起订按手链件数计，三条一套计 3 件；现成虎眼三件套（M-10 黄/红/蓝、M-07 虎眼+金曜石+火山石、M-05 虎眼+火山石+木珠，链到虎眼批发页对应锚点）；也可用常规批发石种（紫水晶、粉晶、黄水晶、白水晶）做配色套装；规格表、one-stop、4 类买家、5 步流程、询价清单、可塘位置、11 条 FAQ、页内表单（`_subject` = Website inquiry – Stackable bracelet sets）、CTA「Tell Us What You Need」。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长、珠数沿用站内口径。天然石不写防水；不锈钢隔珠可写防水、不褪色，黄铜镀金只写防锈和防水。不写 925 银/珍珠、ethical 类、WhatsApp/电话、Apple 人名、儿童、欧盟法规、圣诞截单、24 小时回复。
+3. **图片**：复用仓库已有虎眼套装实拍，另存为 keyword 文件名：`media/wholesale-stackable-bracelet-sets-tiger-eye-yellow-red-blue.webp`（首屏）、`…-obsidian-lava.webp`、`…-lava-wood.webp`；alt 准确，首图 fetchpriority，其余 lazy load。配色示例复用已有产品图。
+4. **内链**：静态页页脚与 React 原始页脚加 Stackable bracelet sets；/wholesale-crystal-bracelets/ 正文和 Related、/tiger-eye-bracelets-wholesale/ 叠戴段落和 Related、/birthstone-bracelet-sets/ 与 /crystal-car-charms/ 的 Related 回链本页。sitemap 35 个 URL（优先级 0.9）；llms.txt 已加入。
+5. **JS 版本**：新建 `assets/site-20261117.js`（STATIC_ROUTES 加新路径），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261116b 加入回滚替换表并保留。site-home 未变。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1。
+- 线上：/wholesale-stackable-bracelet-sets/、site-20261117.js、三张套装图、sitemap、llms.txt 均 200；title 正确；线上 sitemap 已含新页。
+- 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的批发页相同）。
+
+### 待办
+- GSC：对 /wholesale-stackable-bracelet-sets/ 请求编入索引。
+- 明天 11-18：/beaded-phone-charms-straps/。
+
+---
+
 ## 2026-11-16 · 每周 SEO 复盘（GSC 数据截至 11-13）+ 两个高展示页改标题和描述
 
 执行：Grok Bot（每周 SEO 复盘例程）。
