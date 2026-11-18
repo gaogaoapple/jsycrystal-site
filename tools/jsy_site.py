@@ -5,7 +5,7 @@ Run from the repository root:
   python3 tools/jsy_site.py shell     # refresh header/footer/contact dock on static pages + raw nav/footer on React pages
   python3 tools/jsy_site.py clean     # strip Manus preview runtime, point pages at current assets, lazy-load images
   python3 tools/jsy_site.py sitemap   # rebuild sitemap.xml from indexable pages (canonical == own URL, no noindex/refresh)
-  python3 tools/jsy_site.py check     # internal links, canonical, H1, JSON-LD parse, forms
+  python3 tools/jsy_site.py check     # internal links, canonical, H1, JSON-LD parse, forms, script balance
   python3 tools/jsy_site.py all       # clean + shell + sitemap + check
 
 Static pages = <html ... data-jsy-render-mode="static">; they never load React.
@@ -19,8 +19,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-SITE_JS = "/assets/site-20261118.js"
-SITE_HOME_JS = "/assets/site-home-20261116.js"
+SITE_JS = "/assets/site-20261118b.js"
+SITE_HOME_JS = "/assets/site-home-20261118.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
 LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
 LOGO_TOP = "/media/jsy-crystal-jewelry-logo-top-160.webp"  # upper half of the badge; pages with data-jsy-logo="top"
@@ -154,6 +154,7 @@ def clean():
         s = s.replace("/assets/publication-home-20261109.js", SITE_HOME_JS)
         s = s.replace("/assets/publication-20261109.js", SITE_JS)
         for old in (
+            "/assets/site-home-20261116.js",
             "/assets/site-home-20261114.js",
             "/assets/site-home-20261113b.js",
             "/assets/site-home-20261113.js",
@@ -164,6 +165,7 @@ def clean():
             "/assets/site-home-20261110b.js",
             "/assets/site-home-20261110.js",
             "/assets/site-home-20261109.js",
+            "/assets/site-20261118.js",
             "/assets/site-20261117.js",
             "/assets/site-20261116b.js",
             "/assets/site-20261116.js",
@@ -288,6 +290,88 @@ def sitemap(lastmod=None):
 
 
 # ---------------------------------------------------------------- check
+def script_tag_problems(text):
+    """HTML only ends a script element on the literal </script>.
+
+    A JS-escaped <\\/script> does not. The browser then treats the rest of the
+    document as script, returns HTTP 200, and paints a blank page.
+    A <\\/script> inside a script that really does close is left alone: that
+    escape is how inline JavaScript hides the character sequence from HTML.
+    """
+    from html.parser import HTMLParser
+
+    class Audit(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.depth = 0
+            self.json_errors = []
+            self._attrs = {}
+            self._buf = []
+
+        def handle_starttag(self, tag, attrs):
+            if tag == "script":
+                self.depth += 1
+                self._attrs = dict(attrs)
+                self._buf = []
+
+        def handle_endtag(self, tag):
+            if tag == "script" and self.depth:
+                self.depth -= 1
+                kind = (self._attrs.get("type") or "").lower()
+                if kind == "application/ld+json":
+                    raw = "".join(self._buf).strip()
+                    if raw:
+                        try:
+                            json.loads(raw)
+                        except Exception as exc:
+                            self.json_errors.append(f"JSON-LD did not parse: {exc}")
+                self._buf = []
+                self._attrs = {}
+
+        def handle_data(self, data):
+            if self.depth:
+                self._buf.append(data)
+
+    audit = Audit()
+    try:
+        audit.feed(text)
+        audit.close()
+    except Exception as exc:
+        return [f"HTML script parse failed: {exc}"]
+    problems = []
+    if audit.depth:
+        problems.append(
+            "unclosed <script>: the rest of the document is treated as JavaScript, so the page can return HTTP 200 and render blank"
+        )
+        if "<\\/script>" in text:
+            problems.append(
+                "script end tag is written as <\\/script> (a JavaScript string escape). HTML closes a script only on the literal </script>"
+            )
+    problems.extend(audit.json_errors)
+    return problems
+
+
+def _selftest_script_detector():
+    broken = (
+        '<!doctype html><html><head><title>T</title>'
+        '<script src="/a.js"><\\/script></head><body><h1>Wholesale</h1>'
+        "<p>visible body copy that a shopper should see</p></body></html>"
+    )
+    probs = script_tag_problems(broken)
+    if not any("unclosed" in p or "escape" in p for p in probs):
+        raise SystemExit("script detector self-test failed: escaped closer was not flagged")
+    ok = (
+        '<!doctype html><html><body><script>var s="<\\/script>";</script>'
+        "<h1>Hi</h1><p>visible</p></body></html>"
+    )
+    ok_probs = script_tag_problems(ok)
+    if ok_probs:
+        raise SystemExit("script detector self-test failed on a real script closer: " + "; ".join(ok_probs))
+    bad_json = '<script type="application/ld+json">{</script>'
+    if not any("JSON-LD" in p for p in script_tag_problems(bad_json)):
+        raise SystemExit("script detector self-test failed: invalid JSON-LD was not flagged")
+
+
 def exists(path):
     path = path.split("#")[0].split("?")[0]
     if not path or path == "/":
@@ -301,12 +385,16 @@ def exists(path):
 
 
 def check():
+    _selftest_script_detector()
     bad = 0
     for p in pages():
         s = p.read_text(encoding="utf-8")
         u = url_of(p)
         redirect = 'http-equiv="refresh"' in s
         body = s[s.find("<body"):]
+        for problem in script_tag_problems(s):
+            print(f"SCRIPT {u}: {problem}")
+            bad += 1
         for h in re.findall(r'(?:href|src)="(/[^"]*)"', s):
             if h.startswith("//"):
                 continue
