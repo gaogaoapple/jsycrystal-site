@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-11-18 · 每日发文：/beaded-phone-charms-straps/ 天然石手机挂与手机挂绳落地页
+
+执行：Grok Bot（每日发文例程，日历 11-18 项）。提交 `c4b4c1e`，约 09:08 Asia/Shanghai 线上确认 200。
+
+### 改了什么
+1. **新页** /beaded-phone-charms-straps/（静态）。目标词 beaded phone charm / phone strap wholesale / custom phone charm，市场 US（CA/AU/GB 通用）。Title「Beaded Phone Charms and Phone Straps, Wholesale」；H1 对准手机挂与挂绳、10 件起可混。内容：可做的产品（短串珠手机挂、串珠手腕/短挂绳、与包挂/钥匙扣/手链的配套礼盒、logo 吊牌/卡片）；**汗液与日常使用**一节如实写：手机常握在手里，天然石远离汗液、泳池和长时间浸水，**不写天然石防水或防汗**；不锈钢配件可写防水、不褪色；黄铜镀金写防锈和防水，不写不褪色。扣具以不锈钢钩扣、圆环为主，具体卡扣或壳型请买家随询价附照片，不承诺兼容所有手机壳。规格表、one-stop、4 类买家、6 步流程、询价清单、可塘位置、9 条 FAQ、页内表单（`_subject` = Website inquiry – Phone charms & straps）、CTA「Tell Us What You Need」。更长的包链、眼镜链、挂绳可同单询问，暂不链未上线页面。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长沿用站内口径。不写 925 银/珍珠、ethical 类、WhatsApp/电话、Apple 人名、儿童、欧盟法规、圣诞截单、24 小时回复。
+3. **图片**：复用仓库已有概念图（包挂 + 手机挂同框），另存为 keyword 文件名 `media/beaded-phone-charms-straps-natural-stone-concept.webp`；alt 准确并标注 Concept visualization，首图 fetchpriority。
+4. **内链**：静态页页脚与 React 原始页脚加 Phone charms & straps；/custom-beaded-bag-charms-keychains/ 正文列表、相关段、FAQ 及 /crystal-car-charms/ 的 Related 回链本页。sitemap 36 个 URL（优先级 0.9）；llms.txt 已加入。
+5. **JS 版本**：新建 `assets/site-20261118.js`（STATIC_ROUTES 加新路径），全站 HTML 和 `tools/jsy_site.py` 引用已换；20261117 加入回滚替换表并保留。site-home 未变。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1。
+- 线上：/beaded-phone-charms-straps/、site-20261118.js、概念图、sitemap、llms.txt 均 200；title 正确；线上 sitemap 已含新页。
+- 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的包挂页相同）。
+
+### 待办
+- GSC：对 /beaded-phone-charms-straps/ 请求编入索引。
+- 明天 11-19：/mixed-metal-beaded-bracelets/（新品细节若 Apple 尚未确认，保持通用写法）。
+
+---
+
 ## 2026-11-17 · 每日发文：/wholesale-stackable-bracelet-sets/ 批发叠戴手链套装落地页
 
 执行：Grok Bot（每日发文例程，日历 11-17 项）。提交 `53447de`，约 09:13 Asia/Shanghai 线上确认 200。
