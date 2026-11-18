@@ -6,6 +6,43 @@
 
 ---
 
+## 2026-11-18 · 叠戴页白屏修复 + 已批准可塘文案（分支，未上线）
+
+执行：本分支 `cursor/fix-stackable-ketang-copy-8167`。**没有合并，没有推 main，正式站尚未更新。** 本地预览不能当成已上线。
+
+### 叠戴页白屏：核对后的原因
+线上 `https://jsycrystal.com/wholesale-stackable-bracelet-sets/` 本次仍是 HTTP 200、HTML 约 36KB，但 5 处 script 结束标签写成了 JS 转义 `<\/script>`，字面量 `</script>` 为 0。浏览器只把字面量 `</script>` 当作 script 结束，所以第一个 `<script src="/assets/site-20261118.js">` 一直不结束，后面的正文、H1 和 JSON-LD 都被吃进脚本，页面空白、无障碍树没有正文。首页和 `/custom-gemstone-bracelet/` 的闭合是正常的，所以它们能打开。
+
+仓库里没有落地页生成器。这一页是 2026-11-17 直接提交的静态 HTML（`53447de`）。次日的 `/beaded-phone-charms-straps/` 用的是正确的 `</script>`。全站 HTML 扫描后，只有叠戴页有这种转义闭合。`tools/jsy_site.py check` 原先用正则找 `</script>`，找不到闭合就不解析 JSON-LD，也不报错，所以当时 problems 0 仍能放过白屏。
+
+### 改了什么
+1. **叠戴页** `wholesale-stackable-bracelet-sets/index.html`：5 处 `<\/script>` 改成字面量 `</script>`。正文、图片、表单、title 未改。该页原有的 “exclusive overseas agent” 句子不在本次文案包里，没有顺手改。
+2. **回归检查** `tools/jsy_site.py check`：用 HTML 解析器检查每个页面的 script 是否真正闭合；未闭合（包括把结束标签写成 `<\/script>`）记为问题并让检查失败。script 内部合法的 `<\/script>` 字符串（外面仍有真正的 `</script>`）不算错。JSON-LD 必须能解析。检查开始时用一段故意写错的样例自测，确认检测器会拦住它。不能只看 HTTP 200。
+3. **已批准可塘文案**（附件核心，不是全文重写）。SEO title、URL、canonical 未改。
+   - 首页首屏、信任条里的 `20+ / Years Manufacturing`、`#why-us` 四张卡、`#about`（去掉 “100% Natural / No synthetic”，补 `/about/`）。首页是 React 覆盖静态 HTML 的，所以同时改了预渲染 HTML、`assets/home-image-20261118.js`（由 20261116 复制后只换这些句子）和 `assets/site-home-20261118.js`。`index.html` 与 `404.html` 一起改指向新的 site-home。旧包保留。首页时间轴整段按文案包没有改。
+   - `/about/`：首屏角色、What we do、把原来的 How orders run 换成 “How we work together” 五步。去掉 exclusive overseas agent、15–30 天和验货承诺。法律名称仍是 Shanwei Jingshenyuan Jewelry Co., Ltd.。标题未改。后面的 What we handle / What we supply / Who you deal with 没有整段重写。
+   - `/custom-gemstone-bracelet/`：选择表、护理句、四步流程、CTA 和表单旁说明。首屏事实条里的 “Bulk 15–30 days after approval” 改为 “Production and shipping times confirmed with your order”。10 件可混只写成成品手链，吊牌和包装按设计确认。FAQ 里同一条交期承诺与 JSON-LD 一起改成 “confirmed with your order”。表单字段、FormSubmit 地址、`#inquiry-form`、按钮 “Send inquiry →” 保留。没有提交测试询盘。
+4. **站点脚本** `assets/site-20261118b.js`：只比 `site-20261118.js` 多一行，定制页的表单说明用已批准句子；其他页面的说明不变。静态页的 script 引用改到这个新文件，是为了避免旧脚本把定制页说明写回去。`/beaded-phone-charms-straps/` 只改了这一处 script 文件名，正文没有动。
+
+### 验证（本地，不是线上）
+- `node --check`：`site-home-20261118.js`、`site-20261118b.js`、`home-image-20261118.js` 通过。
+- `python3 tools/jsy_site.py check`：problems 0。含 script 开闭自测和全站 HTML 扫描；JSON-LD 可解析。
+- 本机 `python3 -m http.server` + headless Chrome（桌面 1280×900，手机 390×844）打开叠戴页、首页、`/about/`、`/custom-gemstone-bracelet/`：
+  - 四页都有可见 H1 和正文；控制台 error 和 pageerror 为 0；没有横向溢出。
+  - 叠戴页 H1 “Wholesale Stackable Bracelet Sets, from 10 pieces, mixed”，虎眼套装图 naturalWidth 1000。懒加载的产品图滚进视口后也能加载。
+  - 首页 H1 “Natural Stone Bracelets for Crystal Shops, Boutiques & Gift Stores”；可见文字里没有 “Years Manufacturing”“on time, every time”。优势四卡和 About 入口与批准文案一致，“Read more about JSY” 指向 `/about/`。
+  - About H1 “Based in Ketang, working with partner factories”。这页正文没有新照片，页头沿用原有 logo。
+  - 定制页选择表、护理句、表单说明可见。`#inquiry-form` 仍在；字段和 `https://formsubmit.co/84de44e7c16b22f5baa08c38d60c1461` 未改；按钮仍是 “Send inquiry →”。
+  - 首页首屏 “Submit Your Inquiry” 进入 `/inquiry/#inquiry-form`，表单在页面上。About 的 “Submit Your Inquiry” 同样进入该锚点。定制页 “Get a custom quote” 滚到本页 `#inquiry-form`（平滑滚动结束后表单顶到视口）。叠戴页 “Tell Us What You Need” 指向本页 `#inquiry-form`。**没有提交表单，没有发信。**
+
+### 还没做 / 不要误读
+- 正式站仍是修之前的版本，叠戴页线上仍会白屏，直到这个分支合并进 main 且 Pages 部署成功。
+- 首页时间轴、`/factory/`、`/ketang/`、`/how-it-works/` 不在本包，没有改。叠戴页正文里原有的 exclusive overseas agent 一句也没改。
+- 首页 About 右侧仍是既有官方整徽（徽上原有 Factory Direct 字样）。没有新生成图片，也没有用视频帧。
+- 表单能打开不等于询盘已经送达。这次没有做线上提交验收。
+
+---
+
 ## 2026-11-18 · 每日发文：/beaded-phone-charms-straps/ 天然石手机挂与手机挂绳落地页
 
 执行：Grok Bot（每日发文例程，日历 11-18 项）。提交 `c4b4c1e`，约 09:08 Asia/Shanghai 线上确认 200。
