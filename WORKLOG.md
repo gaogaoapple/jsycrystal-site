@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-11-19 · 每日发文：/mixed-metal-beaded-bracelets/ 混金属天然石串珠手链落地页
+
+执行：Grok Bot（每日发文例程，日历 11-19 项）。提交 `c19772b`，约 09:15 Asia/Shanghai 线上确认 200。
+
+### 改了什么
+1. **新页** /mixed-metal-beaded-bracelets/（静态）。目标词 mixed metal beaded bracelets / gold beaded bracelet wholesale，市场 US（CA/AU/GB 通用）。Title「Mixed Metal Beaded Bracelets, Wholesale」；H1 对准天然石搭配不锈钢或黄铜镀金。内容保持通用（Apple 尚未确认新线细节，不写具体款名或系列）：可做的组合（天然石 + 不锈钢；天然石 + 黄铜镀金的金感批发款；同一订单可混两种金属和全石手链）；**护理与金属口径**如实写：天然石远离汗液、泳池和长时间浸水，**不写天然石防水或防汗**；不锈钢配件可写防水、不褪色；黄铜镀金写防锈和防水，不写不褪色；报价和样品上标明所用金属。规格表、one-stop、4 类买家、6 步流程、询价清单、可塘位置、10 条 FAQ、页内表单（`_subject` = Website inquiry – Mixed metal beaded bracelets）、CTA「Tell Us What You Need」。金感批发款写明是天然石加黄铜镀金配件，不是实金。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长沿用站内口径。不写 925 银/珍珠、ethical 类、WhatsApp/电话、Apple 人名、儿童、欧盟法规、圣诞截单、24 小时回复。
+3. **图片**：仓库里没有合适的混金属实拍或概念图，本页未放产品图；og/twitter 图用官方 logo。
+4. **内链**：静态页页脚与部分 React 页中部链接补 Mixed metal beaded bracelets；/wholesale-crystal-bracelets/ 正文与 Related、/wholesale-stackable-bracelet-sets/ 和 /tiger-eye-bracelets-wholesale/ 的 Related 回链本页。sitemap 37 个 URL（优先级 0.9）；llms.txt 已加入。
+5. **JS 版本**：在刚合并的 `site-20261118b.js` 基础上新建 `assets/site-20261119.js`（STATIC_ROUTES 加新路径），全站引用已换；20261118b 加入回滚替换表并保留。site-home 未改（首页仍走已批准的 20261118 包）。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1；script 闭合为字面量 `</script>`。
+- 线上：/mixed-metal-beaded-bracelets/、site-20261119.js、sitemap、llms.txt 均 200；title 正确；线上 sitemap 与 llms.txt 已含新页。
+- 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的配件页相同）。
+
+### 待办
+- GSC：对 /mixed-metal-beaded-bracelets/ 请求编入索引。
+- 明天 11-20：/custom-beaded-chains-straps/（包链、手机链、眼镜链、挂绳；内链包挂/钥匙扣和手机挂页）。
+- 混金属新品若 Apple 确认了具体款式或系列，再回来补细节和实拍，不必另开新 URL。
+
+---
+
 ## 2026-11-18 · 叠戴页白屏修复 + 已批准可塘文案（分支，未上线）
 
 执行：本分支 `cursor/fix-stackable-ketang-copy-8167`。**没有合并，没有推 main，正式站尚未更新。** 本地预览不能当成已上线。
