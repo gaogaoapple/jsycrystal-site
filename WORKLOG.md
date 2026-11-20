@@ -8,7 +8,7 @@
 
 ## 2026-11-20 · 每日发文：/custom-beaded-chains-straps/ 定制串珠包链、手机链、眼镜链与挂绳落地页
 
-执行：Grok Bot（每日发文例程，日历 11-20 项）。提交待推送后线上确认。
+执行：Grok Bot（每日发文例程，日历 11-20 项）。提交 7bb1fee，约 09:13 Asia/Shanghai 线上确认 200。
 
 ### 改了什么
 1. **新页** /custom-beaded-chains-straps/（静态）。目标词 beaded bag strap / phone chain / glasses chain / beaded lanyard，市场 US（CA/AU/GB 通用）。Title「Custom Beaded Chains and Straps, Wholesale」；H1 对准包链、手机链、眼镜链和挂绳。与已上线的短款包挂、钥匙扣和手机挂/短挂绳分开写：本页是更长的链和带；短款手机挂与腕式/短挂绳仍指向 /beaded-phone-charms-straps/。正文写明长度和扣具在效果图和样品上确认；请买家附上包具、手机壳、眼镜或卡扣照片；**包链若需承重，询价时说明，不把每条串珠带都当成承重肩带**。护理口径：天然石远离汗液、泳池和长时间浸水，**不写天然石防水或防汗**；眼镜链和挂绳贴皮肤、手机链常握在手里，建议尽量保持珠子干燥，运动或游泳前取下；不锈钢配件可写防水、不褪色；黄铜镀金写防锈和防水，不写不褪色。规格表、one-stop、4 类买家、6 步流程、询价清单、可塘位置、10 条 FAQ、页内表单（`_subject` = Website inquiry – Beaded chains & straps）、CTA「Tell Us What You Need」。
@@ -19,7 +19,7 @@
 
 ### 验证
 - `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1；script 闭合为字面量 `</script>`。
-- 线上确认见推送后复查。
+- 线上：/custom-beaded-chains-straps/、site-20261120.js、sitemap、llms.txt 均 200；title 正确；线上 sitemap 与 llms.txt 已含新页。
 - 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的配件页相同）。
 
 ### 待办
