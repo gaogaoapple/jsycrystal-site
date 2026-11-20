@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-11-20 · 每日发文：/custom-beaded-chains-straps/ 定制串珠包链、手机链、眼镜链与挂绳落地页
+
+执行：Grok Bot（每日发文例程，日历 11-20 项）。提交待推送后线上确认。
+
+### 改了什么
+1. **新页** /custom-beaded-chains-straps/（静态）。目标词 beaded bag strap / phone chain / glasses chain / beaded lanyard，市场 US（CA/AU/GB 通用）。Title「Custom Beaded Chains and Straps, Wholesale」；H1 对准包链、手机链、眼镜链和挂绳。与已上线的短款包挂、钥匙扣和手机挂/短挂绳分开写：本页是更长的链和带；短款手机挂与腕式/短挂绳仍指向 /beaded-phone-charms-straps/。正文写明长度和扣具在效果图和样品上确认；请买家附上包具、手机壳、眼镜或卡扣照片；**包链若需承重，询价时说明，不把每条串珠带都当成承重肩带**。护理口径：天然石远离汗液、泳池和长时间浸水，**不写天然石防水或防汗**；眼镜链和挂绳贴皮肤、手机链常握在手里，建议尽量保持珠子干燥，运动或游泳前取下；不锈钢配件可写防水、不褪色；黄铜镀金写防锈和防水，不写不褪色。规格表、one-stop、4 类买家、6 步流程、询价清单、可塘位置、10 条 FAQ、页内表单（`_subject` = Website inquiry – Beaded chains & straps）、CTA「Tell Us What You Need」。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长沿用站内口径。不写 925 银/珍珠、ethical 类、WhatsApp/电话、Apple 人名、儿童、欧盟法规、圣诞截单、24 小时回复。
+3. **图片**：仓库里没有合适的包链、眼镜链或挂绳实拍或概念图，本页未放产品图；og/twitter 图用官方 logo。
+4. **内链**：静态页页脚补 Beaded chains & straps（紧接 Phone charms & straps 之后）；部分 React 页底部产品链同步补上。/custom-beaded-bag-charms-keychains/ 与 /beaded-phone-charms-straps/ 正文、规格表、Related（包挂页 FAQ 与 JSON-LD 一并）回链本页；/crystal-car-charms/ 与 /wholesale-crystal-bracelets/ 的 Related 也已加上。sitemap 38 个 URL（优先级 0.9）；llms.txt 已加入。
+5. **JS 版本**：在 `site-20261119.js` 基础上新建 `assets/site-20261120.js`（STATIC_ROUTES 加新路径），全站引用已换；20261119 加入回滚替换表并保留。site-home 未改。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1；script 闭合为字面量 `</script>`。
+- 线上确认见推送后复查。
+- 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的配件页相同）。
+
+### 待办
+- GSC：对 /custom-beaded-chains-straps/ 请求编入索引。
+- 明天 11-21：/personalized-initial-letter-bracelets/（个性化首字母/字母珠手链；B2B，页内表单，自有 `_subject`；无价格、无目录）。
+
+---
+
+
 ## 2026-11-19 · 每日发文：/mixed-metal-beaded-bracelets/ 混金属天然石串珠手链落地页
 
 执行：Grok Bot（每日发文例程，日历 11-19 项）。提交 `c19772b`，约 09:15 Asia/Shanghai 线上确认 200。
