@@ -6,6 +6,47 @@
 
 ---
 
+## 2026-11-22 · 定制手链页首屏与询价负担（分支，未合并、未部署）
+
+执行：Apple 2026-11-22 要求继续优化询盘，优先 `/custom-gemstone-bracelet/`，不要再堆新主题页。本分支 `cursor/custom-bracelet-hero-8167`，基于当时最新 `main`（`6d7fa8e`，已含 11-19 混金属、11-20 包链、11-21 字母珠页）。**没有合并，没有推 main，正式站还是旧版。**
+
+### GSC 基线（11-21 读取 final，PT 日期 10-22～11-18）
+- 全站：204 曝光，3 点击，平均排名 17.14。
+- 美国：141 曝光，3 点击，平均排名 19.27。
+- `/custom-gemstone-bracelet/`（带斜杠，canonical）：73 曝光，0 点击，平均 11.04。
+- 无斜杠 URL：41 曝光，0 点击，平均 22.02。canonical 仍是带斜杠，这次不改 URL。
+- 查询：custom gemstone bracelet 16 曝光、平均 11.88；custom stone-set bracelet manufacturer 31 曝光、平均 12.65。
+- 这些数字只是改前基线。**不能当成改完就会有点击或询盘。** 下次比较同一页带斜杠的曝光、点击、平均排名，以及上面两个查询。没有新数据之前不要写“已经变好”。
+
+### 改了什么
+1. **搜索标题和描述**（URL / canonical 不动）：title 改为 “Custom Gemstone Bracelets for Crystal Shops | JSY Crystal”。描述改成给水晶店、精品店、礼品店的一句采购说明，10 件可混只指成品手链，吊牌和包装按设计确认。没有写价格、manufacturer、固定交期。
+2. **首屏**：去掉长段落和右侧小圆图。左边是裁掉 “JSY / M-D3” 和 “Sage Companions” 字样后的 M-D3 白底双条概念图（`media/custom-gemstone-bracelet-green-stone-concept.webp`，约 21KB，1200×566，`fetchpriority=high`，不 lazy）。旁边短标题 “Custom gemstone bracelets”、一句给店主的利益、一个 “Get a custom quote”。图下写明 Concept illustration，不是客户订单或已出货，也不能凭图确认金属等级或产能。Lifestyle 双人礼赠图人物压过产品，没有放上页面。SOURCES 里未过检的包装图没有用。没有重画 logo。
+3. **长内容折叠**：规格表、护理、流程、石种、询价清单、FAQ 仍在 HTML 里，默认收起。FAQ 里 “run QC” 和 “Quality checks (QC)” 从本页拿掉，不新写质检细则。“target price” 从本页拿掉。
+4. **询价**：只改这一页表单的提示。必填仍是 email 和 message。占位改成店型、风格、大概数量即可。买家类型等选填项收进 “optional”。FormSubmit 地址、`_next`、`_captcha`、`_honey`、字段名都没改。没有上传控件，页面也不说可以上传。没有发信。
+
+### 表单调查（只读，这次没有提交）
+- 定制页、`/inquiry/`、`/contact/`、车挂页都是 `POST https://formsubmit.co/84de44e7c16b22f5baa08c38d60c1461`。隐藏字段有绝对地址 `_next=https://jsycrystal.com/thank-you/` 和 `_captcha=false`。定制页必填只有 email、message。
+- **前端配置**有证据：源码和这次浏览器里读到的 form action、`_next`、必填字段一致。
+- **成功跳转**不能写成已经稳定到本站感谢页。仓库日记里有几次 curl/表单测试记录 302 到 `/thank-you/`。Apple 指出的车挂测试 `TEST – JSY site check` / `JSY-CAR-20261116-0620PST` 提交后到的是 FormSubmit 通用成功页，不是本站感谢页。车挂页源码同样写了 `_next`。所以“代码要求去感谢页”和“那次浏览器实际落到 FormSubmit 页”是两件事。
+- **实际收件没有证据。** marketing@ 邮箱这次没有打开，不能把 HTTP 200、表单看得见、或感谢页文案当成邮件已收到。
+
+### 验证（本地预览，不是线上）
+- `python3 tools/jsy_site.py check`：problems 0。
+- `node --check assets/site-20261121.js`：通过。这次没有改这个 JS。
+- Headless Chrome，桌面 1280×900、手机 390×844：首屏产品图 naturalWidth 1200，不 lazy；H1 和询价按钮可见；控制台 error 为 0；横向溢出 0。规格折叠可打开并看到表格。“Get a custom quote” 滚到 `#inquiry-form`，表单在视口内。没有提交。
+
+### 共享模板里仍会重复、这次没改的口径
+- `assets/static-shell-20261109.css` 把静态页首屏图收成最大 320px、手机 180px 的圆图。本页用更高优先级样式盖过；其他静态页还是旧样子。
+- 多数页页头仍是带 Factory Direct 字样的整徽。
+- 企业礼品、车挂、包挂、包链、旅游团等页仍写 15–30 天、快递 7–10 天、海运 25–35 天，以及 “exclusive overseas agent” / “check quality” / mockups。首页时间轴也还在。
+- 没有包链、手机挂、眼镜链的对应产品图，这次没有用手链图去冒充。
+
+### 下次看什么
+- GSC 同一口径：带斜杠定制页的曝光、点击、平均排名；查询 custom gemstone bracelet 与 custom stone-set bracelet manufacturer。和上面的 10-22～11-18 基线比，不要在没有新数据时写改善。
+- 另验：FormSubmit 实际跳到哪里，以及 marketing@ 是否收到。这次没发信。
+
+---
+
 ## 2026-11-21 · 每日发文：/personalized-initial-letter-bracelets/ 个性化首字母与字母珠手链落地页
 
 执行：Grok Bot（每日发文例程，日历 11-21 项）。提交 311fe0e，约 09:20 Asia/Shanghai 线上确认 200。
