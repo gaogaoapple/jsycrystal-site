@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-11-21 · 每日发文：/personalized-initial-letter-bracelets/ 个性化首字母与字母珠手链落地页
+
+执行：Grok Bot（每日发文例程，日历 11-21 项）。提交 311fe0e，约 09:20 Asia/Shanghai 线上确认 200。
+
+### 改了什么
+1. **新页** /personalized-initial-letter-bracelets/（静态）。目标词 personalized initial bracelet / letter bead bracelet wholesale，市场 US（CA/AU/GB 通用）。Title「Personalized Initial and Letter Bracelets, Wholesale」；H1 对准天然石搭配首字母吊坠、字母珠或刻字吊牌。三种做法写清楚：单字母吊坠、字母珠拼名字或短词、吊牌刻字母；字母/名字随询价提供，在效果图和样品上确认拼写后再生产；字母吊坠和刻字吊牌可做不锈钢或黄铜镀金，其他字母珠材质可询，不编造具体珠材。护理口径：天然石远离汗液、泳池和长时间浸水，**不写天然石防水或防汗**；不锈钢配件可写防水、不褪色；黄铜镀金写防锈和防水，不写不褪色。规格表、one-stop、4 类买家（店铺、精品店、贴牌品牌、成人礼品/批发；不写儿童款）、6 步流程（含拼写核对）、询价清单、可塘位置、10 条 FAQ、页内表单（`_subject` = Website inquiry – Initial & letter bracelets）、CTA「Tell Us What You Need」。
+2. **红线**：无价格/价格区间/目录；JSON-LD 仅 Organization / Service / FAQPage / BreadcrumbList（无 offers/priceRange）。MOQ、交期、运输时长沿用站内口径。不写 925 银/珍珠、ethical 类、WhatsApp/电话、Apple 人名、儿童、欧盟法规、圣诞截单、24 小时回复。
+3. **图片**：仓库里没有合适的首字母或字母珠手链实拍或概念图，本页未放产品图；og/twitter 图用官方 logo。
+4. **内链**：静态页页脚与 React 页 raw footer 补 Initial & letter bracelets（紧接 Mixed metal beaded bracelets 之后）；同时把此前已上线、但生成脚本里漏掉的 Mixed metal 与 Beaded chains & straps 一并列回 footer() / raw_footer()，避免再跑 shell 时被冲掉。/wholesale-crystal-bracelets/、/mixed-metal-beaded-bracelets/、/wholesale-stackable-bracelet-sets/、/tiger-eye-bracelets-wholesale/、/custom-gemstone-bracelet/、/birthstone-bracelet-sets/ 的 Related 已回链本页。sitemap 39 个 URL（优先级 0.9）；llms.txt 已加入。
+5. **JS 版本**：在 `site-20261120.js` 基础上新建 `assets/site-20261121.js`（STATIC_ROUTES 加新路径），全站引用已换；20261120 加入回滚替换表并保留。site-home 未改。
+
+### 验证
+- `python3 tools/jsy_site.py check`：problems 0；新页 JSON-LD 可解析，1 个 H1；script 闭合为字面量 `</script>`。
+- 线上：/personalized-initial-letter-bracelets/、site-20261121.js、sitemap、llms.txt 均 200；title 正确；线上 sitemap 与 llms.txt 已含新页。
+- 本例程要求不发邮件，未提交测试询盘（表单结构与已验证的手链落地页相同）。
+
+### 待办
+- GSC：对 /personalized-initial-letter-bracelets/ 请求编入索引。
+- 明天 11-22：/pilates-yoga-studio-gifts/（普拉提/瑜伽工作室定制礼；写之前先调研工作室老板的真实用语；出汗场景用不锈钢，天然石远离汗液；页内表单，自有 `_subject`；无价格、无目录；内链配件页）。
+
+---
+
 ## 2026-11-20 · 每日发文：/custom-beaded-chains-straps/ 定制串珠包链、手机链、眼镜链与挂绳落地页
 
 执行：Grok Bot（每日发文例程，日历 11-20 项）。提交 7bb1fee，约 09:13 Asia/Shanghai 线上确认 200。
