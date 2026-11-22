@@ -22,7 +22,8 @@
 1. **搜索标题和描述**（URL / canonical 不动）：title 改为 “Custom Gemstone Bracelets for Crystal Shops | JSY Crystal”。描述改成给水晶店、精品店、礼品店的一句采购说明，10 件可混只指成品手链，吊牌和包装按设计确认。没有写价格、manufacturer、固定交期。
 2. **首屏**：去掉长段落和右侧小圆图。左边是裁掉 “JSY / M-D3” 和 “Sage Companions” 字样后的 M-D3 白底双条概念图（`media/custom-gemstone-bracelet-green-stone-concept.webp`，约 21KB，1200×566，`fetchpriority=high`，不 lazy）。旁边短标题 “Custom gemstone bracelets”、一句给店主的利益、一个 “Get a custom quote”。图下写明 Concept illustration，不是客户订单或已出货，也不能凭图确认金属等级或产能。Lifestyle 双人礼赠图人物压过产品，没有放上页面。SOURCES 里未过检的包装图没有用。没有重画 logo。
 3. **长内容折叠**：规格表、护理、流程、石种、询价清单、FAQ 仍在 HTML 里，默认收起。FAQ 里 “run QC” 和 “Quality checks (QC)” 从本页拿掉，不新写质检细则。“target price” 从本页拿掉。
-4. **询价**：只改这一页表单的提示。必填仍是 email 和 message。占位改成店型、风格、大概数量即可。买家类型等选填项收进 “optional”。FormSubmit 地址、`_next`、`_captcha`、`_honey`、字段名都没改。没有上传控件，页面也不说可以上传。没有发信。
+4. **询价**：必填仍只有 email 和 message。占位改成店型、风格、大概数量即可。选填里去掉和正文重复的 Quantity band，保留一个可选的 Estimated quantity，字段含义不变。说明参考照片请发到 marketing@jsycrystal.com，表单不能上传文件。FormSubmit 地址、`_next`、`_captcha`、`_honey` 没改。没有发信。概念图说明缩短，仍写明不是实拍、不能证明金属。本页藏起重复的黑色次导航。
+5. **锚点遮挡**：`header.jsx-hd` 是 `position:sticky; top:0`。点到 `#inquiry-form` 时浏览器把表单顶到视口 0，邮箱标签和输入框被导航盖住。实测改前桌面导航底 76px、邮箱顶 29px，盖住约 47px；窄屏导航底 69px、盖住约 40px。字母珠页和包链页的按钮点击、直接打开 `#inquiry-form` 都一样。车挂页同一模板也中。修复在 `assets/site-20261122.js`：按当前粘性导航的实际高度给表单 `scroll-margin-top`（高度 + 16px），字体、图片和窗口变化后再量一次；若邮箱仍被挡住或锚点落地后表单被挤离导航，就重新滚到表单。静态页在 `ensureSubnav` 之后调用，所以导航高度变化也能跟上。全站引用这个脚本的页面一起生效，没有改各页正文。
 
 ### 表单调查（只读，这次没有提交）
 - 定制页、`/inquiry/`、`/contact/`、车挂页都是 `POST https://formsubmit.co/84de44e7c16b22f5baa08c38d60c1461`。隐藏字段有绝对地址 `_next=https://jsycrystal.com/thank-you/` 和 `_captcha=false`。定制页必填只有 email、message。
@@ -32,8 +33,8 @@
 
 ### 验证（本地预览，不是线上）
 - `python3 tools/jsy_site.py check`：problems 0。
-- `node --check assets/site-20261121.js`：通过。这次没有改这个 JS。
-- Headless Chrome，桌面 1280×900、手机 390×844：首屏产品图 naturalWidth 1200，不 lazy；H1 和询价按钮可见；控制台 error 为 0；横向溢出 0。规格折叠可打开并看到表格。“Get a custom quote” 滚到 `#inquiry-form`，表单在视口内。没有提交。
+- `node --check assets/site-20261122.js`：通过。
+- Headless Chrome，桌面 1280×900、窄屏 390×844。字母珠页和包链页各测了按钮点击和直接打开 `#inquiry-form`：表单顶到导航底的间隔都是 16px，邮箱输入框完整在导航下方（例如桌面邮箱顶 121、底 171，导航底 76）。控制台 error 为 0，横向溢出 0。车挂页抽查同样通过。定制页首屏图 naturalWidth 1200、不 lazy，折叠可打开，询价按钮滚到表单。没有提交。`/thank-you/` 仍配置为表单 `_next`，标题是 Thank You — Inquiry Received。这只说明页面存在，不说明邮件已收到。
 
 ### 共享模板里仍会重复、这次没改的口径
 - `assets/static-shell-20261109.css` 把静态页首屏图收成最大 320px、手机 180px 的圆图。本页用更高优先级样式盖过；其他静态页还是旧样子。

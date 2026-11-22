@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jsycrystal.com"
 EMAIL = "marketing@jsycrystal.com"
-SITE_JS = "/assets/site-20261121.js"
+SITE_JS = "/assets/site-20261122.js"
 SITE_HOME_JS = "/assets/site-home-20261118.js"
 STATIC_CSS = "/assets/static-shell-20261109.css"
 LOGO = "/media/jsy-crystal-jewelry-logo-128.webp"
@@ -171,6 +171,7 @@ def clean():
             "/assets/site-20261120.js",
             "/assets/site-20261119.js",
             "/assets/site-20261118b.js",
+            "/assets/site-20261121.js",
             "/assets/site-20261118.js",
             "/assets/site-20261117.js",
             "/assets/site-20261116b.js",
