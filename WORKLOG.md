@@ -8,7 +8,7 @@
 
 ## 2026-11-22 · 定制手链页首屏与询价负担（分支，未合并、未部署）
 
-执行：Apple 2026-11-22 要求继续优化询盘，优先 `/custom-gemstone-bracelet/`，不要再堆新主题页。本分支 `cursor/custom-bracelet-hero-8167`，基于当时最新 `main`（`6d7fa8e`，已含 11-19 混金属、11-20 包链、11-21 字母珠页）。**没有合并，没有推 main，正式站还是旧版。**
+执行：Apple 2026-11-22 要求继续优化询盘，优先 `/custom-gemstone-bracelet/`，不要再堆新主题页。本分支 `cursor/custom-bracelet-hero-8167`，基于当时最新 `main`（`6d7fa8e`，已含 11-19 混金属、11-20 包链、11-21 字母珠页）。已于 2026-11-22 合并进 main 并完成 Pages 部署。见下面的线上核对。
 
 ### GSC 基线（11-21 读取 final，PT 日期 10-22～11-18）
 - 全站：204 曝光，3 点击，平均排名 17.14。
@@ -41,6 +41,10 @@
 - 多数页页头仍是带 Factory Direct 字样的整徽。
 - 企业礼品、车挂、包挂、包链、旅游团等页仍写 15–30 天、快递 7–10 天、海运 25–35 天，以及 “exclusive overseas agent” / “check quality” / mockups。首页时间轴也还在。
 - 没有包链、手机挂、眼镜链的对应产品图，这次没有用手链图去冒充。
+
+### 线上核对（正式站，不是本地）
+合并提交 `58a69902f5c75d3029098073aa41164693531fe3`。GitHub Pages run https://github.com/gaogaoapple/jsycrystal-site/actions/runs/44982689639 ，`conclusion: success`，对应这个 SHA。
+桌面 1280×900 和窄屏 390×844，字母珠页与包链页的按钮点击、直接打开 `#inquiry-form` 都是：导航底到表单顶 16px，邮箱输入框完整在导航下方，控制台 error 0，无横向溢出。定制页线上标题、概念图（1200 宽、不 lazy）、折叠和表单地址与分支一致。没有提交测试邮件，没有登录阿里邮箱。收件仍未验证。
 
 ### 下次看什么
 - GSC 同一口径：带斜杠定制页的曝光、点击、平均排名；查询 custom gemstone bracelet 与 custom stone-set bracelet manufacturer。和上面的 10-22～11-18 基线比，不要在没有新数据时写改善。
