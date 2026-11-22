@@ -6,6 +6,36 @@
 
 ---
 
+## 2026-11-22 · 混金属手链页 Dot 概念图上线
+
+执行：用户要求从 Notion 或邮箱发件箱里找 Dot 生成的概念图，放到网站上。本轮只改 `/mixed-metal-beaded-bracelets/` 的必要图文和本日记。首字母页、包链页没有准确的对应图，没有改。发件箱未登录，没有再请求登录。
+
+### 素材来源
+- Notion 页：https://app.notion.com/p/4157b006575a81baa502efbf9687095b （Dot 混金属概念图）。
+- 用了三张已经目视检查过的概念图，压成 webp，宽高写在 `img` 上：
+  - `media/mixed-metal-beaded-bracelets-smoky-quartz-concept.webp`：烟晶 + 金银色珠，1000×1000，约 25KB。首屏产品图，`fetchpriority=high`，不 lazy。
+  - `media/mixed-metal-beaded-bracelets-clear-quartz-concept.webp`：白水晶 + 金银色珠，1000×1000，约 23KB。产品卡，lazy。
+  - `media/mixed-metal-beaded-bracelets-gift-concept.webp`：人物礼赠横图，1400×788，约 110KB。放在产品卡旁边作辅助，lazy。人物不进首屏，也不是小圆图。
+- 图上原有 “Concept illustration” 字样保留。页内说明再写一遍：不是实拍、不是客户订单、不能证明金属。礼赠图上的 Sage Companions 是设计名，不是客户；盒子上的 JSY 是本品牌日用标记，不是买家 logo。没有重画，没有拿掉概念属性，没有用无关品牌或客户 logo。
+- 没有用包装特写，没有客户案例，没有用手链图去填首字母页或包链页。
+
+### 改了什么
+1. 原来的纯文字首屏改成大产品图、短标题、一句买家利益、一个 “Request a quote”。利益句只说可塘一个团队协调石材、金属风格和品牌包装，成品手链 10 件起可混。吊牌和礼盒最低量仍在规格和 FAQ 里，按设计确认。
+2. 本页去掉 15–30 天、快递 7–10 天、海运 25–35 天，以及 “exclusive overseas agent”、质检步骤和 “run QC”。时间和样品费改成随订单确认。不写免费 mockup 或免费样品。不新编工艺。
+3. 天然石仍写不防水、不防汗。不锈钢和黄铜镀金的防水表述保留，并写明只适用于金属配件，不延伸到整条成品。
+4. 长规格、护理、流程、FAQ 收进折叠，HTML 还在。本页藏起和页头重复的黑色次导航，避免手机首屏被挤掉标题和按钮。共享圆图样式只在本页盖过。
+5. 询价表单地址、字段、`_next` 没动。全站锚点间距（导航高度 + 16px）没改。
+
+### 验证（合并前，本地）
+- `python3 tools/jsy_site.py check`：problems 0。
+- `node --check assets/site-20261122.js`：通过（脚本本轮未改）。
+- Headless Chrome 1280×900 与 390×844：首屏产品图加载（1000 宽、不 lazy），按钮和直接打开 `#inquiry-form` 时表单顶到导航底 16px，邮箱完整可见。桌面邮箱顶 121、底 171，导航底 76；窄屏邮箱顶 114、底 164，导航底 69。折叠可打开。本页站内链接本地都是 200。控制台 error 0，横向溢出 0。没有提交表单。
+
+### 口径
+JSY 在可塘协调合作工厂，不是自有厂。没有写固定交期、公开价格、exclusive overseas agent、疗效、ethical、环保或溯源。收件仍未验证：没有登录邮箱，没有发测试信。
+
+---
+
 ## 2026-11-22 · 定制手链页首屏与询价负担（分支，未合并、未部署）
 
 执行：Apple 2026-11-22 要求继续优化询盘，优先 `/custom-gemstone-bracelet/`，不要再堆新主题页。本分支 `cursor/custom-bracelet-hero-8167`，基于当时最新 `main`（`6d7fa8e`，已含 11-19 混金属、11-20 包链、11-21 字母珠页）。已于 2026-11-22 合并进 main 并完成 Pages 部署。见下面的线上核对。

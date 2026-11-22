@@ -9,7 +9,30 @@
 <link rel="icon" type="image/svg+xml" href="/manus-storage/jsy-logo_b2b31f64.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="/media/mixed-metal-beaded-bracelets-smoky-quartz-concept.webp" fetchpriority="high" />
 <link rel="stylesheet" href="/assets/static-shell-20261109.css" />
+<style>
+.mm-hero .jsx-sec{grid-template-columns:minmax(0,1.05fr) minmax(260px,.9fr);gap:28px;align-items:center;padding-top:32px;padding-bottom:28px}
+.mm-hero h1{font-size:clamp(2rem,4vw,3.05rem);line-height:1.05;margin:0 0 12px}
+.mm-hero .jsx-lead{font-size:1.05rem;line-height:1.45;margin:0;max-width:34rem;color:#f5f5f4}
+body:has(.mm-hero) #jsy-subnav{display:none}
+.mm-hero img.mm-photo{width:100%;max-width:none;height:auto;border-radius:16px;background:#fff;display:block}
+.mm-hero .jsx-concept,.mm-note{margin:8px 0 0;font-size:.8rem;line-height:1.4;color:#57534e}
+.mm-hero .jsx-concept{color:#d6d3d1}
+.mm-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+.mm-grid img{width:100%;height:auto;border-radius:16px;background:#fff;display:block}
+.mm-grid figcaption{margin-top:8px}
+.jsx-fold{background:#fff;border:1px solid #e7e5e4;border-radius:14px;padding:4px 18px 8px;margin:12px auto;max-width:1132px}
+.jsx-fold>summary{cursor:pointer;font-family:"Cormorant Garamond",serif;font-size:clamp(1.35rem,3vw,1.7rem);color:#1c1917;padding:14px 0}
+.jsx-fold[open]>summary{border-bottom:1px solid #e7e5e4;margin-bottom:8px}
+@media (max-width:760px){
+  .mm-hero .jsx-sec{grid-template-columns:1fr;padding-top:12px;padding-bottom:16px}
+  .mm-hero .mm-visual{order:-1}
+  .mm-hero img.mm-photo{max-height:300px;width:auto;margin:0 auto}
+  .mm-hero h1{font-size:2rem}
+  .mm-grid{grid-template-columns:1fr}
+}
+</style>
 <script type="module" crossorigin src="/assets/site-20261122.js"></script>
 <meta property="og:title" content="Mixed Metal Beaded Bracelets, Wholesale | JSY Crystal" />
 <meta property="og:description" content="Wholesale mixed metal beaded bracelets in natural stone with stainless steel or gold-plated brass. Gold beaded bracelet styles from 10 pieces mixed. Quoted per inquiry." />
@@ -94,7 +117,7 @@
       "name": "Are mixed metal beaded bracelets waterproof or sweat-proof?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The natural stone is not. Natural stone should be kept away from sweat, pool water and long water exposure. We do not describe natural stone as waterproof or sweat-proof. Stainless steel parts are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, but we do not describe them as tarnish-free."
+        "text": "The natural stone is not. Natural stone should be kept away from sweat, pool water and long water exposure. We do not describe natural stone as waterproof or sweat-proof. Stainless steel parts are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, but we do not describe them as tarnish-free. Those descriptions apply to the metal parts only, not to the finished bracelet."
       }
     },
     {
@@ -110,7 +133,7 @@
       "name": "Can you add our logo or shop name?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Your logo or name can go on a small tag or charm on the bracelet, a hang tag, a printed card or a gift box. Artwork is reviewed with your mockup and sample before production."
+        "text": "Yes. Your logo or name can go on a small tag or charm on the bracelet, a hang tag, a printed card or a gift box. Artwork is confirmed with the design. Minimums for tags and boxes are confirmed in the quote."
       }
     },
     {
@@ -118,7 +141,7 @@
       "name": "Can I order a sample first?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. After we agree a mockup, we can send a sample with photos and video. Sample fees and shipping are quoted per project, and if any of the sample fee is credited against your bulk order, the quotation says so."
+        "text": "If a sample is needed, fees and shipping are quoted for your project."
       }
     },
     {
@@ -126,7 +149,7 @@
       "name": "How long does a mixed metal bracelet order take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bulk production usually runs 15–30 days after you approve the sample, depending on quantity and how much is customized. Shipping is added on top: about 7–10 days by DHL or FedEx, or about 25–35 days by sea freight."
+        "text": "Production and shipping times are confirmed with your order."
       }
     },
     {
@@ -134,7 +157,7 @@
       "name": "Do I need separate suppliers for beads, metal parts and boxes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. We coordinate beads, metal parts, cord, tags, boxes, cards and packaging across our partner workshops in Ketang, Shanwei, run QC, and ship everything together. You deal with one team from quote to delivery."
+        "text": "No. JSY coordinates stone, metal parts, tags and packing with partner factories in Ketang. JSY is not a self-owned factory. You work with one team on the quote and the shipment. Tag and box minimums are confirmed with the design."
       }
     }
   ]
@@ -167,17 +190,32 @@
 <body>
 <div id="root"><!--jsy:header--><header class="jsx-hd"><div class="jsx-hd-in"><a class="jsx-logo" href="/"><img src="/media/jsy-crystal-jewelry-logo-128.webp" alt="JSY Crystal Jewelry logo" width="48" height="48"><span>JSY Crystal Jewelry<small>One-stop custom bracelet partner</small></span></a><nav class="jsx-nav" aria-label="Main"><a href="/travel-group-gifts/">Travel Groups</a><a href="/corporate-gifts/">Corporate Gifts</a><a href="/custom-gemstone-bracelet/">Custom Bracelets</a><a href="/shop/">Wholesale</a><a href="/private-label-jewelry/">Private Label</a><a href="/contact/">Contact</a></nav><a class="jsx-cta jsx-cta-need" href="/inquiry/?intent=custom">Tell Us What You Need</a><a class="jsx-cta" href="/inquiry/">Submit Your Inquiry</a><details class="jsx-mnav"><summary>Menu</summary><nav aria-label="Mobile"><a href="/">Home</a><a href="/travel-group-gifts/">Travel Groups</a><a href="/corporate-gifts/">Corporate Gifts</a><a href="/custom-gemstone-bracelet/">Custom Bracelets</a><a href="/shop/">Wholesale</a><a href="/private-label-jewelry/">Private Label</a><a href="/contact/">Contact</a><a href="/inquiry/?intent=custom">Tell Us What You Need</a><a href="/inquiry/">Submit Your Inquiry</a><a href="mailto:marketing@jsycrystal.com">marketing@jsycrystal.com</a></nav></details></div></header><!--/jsy:header-->
 
-<section class="jsx-hero"><div class="jsx-sec">
-<div><p class="jsx-eyebrow">Wholesale and custom · Natural stone · Small first orders</p>
-<h1>Mixed Metal Beaded Bracelets, <em>natural stone with stainless steel or gold-plated brass</em></h1>
-<p>Bracelets that pair natural-stone beads with metal parts — stainless steel or gold-plated brass — for crystal shops, boutiques, gift shops and brands. Mix stones and metal finishes in one small order, add a logo tag or a gift box, and have beads, metal parts and packaging come through one team in Shanwei.</p>
-<div class="jsx-btns"><a class="jsx-btn" href="#inquiry-form">Tell Us What You Need</a><a class="jsx-btn" style="background:transparent;color:inherit;border:1px solid currentColor" href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets</a></div>
-<ul class="jsx-facts"><li>Minimum 10 pieces per order, mixed</li><li>Stainless steel or gold-plated brass</li><li>Logo tags, cards and gift boxes</li><li>Prompt replies</li></ul></div>
+<section class="jsx-hero mm-hero"><div class="jsx-sec">
+<figure class="mm-visual" style="margin:0">
+<img class="mm-photo" src="/media/mixed-metal-beaded-bracelets-smoky-quartz-concept.webp" alt="Concept illustration: smoky quartz bracelet with gold- and silver-tone metal beads. Not a product photo." width="1000" height="1000" fetchpriority="high" decoding="async">
+<figcaption class="jsx-concept">Concept illustration, not a product photo, a customer order, or proof of the metal.</figcaption>
+</figure>
+<div>
+<p class="jsx-eyebrow">For crystal, boutique and gift shops</p>
+<h1>Mixed metal beaded bracelets</h1>
+<p class="jsx-lead">One team in Ketang coordinates the stone, the metal look and the brand packing, from 10 finished bracelets.</p>
+<div class="jsx-btns"><a class="jsx-btn" href="#inquiry-form">Request a quote</a></div>
+</div>
 </div></section>
 <nav class="jsy-crumbs jsx-sec" aria-label="Breadcrumb" style="padding-top:8px"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/shop/">Wholesale</a> <span aria-hidden="true">/</span> <span>Mixed Metal Beaded Bracelets</span></nav>
+<section class="jsx-sec"><div class="mm-grid">
+<figure style="margin:0">
+<img src="/media/mixed-metal-beaded-bracelets-clear-quartz-concept.webp" alt="Concept illustration: clear quartz bracelet with gold- and silver-tone metal segments. Not a product photo." width="1000" height="1000" loading="lazy" decoding="async">
+<figcaption class="mm-note">Concept illustration: clear quartz with gold- and silver-tone metal beads. Not a product photo, and not proof of the metal.</figcaption>
+</figure>
+<figure style="margin:0">
+<img src="/media/mixed-metal-beaded-bracelets-gift-concept.webp" alt="Concept illustration of two people exchanging a gift; mixed-metal natural stone bracelet set. Not a product photo." width="1400" height="788" loading="lazy" decoding="async">
+<figcaption class="mm-note">Concept illustration of a gift scene. Sage Companions is a design name on the artwork, not a customer. The JSY mark on the box is our brand, not a buyer logo. Not a delivered order.</figcaption>
+</figure>
+</div></section>
 
-<section class="jsx-sec"><p class="jsx-eyebrow">What we make</p>
-<h2>Natural stone, mixed with metal</h2>
+
+<details class="jsx-fold"><summary>Natural stone, mixed with metal</summary><p class="jsx-eyebrow">What we make</p>
 <p class="jsx-intro">These bracelets use the same natural stones and the same partner workshops as our <a href="/wholesale-crystal-bracelets/">wholesale crystal bracelets</a>. The difference is the metal: spacers, tubes, accent pieces, clasps and findings in stainless steel or gold-plated brass, combined with the beads to the design you send. We keep this page general on purpose — send a reference photo or a short brief, and we will say what we can make.</p>
 <ul>
 <li><strong>Natural stone with stainless steel</strong> — a clean, silver-tone look. Those metal parts are waterproof and tarnish-free.</li>
@@ -186,70 +224,56 @@
 <li><strong>Logo tags and packaging</strong> — your shop or brand name on a small tag, a hang tag, a printed card or a gift box.</li>
 </ul>
 <p>Wrist length is usually about 15–20 cm; longer lengths and 10 mm or 12 mm beads are available when you need them. You can also add <a href="/custom-beaded-bag-charms-keychains/">bag charms and keychains</a> or <a href="/custom-gemstone-bracelet/">custom all-stone bracelets</a> to the same order.</p>
-</section>
-
-<section class="jsx-soft"><div class="jsx-sec" id="care">
+</details>
+<details class="jsx-fold"><summary>Sweat, water and the two metals</summary><div class="jsx-sec" id="care">
 <p class="jsx-eyebrow">Before you order</p>
-<h2>Sweat, water and the two metals</h2>
 <p>A mixed metal bracelet is worn on the wrist, so it meets sweat, lotion and the odd splash. Natural stone should be kept away from sweat, pool water and long water exposure. We do not describe natural stone as waterproof or sweat-proof. Shops can tell customers to take the bracelet off before a workout, a swim or a shower.</p>
 <p>Stainless steel clasps, spacers and findings are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, but we do not describe them as tarnish-free. We mark the metal on the quotation and the sample so you know what you are selling.</p>
-</div></section>
-
-<section class="jsx-sec"><p class="jsx-eyebrow">Spec sheet</p>
-<h2>What you can choose</h2>
+</div></details>
+<details class="jsx-fold"><summary>What you can choose</summary><p class="jsx-eyebrow">Spec sheet</p>
 <div class="jsx-tablewrap"><table class="jsx-table"><thead><tr><th>Item</th><th>Options</th></tr></thead><tbody>
 <tr><td>Product types</td><td>Mixed metal beaded bracelets: natural stone with stainless steel, gold-plated brass, or both in the same order. All-stone bracelets, stackable sets and beaded accessories can be added in the same inquiry.</td></tr>
 <tr><td>Stones and colours</td><td>20+ natural stones, single stone or mixed. Other stones on request. Natural stones vary in colour and inclusions from bead to bead.</td></tr>
-<tr><td>Bead size and length</td><td>6 / 8 / 10 / 12 mm beads; wrist length about 15–20 cm, or longer if you need it. Elastic or knotted cord, agreed on the mockup and sample.</td></tr>
+<tr><td>Bead size and length</td><td>6 / 8 / 10 / 12 mm beads; wrist length about 15–20 cm, or longer if you need it. Elastic or knotted cord, confirmed with the design.</td></tr>
 <tr><td>Metal parts</td><td>Stainless steel spacers, tubes, accent pieces, clasps and findings as standard — waterproof and tarnish-free. Gold-plated brass parts are available where a warmer, gold look is wanted; those parts are rust-proof and waterproof, but we do not describe them as tarnish-free.</td></tr>
 <tr><td>Tags and engraving</td><td>Your name or logo on a small tag or charm, a hang tag, or a printed card.</td></tr>
 <tr><td>Packaging</td><td>Cards, pouches, kraft or printed gift boxes, and gift sets with matching accessories.</td></tr>
 <tr><td>Minimum order</td><td>10 pieces per order, mixed styles and stones. Branded tags, cards and boxes can have their own minimums, confirmed in the quote.</td></tr>
-<tr><td>Lead time</td><td>Bulk production usually 15–30 days after sample approval, plus shipping.</td></tr>
+<tr><td>Timing</td><td>Production and shipping times are confirmed with your order.</td></tr>
 <tr><td>Pricing</td><td>Pricing depends on quantity, design and packaging; we quote each inquiry.</td></tr>
 <tr><td>Care</td><td>Keep natural stone away from sweat, pool water and long water exposure. Stainless steel parts are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, not described as tarnish-free.</td></tr>
 </tbody></table></div>
 <p style="margin-top:16px">Need other bead materials or crystal items? Tell us briefly and we'll check what we can make or source.</p>
-</section>
-
-<section class="jsx-soft"><div class="jsx-sec" id="what-we-handle">
+</details>
+<details class="jsx-fold"><summary>What we handle for you</summary><div class="jsx-sec" id="what-we-handle">
 <p class="jsx-eyebrow">One-stop</p>
-<h2>What we handle for you</h2>
-<p class="jsx-intro">You should not have to find a bead supplier, a metal-parts maker and a box printer separately. We coordinate the work across our partner workshops in Ketang, Shanwei, check it, and ship it together, with any all-stone bracelets or accessories in the same order.</p>
+<p class="jsx-intro">You work with one team. JSY coordinates stone, metal parts, tags and packing with partner factories in Ketang. JSY does not own those factories.</p>
 <ul>
 <li><strong>Beads and stones</strong> — natural stone first; other bead materials on request</li>
 <li><strong>Metal parts, cord and clasps</strong> — stainless steel or gold-plated brass, as agreed</li>
 <li><strong>Tags and engraving</strong> — shop or brand name or logo</li>
 <li><strong>Gift boxes, cards and packaging</strong></li>
-<li><strong>Mockup and sample approval</strong></li>
-<li><strong>Quality checks (QC)</strong> — counts, lengths, knots, metal parts, finish and packing</li>
+<li><strong>Design confirmation</strong> — stone, metal look, tags and packing confirmed with your order</li>
 <li><strong>Consolidated shipping</strong></li>
 </ul>
-</div></section>
-
-<section class="jsx-sec"><p class="jsx-eyebrow">Who these are for</p>
-<h2>Shops, brands and wholesale buyers</h2>
+</div></details>
+<details class="jsx-fold"><summary>Shops, brands and wholesale buyers</summary><p class="jsx-eyebrow">Who these are for</p>
 <div class="jsx-grid">
 <article class="jsx-card"><h3>Crystal shops and gift shops</h3><p>A gold-look or silver-tone option next to your all-stone strands, in the same stones, so the counter has more than one finish to show.</p></article>
 <article class="jsx-card"><h3>Boutiques and lifestyle stores</h3><p>A small mixed-metal range that matches your bracelet colours, with your shop name on the tag or card.</p></article>
 <article class="jsx-card"><h3>Online brands and private label</h3><p>Your design, your tag and your box, made as a repeatable line you can reorder. For a full labelled range, see <a href="/private-label-jewelry/">private label</a> or <a href="/oem-crystal-bracelet-manufacturer/">OEM</a>.</p></article>
 <article class="jsx-card"><h3>Wholesale distributors</h3><p>Mix mixed-metal and all-stone styles from 10 pieces, see what your retail accounts take, then reorder. See also <a href="/wholesale-crystal-bracelets/">wholesale crystal bracelets</a>.</p></article>
-</div></section>
-
-<section class="jsx-soft"><div class="jsx-sec"><p class="jsx-eyebrow">Process</p>
-<h2>From idea to a packed shipment</h2>
+</div></details>
+<details class="jsx-fold"><summary>From idea to a packed shipment</summary><div class="jsx-sec"><p class="jsx-eyebrow">Process</p>
 <ol class="jsx-steps">
 <li><h3>Send your idea</h3><p>Stones and colours, stainless steel or gold-plated brass, a reference photo if you have one, a rough quantity and your logo file if you have one is enough to start.</p></li>
-<li><h3>Mockup and quote</h3><p>We reply as soon as possible with questions, a quotation and a mockup showing beads, metal parts, length, tag and packaging.</p></li>
-<li><h3>Sample approval</h3><p>We make a sample and send photos and video with it. Check the stones, the metal and the fit before you approve it. Production starts after approval.</p></li>
-<li><h3>Production</h3><p>Beads are graded by colour and size, then strung and finished with the agreed metal parts to the approved sample. Bulk work usually takes 15–30 days, depending on quantity and how much is customized.</p></li>
-<li><h3>QC</h3><p>We check counts, lengths, knots, metal parts and packing, and can send inspection photos before dispatch.</p></li>
-<li><h3>Consolidated shipping</h3><p>Bracelets, tags and boxes leave together. DHL or FedEx takes about 7–10 days; sea freight about 25–35 days for larger orders.</p></li>
+<li><h3>Quote</h3><p>We reply as soon as possible. The quote confirms the stone, the metal look, tags and packing with your design.</p></li>
+<li><h3>Sample, if you need one</h3><p>If a sample is needed, fees and shipping are quoted for your project. Production starts after you approve the specification.</p></li>
+<li><h3>Production</h3><p>After you approve the specification, we coordinate the order with partner factories. Timing is confirmed with your order.</p></li>
+<li><h3>Shipment</h3><p>After approval, we arrange shipment with the order. Shipping time is confirmed then.</p></li>
 </ol>
-</div></section>
-
-<section class="jsx-sec"><p class="jsx-eyebrow">What to send us</p>
-<h2>Get a useful quote on the first reply</h2>
+</div></details>
+<details class="jsx-fold"><summary>Get a useful quote on the first reply</summary><p class="jsx-eyebrow">What to send us</p>
 <p class="jsx-intro">The more of this you include, the fewer emails before you have a quote. None of it is required.</p>
 <ul>
 <li>The stones or colours you want</li>
@@ -260,28 +284,23 @@
 <li>A rough quantity, in total and per style if you know it</li>
 <li>Delivery country and the date you need the goods</li>
 </ul>
-</section>
-
-<section class="jsx-soft"><div class="jsx-sec"><p class="jsx-eyebrow">Where we are</p>
-<h2>Ketang, Shanwei</h2>
-<p>JSY Crystal is based in Ketang, Shanwei, Guangdong, a trading and processing hub for crystals and coloured stones. We are the exclusive overseas agent of our <a href="/factory/">partner factories</a> there and run the export side in English: quotes, mockups, samples, packaging, quality checks and shipping. More about the hub on the <a href="/ketang/">Ketang page</a>.</p>
-</div></section>
-
-<section class="jsx-sec"><p class="jsx-eyebrow">FAQ</p>
-<h2>Mixed metal bracelet questions</h2>
+</details>
+<details class="jsx-fold"><summary>Ketang, Shanwei</summary><div class="jsx-sec"><p class="jsx-eyebrow">Where we are</p>
+<p>JSY is based in Ketang, Shanwei, Guangdong, and coordinates orders with partner factories there. JSY is not a self-owned factory. More about the local setting is on the <a href="/ketang/">Ketang page</a> and the <a href="/factory/">partner factories page</a>.</p>
+</div></details>
+<details class="jsx-fold"><summary>Mixed metal bracelet questions</summary><p class="jsx-eyebrow">FAQ</p>
 <div class="jsx-faq">
 <details><summary>What is the minimum order for mixed metal beaded bracelets?</summary><p>10 pieces per order in total. You can mix mixed-metal styles, all-stone bracelets, stones and colours inside those 10 pieces, and add stackable sets or beaded accessories to the same order. Branded extras such as engraved logo tags, printed cards or custom boxes can have their own minimums, and we confirm those in your quotation.</p></details>
 <details><summary>How much do mixed metal beaded bracelets cost?</summary><p>Pricing depends on quantity, design and packaging, so we quote each inquiry. Tell us the stones, the metal finish, a rough quantity and whether you need logo tags or boxes, and the quotation will show every line clearly.</p></details>
 <details><summary>What metals do you use on a mixed metal beaded bracelet?</summary><p>Two metals are standard with the natural-stone beads: stainless steel, and gold-plated brass. Stainless steel parts are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, but we do not describe them as tarnish-free. We mark the metal on the quotation and the sample.</p></details>
 <details><summary>Do you make gold beaded bracelets for wholesale?</summary><p>If you want a gold-look beaded bracelet for wholesale, this is usually a natural-stone bracelet with gold-plated brass spacers, accent pieces, clasps or findings — not a solid-gold piece. Send a reference photo or a short description of the look you want, and we will say what we can make.</p></details>
-<details><summary>Are mixed metal beaded bracelets waterproof or sweat-proof?</summary><p>The natural stone is not. Natural stone should be kept away from sweat, pool water and long water exposure. We do not describe natural stone as waterproof or sweat-proof. Stainless steel parts are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, but we do not describe them as tarnish-free.</p></details>
+<details><summary>Are mixed metal beaded bracelets waterproof or sweat-proof?</summary><p>The natural stone is not. Natural stone should be kept away from sweat, pool water and long water exposure. We do not describe natural stone as waterproof or sweat-proof. Stainless steel parts are waterproof and tarnish-free. Gold-plated brass parts are rust-proof and waterproof, but we do not describe them as tarnish-free. Those descriptions apply to the metal parts only, not to the finished bracelet.</p></details>
 <details><summary>Can I mix these with all-stone bracelets in one order?</summary><p>Yes. Mixing is normal for a first order. Many shops start with a small spread of mixed-metal and all-stone styles, see what sells, then reorder the ones that work. You can also add <a href="/wholesale-stackable-bracelet-sets/">stackable sets</a>, <a href="/custom-beaded-bag-charms-keychains/">bag charms or keychains</a> to the same shipment.</p></details>
-<details><summary>Can you add our logo or shop name?</summary><p>Yes. Your logo or name can go on a small tag or charm on the bracelet, a hang tag, a printed card or a gift box. Artwork is reviewed with your mockup and sample before production.</p></details>
-<details><summary>Can I order a sample first?</summary><p>Yes. After we agree a mockup, we can send a sample with photos and video. Sample fees and shipping are quoted per project, and if any of the sample fee is credited against your bulk order, the quotation says so.</p></details>
-<details><summary>How long does a mixed metal bracelet order take?</summary><p>Bulk production usually runs 15–30 days after you approve the sample, depending on quantity and how much is customized. Shipping is added on top: about 7–10 days by DHL or FedEx, or about 25–35 days by sea freight.</p></details>
-<details><summary>Do I need separate suppliers for beads, metal parts and boxes?</summary><p>No. We coordinate beads, metal parts, cord, tags, boxes, cards and packaging across our partner workshops in Ketang, Shanwei, run QC, and ship everything together. You deal with one team from quote to delivery.</p></details>
-</div></section>
-
+<details><summary>Can you add our logo or shop name?</summary><p>Yes. Your logo or name can go on a small tag or charm on the bracelet, a hang tag, a printed card or a gift box. Artwork is confirmed with the design. Minimums for tags and boxes are confirmed in the quote.</p></details>
+<details><summary>Can I order a sample first?</summary><p>If a sample is needed, fees and shipping are quoted for your project.</p></details>
+<details><summary>How long does a mixed metal bracelet order take?</summary><p>Production and shipping times are confirmed with your order.</p></details>
+<details><summary>Do I need separate suppliers for beads, metal parts and boxes?</summary><p>No. JSY coordinates stone, metal parts, tags and packing with partner factories in Ketang. JSY is not a self-owned factory. You work with one team on the quote and the shipment. Tag and box minimums are confirmed with the design.</p></details>
+</div></details>
 <section class="jsx-soft"><div class="jsx-sec" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:start">
 <div><p class="jsx-eyebrow">Tell Us What You Need</p>
 <h2>Start a mixed metal bracelet inquiry</h2>
