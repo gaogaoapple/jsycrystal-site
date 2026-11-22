@@ -34,6 +34,10 @@
 ### 口径
 JSY 在可塘协调合作工厂，不是自有厂。没有写固定交期、公开价格、exclusive overseas agent、疗效、ethical、环保或溯源。收件仍未验证：没有登录邮箱，没有发测试信。
 
+### 线上核对
+合并提交 `dedb201817acedd70cf1e224244c198116d2c916`（PR https://github.com/gaogaoapple/jsycrystal-site/pull/3 ）。GitHub Pages run https://github.com/gaogaoapple/jsycrystal-site/actions/runs/44984442161 ，`conclusion: success`，headSha 就是这个合并提交。合并前该提交的 check-runs 为 0，combined status 没有具体检查项；这不是 CI 通过。
+正式站桌面 1280×900、窄屏 390×844：首屏烟晶概念图 1000×1000、不 lazy，按钮可见；按钮点击和直接打开 `#inquiry-form` 时表单顶到导航底 16px，邮箱完整可见（桌面邮箱顶 121、底 171，导航底 76；窄屏邮箱顶 114、底 164，导航底 69）。折叠可打开。控制台 error 0，无横向溢出，本页图片请求无 4xx。表单 action 仍是 `https://formsubmit.co/84de44e7c16b22f5baa08c38d60c1461`，`_next` 仍是 `https://jsycrystal.com/thank-you/`。没有提交测试信，没有登录邮箱。收件仍未验证。
+
 ---
 
 ## 2026-11-22 · 定制手链页首屏与询价负担（分支，未合并、未部署）
