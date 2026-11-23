@@ -18,6 +18,9 @@ Apple 确认的 JSY Equestrian Collection 目录 PDF 只作裁图参考，没有
 
 `/custom-beaded-bag-charms-keychains/` 和 `/tiger-eye-bracelets-wholesale/` 各加一张小图入口。sitemap 加入新页。`assets/site-20261122.js` 把新路径列入静态页，并让本页表单主题保持 “Website inquiry – Equestrian Collection”，否则现有脚本会把主题改成泛用的 Website inquiry。表单端点、`_next`、邮箱和留言必填没有改。本页没有放 10–49 的数量档，避免写成站内 10 件起订。
 
+### 2026-11-23 本页去掉起订量
+只改马术页。页脚原模板 “Wholesale from 10 pcs, mixed” 改为 “Ask for a quote”，链到本页询价。页头整徽底部有 Factory Direct 一类小标，本页改用已有的上半部日用 logo `media/jsy-crystal-jewelry-logo-top-160.webp`，没有重画。其他页的 10 件成品手链口径不动。
+
 ### 2026-11-23 预览修订
 买家可见文案改成每组一句商品说明，去掉“石种未命名所以只写 natural stone”“刻字不是功效”这类内部说明。图注统一为 Concept image。Carry Good Fortune 的产品图和马蹄铁场景图改成同一 3:2 裁切，避免一边很高、旁边留白。全页灰块是懒加载图在整页拼接截图里还没画出来；视口滚到该组后 naturalWidth 大于 0。固定导航出现在全页图中部、顶部白边，是整页拼接把 sticky 头截进去的假象，普通视口里导航在顶部。
 
