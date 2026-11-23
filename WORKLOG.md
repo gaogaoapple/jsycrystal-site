@@ -6,6 +6,34 @@
 
 ---
 
+## 2026-11-23 · 每周 SEO 复盘：私标页去掉 Apple 联系人描述，OEM 页改搜索标题（分支，未合并、未部署）
+
+执行：Grok Bot 每周 SEO 复盘。分支 `cursor/weekly-seo-20261123`，基于 main `2c920b4`。只改两页 `<head>` 的 title / description / og / twitter，正文、表单、JS 版本、sitemap 都没动。
+
+### GSC 基线（final 到 2026-11-20 PT；读取 2026-11-23 约 10:00 SGT）
+- 近7天 11-14～11-20：89 曝光、1 点击、平均 18.35；前7天 90 / 0 / 15.11。
+- 近28天 10-24～11-20：237 曝光、3 点击、平均 16.56；前28天 52 / 1 / 25.83。美国 147 / 3。
+- `/oem-crystal-bracelet-manufacturer/`：28天 20 曝光、0 点击、平均 20.25（近7天 9 / 25.8）；查询 bracelet manufacturer、custom stone-set bracelet manufacturer 落在本页。
+- `/private-label-jewelry/`：28天 12 曝光、1 点击、平均 13.17。
+- 完整快照：box 上 `/workspace/jsy-seo/weekly-2026-11-23.md`（不在仓库）。
+- 这些只是改前基线，不能当成改完就有点击或询盘。下次对比这两页的曝光、点击、平均排名。
+
+### 改了什么
+1. `/private-label-jewelry/`：description（含 og、twitter）原来是 “...a project quotation with Apple.”，会出现在 Google 摘要，违反“不出现 Apple 联系人”。改为：“Private label natural stone bracelets for jewelry brands and crystal shops. Your logo tags, cards and gift boxes, coordinated with the bracelets by one team in Ketang, China.” title 由 “Private Label Gemstone Bracelets for Jewelry Brands” 改为 “Private Label Crystal Bracelets for Brands and Shops | JSY Crystal”，贴近 private label crystal bracelets。
+2. `/oem-crystal-bracelet-manufacturer/`：title 原 79 字符会被截断，改为 “OEM Crystal Bracelet Manufacturer: Your Stones, Tags & Boxes | JSY Crystal”。description 去掉固定 “15–30 day production”，改为买家步骤：“Natural stone bracelets under your brand: choose stones and bead size, add logo tags and gift boxes, approve a sample, then order from 10 pieces mixed.” 正文里的 15–30 天和快递/海运时长没动，待定。
+3. `/custom-gemstone-bracelet/` 11-22 刚改过 title，本周不动，等数据。
+
+### 验证（本地）
+- `python3 tools/jsy_site.py check`：problems 0。
+- Headless Chrome 渲染两页：title 正确，H1 不变；渲染正文里没有 Apple、WhatsApp、925、pearl、24 hours、price list、catalog。
+- 没有提交表单，没有登录邮箱。
+
+### 待办
+- 合并后核对 Pages run 与线上 title/description；对两页在 GSC 请求编入索引。
+- OEM 页正文的固定交期（15–30 天、7–10 天、25–35 天）是否像混金属页一样改成“随订单确认”，请 Apple 定。
+
+---
+
 ## 2026-11-22 · 混金属手链页 Dot 概念图上线
 
 执行：用户要求从 Notion 或邮箱发件箱里找 Dot 生成的概念图，放到网站上。本轮只改 `/mixed-metal-beaded-bracelets/` 的必要图文和本日记。首字母页、包链页没有准确的对应图，没有改。发件箱未登录，没有再请求登录。
