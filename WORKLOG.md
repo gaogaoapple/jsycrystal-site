@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-11-23 · 马术钥匙扣与包挂落地页（预览分支，未合并、未发布）
+
+执行：基于 main `e5b691d` 开分支 `cursor/equestrian-keychains-8167`。只做预览，不合并，不发布，不提交测试询盘。
+
+### 素材
+Apple 确认的 JSY Equestrian Collection 目录 PDF 只作裁图参考，没有放进仓库，页面也不提供下载。从 PDF 高分辨率渲染后重裁，去掉价格条、US$、MOQ、WhatsApp、电话、EXW、目录页眉，以及带 Factory Direct 字样的圆形 logo。压成宽 1600 以内的 webp，并写上宽高。封面场景图保留图上已有的 “Styling illustration. Bag not included.”。K04 圆牌图在 PDF 第 3 页，有可用产品图，已放上。
+
+### 页面
+新页 `/equestrian-keychains-bag-charms/`。首屏是封面场景、短标题、一句给 tack shop 的好处、一个询价按钮。下面四个短卖点，再按 Stable Stories K01–K03、Inspirational Rider Keepsake Tag K04、Rider’s Blessing K05–K09、Carry Good Fortune K10–K12、套装 K13/K14 分组。图下都标 Concept image。除 K13/K14 写 tiger’s eye 外，珠子和十字架只写 natural stone。金属只写 stainless steel hardware，不写防水、不褪色或防锈。刻字和款名原样出现，并写明不是石头或产品的功效。不写起订件数，只写询价时确认。JSY 在可塘协调合作工厂，不是自有厂。
+
+`/custom-beaded-bag-charms-keychains/` 和 `/tiger-eye-bracelets-wholesale/` 各加一张小图入口。sitemap 加入新页。`assets/site-20261122.js` 把新路径列入静态页，并让本页表单主题保持 “Website inquiry – Equestrian Collection”，否则现有脚本会把主题改成泛用的 Website inquiry。表单端点、`_next`、邮箱和留言必填没有改。本页没有放 10–49 的数量档，避免写成站内 10 件起订。
+
+### 口径缺口
+目录里的价格、100 件起订、EXW 和 WhatsApp 都没有上站。没有登录邮箱，没有发测试信。收件未验证。
+
+---
+
 ## 2026-11-23 · 每周 SEO 复盘：私标页去掉 Apple 联系人描述，OEM 页改搜索标题（分支，未合并、未部署）
 
 执行：Grok Bot 每周 SEO 复盘。分支 `cursor/weekly-seo-20261123`，基于 main `2c920b4`。只改两页 `<head>` 的 title / description / og / twitter，正文、表单、JS 版本、sitemap 都没动。
