@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-24 · 批发页收成一个总页
+
+`/wholesale-crystal-bracelets/` 按三种采购方式重排，网址和 title 没改。保留 10 件混批、独家设计、NDA、样品费抵大货，以及已有石种图。概念图标 Concept image。交期只在运到美国的 FAQ 里引用 OEM 页已有的 15–30 / 7–10 / 25–35 天。表单 action 和 `_next` 没改，并加了店铺链接、8 类买家和感兴趣品类。OEM 页正文没动。
+
+---
+
 ## 2026-11-24 · 补上 Apple 已确认的四句
 
 Apple 确认这四句可以写。只加在 `/custom-gemstone-bracelet/`、`/private-label-jewelry/`、`/wholesale-crystal-bracelets/` 的正文、FAQ 和 JSON-LD，并放在询盘表单或询盘入口旁边。没有加金额、期限或其他新说法。
