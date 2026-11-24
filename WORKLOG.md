@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-24 · 报价改为 EXW
+
+全站报价写明 EXW（可塘/汕尾）。买家或货代负责运费、进口关税和清关。可以帮忙订舱，费用另报，不作承诺。去掉 DDP、指定承运商和运输天数。OEM 页正文没有 DDP，所以没改；那里仍有 DHL/FedEx 和 7–10 / 25–35 天。
+
+---
+
 ## 2026-11-24 · 可塘工厂口径写直接
 
 买家核实工厂可以配合，所以页面可以直接写 our factory in Ketang, Shanwei、our production team、we manufacture your bracelets in Ketang。一个团队仍负责珠子、配件、吊牌、卡片、礼盒和包装。不写 factory direct、厂房规模、人数、设备、年限、参观、质检步骤或认证。OEM 页正文没动。
