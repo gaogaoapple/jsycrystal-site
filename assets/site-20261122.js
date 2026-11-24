@@ -24,6 +24,7 @@ export const STATIC_ROUTES = new Set([
   '/custom-beaded-chains-straps/',
   '/personalized-initial-letter-bracelets/',
   '/equestrian-keychains-bag-charms/',
+  '/private-label-jewelry/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
 export const PAGE_ROUTES = new Set([
