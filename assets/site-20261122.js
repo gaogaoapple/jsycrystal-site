@@ -23,6 +23,7 @@ export const STATIC_ROUTES = new Set([
   '/mixed-metal-beaded-bracelets/',
   '/custom-beaded-chains-straps/',
   '/personalized-initial-letter-bracelets/',
+  '/equestrian-keychains-bag-charms/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
 export const PAGE_ROUTES = new Set([
@@ -98,6 +99,7 @@ export function subjectFor(path, intent) {
   if (/private-label/i.test(path)) return INTENT_SUBJECTS['private-label'];
   if (/oem-crystal|custom-gemstone/i.test(path)) return INTENT_SUBJECTS.custom;
   if (/wholesale|\/shop\/?/i.test(path)) return INTENT_SUBJECTS.wholesale;
+  if (/equestrian-keychains-bag-charms/i.test(path)) return 'Website inquiry – Equestrian Collection';
   if (/inquiry|contact/i.test(path)) return 'Website inquiry';
   return 'Website inquiry';
 }
