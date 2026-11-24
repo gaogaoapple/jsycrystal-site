@@ -29,6 +29,7 @@ export const STATIC_ROUTES = new Set([
   '/products/rose-quartz-crystal-bracelet/',
   '/products/citrine-crystal-bracelet/',
   '/products/clear-quartz-crystal-bracelet/',
+  '/how-it-works/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
 export const PAGE_ROUTES = new Set([
