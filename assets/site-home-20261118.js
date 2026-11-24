@@ -465,7 +465,7 @@ export function patchHomeHeroCopy(doc) {
   const hero = doc.querySelector('#root section.relative, #root section[class*="min-h"], section.relative');
   if (hero) {
     const ps = [...hero.querySelectorAll('p')];
-    if (ps[0]) ps[0].textContent = 'Ketang, Shanwei, Guangdong · Our production in Ketang';
+    if (ps[0]) ps[0].textContent = 'Ketang, Shanwei, Guangdong · Our factory in Ketang, Shanwei';
     const h1 = hero.querySelector('h1');
     if (h1) {
       h1.innerHTML = 'Natural Stone Bracelets<br><em class="italic" style="color: var(--gold);">for Crystal Shops, Boutiques &amp; Gift Stores</em>';
@@ -506,7 +506,7 @@ export function patchHomeHeroCopy(doc) {
     const heading = why.querySelector('h2');
     if (heading) heading.textContent = 'Why Choose JSY Crystal Jewelry';
     const cards = [
-      ['Based in Ketang', 'We are based in Ketang, Shanwei, Guangdong, a crystal industry cluster. Our workshops in Ketang handle stringing, finishing and packing. '],
+      ['Based in Ketang', 'We are based in Ketang, Shanwei, Guangdong, a crystal industry cluster. Our production team handles stringing, finishing and packing at our factory in Ketang, Shanwei. '],
       ['Small mixed wholesale orders', 'Finished bracelets start at 10 pieces per order, mixed across styles and stones. For other products, tell us the quantity and we will confirm.'],
       ['Tags and packaging, confirmed by design', 'Logo hang tags, tassels and custom packaging can be made with the finished bracelets. Minimums and feasibility for these custom details are confirmed with the design; we do not publish a separate number.'],
       ['A clear role', 'JSY makes your order in Ketang. You work with one team on the brief, the quote and shipment.'],
@@ -527,14 +527,14 @@ export function patchHomeHeroCopy(doc) {
     }
     const bodies = [...about.querySelectorAll('p')].filter(p => (p.className || '').includes('leading-relaxed'));
     const copy = [
-      'JSY Crystal Jewelry supplies finished natural-stone bracelets and related packing for shops and wholesale buyers. Our workshops in Ketang handle logo tags and packaging with the bracelets. ',
-      'Ketang, Shanwei, Guangdong is a crystal industry cluster with raw material, processing, trading and beading workshops nearby. That is the setting we work in; Our production is in Ketang, Shanwei, China's crystal bead hub.',
+      'JSY Crystal Jewelry supplies finished natural-stone bracelets and related packing for shops and wholesale buyers. Our production team handles logo tags and packaging with the bracelets at our factory in Ketang, Shanwei. ',
+      'Ketang, Shanwei, Guangdong is a crystal industry cluster with raw material, processing, trading and beading workshops nearby. That is the setting we work in; Our factory is in Ketang, Shanwei, China's crystal bead hub.',
     ];
     bodies.slice(0, 2).forEach((para, i) => { para.textContent = copy[i]; });
     const points = [
       'Natural-stone finished bracelets',
       'Based in Ketang, Shanwei, Guangdong',
-      'Our production in Ketang',
+      'Our factory in Ketang, Shanwei',
       'Wholesale from 10 pieces, mixed',
     ];
     const list = about.querySelector('.flex.flex-col') || about.querySelector('[class*="flex-col"]');

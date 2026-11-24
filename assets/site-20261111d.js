@@ -397,7 +397,7 @@ export function patchHomeHeroCopy(doc) {
   if (hero) {
     const ps = [...hero.querySelectorAll('p')];
     if (ps[0] && /private label|jewelry brands/i.test(ps[0].textContent || '')) {
-      ps[0].textContent = 'Custom programs for travel groups, company gifts and boutique exclusives — plus wholesale supply and private label for distributors. Natural stone beaded bracelets from our workshop in Ketang.';
+      ps[0].textContent = 'Custom programs for travel groups, company gifts and boutique exclusives — plus wholesale supply and private label for distributors. Natural stone beaded bracelets from our factory in Ketang, Shanwei.';
     }
     if (ps[1] && /Serving|worldwide|brands/i.test(ps[1].textContent || '')) {
       ps[1].textContent = 'Two paths: custom for end clients, and wholesale for distributors';

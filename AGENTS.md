@@ -14,8 +14,8 @@
 
 JSY Crystal Jewelry = **one-stop custom bracelet solution supplier**（一站式定制手链方案供应商）。
 
-- 客户可见文案用制造商式一站式口径：Our production in Ketang, Shanwei, China's crystal bead hub；our workshops handle stringing, finishing and packing；One team runs the whole order。`/factory/` 是 “Our production in Ketang” 页。
-- 不写所有权：不写 does not own，也不写 we own a factory / our own factory / factory direct / own mine。不写车间数量、人数、设备、参观、质检步骤或认证。
+- 客户可见文案可以直接写 our factory in Ketang, Shanwei、our production team、we manufacture your bracelets in Ketang，以及一个团队做 beads, findings, logo tags, cards, gift boxes, packaging。`/factory/` 用这个口径。
+- 仍不写 factory direct、工厂价格、厂房面积、人数、设备数量、经营年限、参观或 factory tour、质检步骤、认证。也不写 we own a factory / our own factory / own mine。
 - OEM 页正文保持原样，不把上面的口径改进去。
 - 客户只对接一家：天然石珠（主推；其他珠材可询）、吊坠/配件、刻字或 logo 吊牌、礼盒、卡片与包装。
 - 红线不变：天然石优先；不写 925 银/珍珠；不写 ethical/fair-trade/sustainable/eco/charity；无 WhatsApp/电话；客户可见文案不出现 Apple 人名；不写欧盟法规专题。
