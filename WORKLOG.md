@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-11-24 · 主导航、首页快速报价、表单提示，并清掉未确认说法
+
+执行：对标报告的第 1、3、4 条，加上首页清理。Apple 已批准继续优化并发布。
+
+### 导航和页脚
+静态页主导航改为 Wholesale、Custom & OEM、Private Label、Bag Charms & Keychains、Guides、Get a Quote。Guides 指向现有的 `/importing-crystal-bracelets-from-china/`，没有新建指南目录。手机菜单同一组链接。首页和仍由脚本渲染的页面，在页面加载后换成同一组链接。页脚按这几组重排。
+
+### 首页
+去掉 Your Cart 购物车抽屉。首屏路径下面加 3 个字段的快速报价：姓名、邮箱、想做什么。提交到原来的 FormSubmit，`_next` 仍是 `/thank-you/`，并带隐藏字段 `source=home-quick-quote`。
+
+### 全站表单
+每个询盘表单上方加一句：To quote quickly, tell us: your shop type and website, the style or stones, quantity, and the ship-to country and date you need it. 另加可选字段 Where do you sell?（Store / Online / Both）。表单 action 和 `_next` 没改。
+
+### 删掉的说法
+首页和全站可见文案里去掉 100% natural gemstones、Natural selection & quality control、check quality、NDA、Quality Inspection 2–3 Days，以及 run QC、质检照片承诺。生产时间只保留 OEM 页已有的 15–30 天生产和 7–10 天发运；7–14 天改成 7–10 天。OEM 页正文没有改。
+
+---
+
 ## 2026-11-24 · 删掉三页上未确认的批次照片、处理和质检说法
 
 Apple 没有确认这些承诺，要求删掉。只改 `/custom-gemstone-bracelet/`、`/wholesale-crystal-bracelets/`、`/tiger-eye-bracelets-wholesale/` 的正文和 JSON-LD。

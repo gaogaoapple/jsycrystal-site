@@ -158,7 +158,7 @@ export function upgradeInquiryForms(doc, win) {
       form.appendChild(honey);
     }
     // Optional qualification fields
-    if (!form.querySelector('[data-jsy-qualify], select[name="buyer_type"]')) {
+    if (!form.dataset.jsyQuick && !form.querySelector('[data-jsy-qualify], select[name="buyer_type"]')) {
       const wrap = form.ownerDocument.createElement('div');
       wrap.innerHTML = optionalFieldsHTML();
       const block = wrap.firstElementChild;
@@ -181,6 +181,19 @@ export function upgradeInquiryForms(doc, win) {
       };
       if (map[intent]) buyer.value = map[intent];
     }
+    if (!form.querySelector('select[name="where_sell"]')) {
+      const sell = form.ownerDocument.createElement('label');
+      sell.innerHTML = 'Where do you sell? (optional)<select name="where_sell"><option value="">Select…</option><option value="store">Store</option><option value="online">Online</option><option value="both">Both</option></select>';
+      const btn = form.querySelector('button[type="submit"], button.jsy-primary');
+      if (btn) btn.insertAdjacentElement('beforebegin', sell);
+      else form.appendChild(sell);
+    }
+    if (!(form.previousElementSibling && form.previousElementSibling.classList.contains('jsy-quote-note'))) {
+      const note = form.ownerDocument.createElement('p');
+      note.className = 'jsy-quote-note';
+      note.textContent = 'To quote quickly, tell us: your shop type and website, the style or stones, quantity, and the ship-to country and date you need it.';
+      form.insertAdjacentElement('beforebegin', note);
+    }
     // Reply SLA near submit
     if (!form.querySelector('.jsy-reply-sla')) {
       const btn = form.querySelector('button[type="submit"], button.jsy-primary');
@@ -192,7 +205,7 @@ export function upgradeInquiryForms(doc, win) {
     }
     // Supporting line near form (needs-based; never promise a catalog or price list)
     const section = form.closest('section, .jsy-short-inquiry, div') || form.parentNode;
-    if (section) {
+    if (section && !form.dataset.jsyQuick) {
       const old = section.querySelector('.jsy-catalog-near, .jsy-need-near');
       const p = old || form.ownerDocument.createElement('p');
       p.className = 'jsy-need-near';
@@ -281,7 +294,7 @@ export function ensureNeedCta(doc) {
     inner.appendChild(a);
   }
   const hd = doc.querySelector('header.jsx-hd .jsx-hd-in, header .jsx-hd-in');
-  if (hd && !hd.querySelector('a.jsx-cta-need, a[href*="intent=custom"][class*="cta"]')) {
+  if (hd && !hd.querySelector('a[href*="/inquiry"]') && !hd.querySelector('a.jsx-cta-need, a[href*="intent=custom"][class*="cta"]')) {
     const primary = hd.querySelector('a.jsx-cta:not(.jsx-cta-need):not(.jsx-cta-catalog)');
     const a = doc.createElement('a');
     a.className = 'jsx-cta jsx-cta-need';
@@ -291,7 +304,7 @@ export function ensureNeedCta(doc) {
     else hd.appendChild(a);
   }
   const reactHeader = doc.querySelector('#root header, header');
-  if (reactHeader && !reactHeader.querySelector('a[href*="intent=custom"][data-jsy-need], a.jsx-cta-need') && !reactHeader.classList.contains('jsx-hd')) {
+  if (reactHeader && !reactHeader.classList.contains('jsx-hd') && !reactHeader.querySelector('a[href*="/inquiry"]') && !reactHeader.querySelector('a[href*="intent=custom"][data-jsy-need], a.jsx-cta-need')) {
     if (!reactHeader.querySelector('a[data-jsy-need]')) {
       const a = doc.createElement('a');
       a.href = '/inquiry/?intent=custom';
@@ -482,6 +495,9 @@ export function patchContactCopy(doc) {
 
 
 export function ensureSubnav(doc) {
+  const old = doc.getElementById('jsy-subnav');
+  if (old) old.remove();
+  return;
   if (doc.getElementById('jsy-subnav')) return;
   const bar = doc.createElement('nav');
   bar.id = 'jsy-subnav';
@@ -552,6 +568,64 @@ export function bindInquiryScrollOffset(win, doc) {
   win.setTimeout(reveal, 1200);
 }
 
+const PRIMARY_NAV = [
+  ['/wholesale-crystal-bracelets/', 'Wholesale'],
+  ['/custom-gemstone-bracelet/', 'Custom & OEM'],
+  ['/private-label-jewelry/', 'Private Label'],
+  ['/custom-beaded-bag-charms-keychains/', 'Bag Charms & Keychains'],
+  ['/importing-crystal-bracelets-from-china/', 'Guides'],
+];
+
+export function ensurePrimaryNav(doc) {
+  const header = doc.querySelector('header');
+  if (!header || header.classList.contains('jsx-hd') || header.querySelector('.jsx-nav')) return;
+  const desktop = header.querySelector('nav.hidden');
+  if (desktop && !desktop.querySelector('a[href="/wholesale-crystal-bracelets/"]')) {
+    desktop.innerHTML = PRIMARY_NAV.map(([href, label]) =>
+      `<a href="${href}" style="font-size:.85rem;color:#44403c;text-decoration:none;white-space:nowrap">${label}</a>`
+    ).join('') + '<a href="/inquiry/" style="background:#292524;color:#fff;text-decoration:none;font-size:.8rem;padding:8px 14px;border-radius:6px;white-space:nowrap">Get a Quote</a>';
+    desktop.style.gap = '14px';
+    desktop.style.alignItems = 'center';
+    desktop.style.flexWrap = 'wrap';
+  }
+  for (const el of [...header.querySelectorAll('a, button')]) {
+    const t = (el.textContent || '').replace(/\s+/g, ' ').trim();
+    if (/Submit Your Inquiry/i.test(t)) el.style.setProperty('display', 'none', 'important');
+  }
+  for (const menu of [...header.querySelectorAll('nav')]) {
+    if (menu === desktop || menu.querySelector('a[href="/wholesale-crystal-bracelets/"]')) continue;
+    menu.innerHTML = [['/', 'Home'], ...PRIMARY_NAV, ['/inquiry/', 'Get a Quote']].map(([href, label]) =>
+      `<a href="${href}" style="display:block;padding:12px 16px;color:#292524;text-decoration:none">${label}</a>`
+    ).join('');
+  }
+}
+
+export function ensureFooterLinks(doc) {
+  const footer = doc.querySelector('footer');
+  if (!footer || footer.classList.contains('jsx-ft') || footer.querySelector('[data-jsy-foot]')) return;
+  const row = doc.createElement('div');
+  row.dataset.jsyFoot = '1';
+  row.style.cssText = 'max-width:1100px;margin:0 auto;padding:4px 24px 28px;display:flex;flex-wrap:wrap;gap:12px 20px;font-size:.9rem';
+  row.innerHTML = [...PRIMARY_NAV, ['/inquiry/', 'Get a Quote']].map(([href, label]) =>
+    `<a href="${href}" style="color:inherit">${label}</a>`
+  ).join('');
+  footer.appendChild(row);
+}
+
+export function removeCartUI(doc) {
+  for (const dialog of [...doc.querySelectorAll('[aria-label="Shopping cart"]')]) {
+    const prev = dialog.previousElementSibling;
+    if (prev && prev.getAttribute('aria-hidden') === 'true') prev.remove();
+    dialog.remove();
+  }
+  for (const h of [...doc.querySelectorAll('h2')]) {
+    if (/^Your Cart/i.test((h.textContent || '').trim())) {
+      const box = h.closest('[role="dialog"]') || h.parentElement;
+      if (box) box.remove();
+    }
+  }
+}
+
 export function startPublication(win, doc, loadLegacy) {
   injectHideStyle(doc);
   function normalizeLinks(root) {
@@ -583,6 +657,9 @@ export function startPublication(win, doc, loadLegacy) {
         upgradeInquiryForms(doc, win);
         ensureNeedCta(doc);
         ensureSubnav(doc);
+        ensurePrimaryNav(doc);
+        ensureFooterLinks(doc);
+        removeCartUI(doc);
       }
     }
   });
@@ -628,6 +705,9 @@ export function startPublication(win, doc, loadLegacy) {
   ensureSubnav(doc);
   ensureNeedCta(doc);
   upgradeInquiryForms(doc, win);
+  ensurePrimaryNav(doc);
+  ensureFooterLinks(doc);
+  removeCartUI(doc);
   bindInquiryScrollOffset(win, doc);
   if (isStatic) return;
 
@@ -640,6 +720,9 @@ export function startPublication(win, doc, loadLegacy) {
       ensureSubnav(doc);
       ensureNeedCta(doc);
       upgradeInquiryForms(doc, win);
+      ensurePrimaryNav(doc);
+      ensureFooterLinks(doc);
+      removeCartUI(doc);
       bindInquiryScrollOffset(win, doc);
       if (path === '/') {
         ensureBuyerPathsCss(doc);
