@@ -25,6 +25,10 @@ export const STATIC_ROUTES = new Set([
   '/personalized-initial-letter-bracelets/',
   '/equestrian-keychains-bag-charms/',
   '/private-label-jewelry/',
+  '/products/amethyst-crystal-bracelet/',
+  '/products/rose-quartz-crystal-bracelet/',
+  '/products/citrine-crystal-bracelet/',
+  '/products/clear-quartz-crystal-bracelet/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
 export const PAGE_ROUTES = new Set([
