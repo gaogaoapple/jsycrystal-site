@@ -569,7 +569,7 @@ export function bindInquiryScrollOffset(win, doc) {
 }
 
 const PRIMARY_NAV = [
-  ['/wholesale-crystal-bracelets/', 'Wholesale'],
+  ['/wholesale-crystal-bracelets/', 'Wholesale / B2B'],
   ['/custom-gemstone-bracelet/', 'Custom & OEM'],
   ['/private-label-jewelry/', 'Private Label'],
   ['/custom-beaded-bag-charms-keychains/', 'Bag Charms & Keychains'],

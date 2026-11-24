@@ -27,7 +27,7 @@ LOGO_TOP = "/media/jsy-crystal-jewelry-logo-top-160.webp"  # upper half of the b
 SKIP_DIRS = {".git", "tools", "assets", "media", "fonts", "manus-storage", "__manus__", "docs", "content"}
 
 NAV = [
-    ("/wholesale-crystal-bracelets/", "Wholesale"),
+    ("/wholesale-crystal-bracelets/", "Wholesale / B2B"),
     ("/custom-gemstone-bracelet/", "Custom & OEM"),
     ("/private-label-jewelry/", "Private Label"),
     ("/custom-beaded-bag-charms-keychains/", "Bag Charms & Keychains"),
@@ -65,7 +65,7 @@ def footer():
         '<div><p class="jsx-ft-name">JSY Crystal Jewelry</p>'
         '<p>One-stop custom bracelet solution supplier in Shanwei, Guangdong, China. Natural-stone beads, tags, boxes and packaging coordinated for brands, boutiques and wholesale buyers.</p>'
         f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/inquiry/#inquiry-form">Send an inquiry</a></p></div>'
-        '<div><h3>Wholesale</h3><ul>'
+        '<div><h3>Wholesale / B2B</h3><ul>'
         '<li><a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets</a></li>'
         '<li><a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a></li>'
         '<li><a href="/wholesale-stackable-bracelet-sets/">Stackable bracelet sets</a></li>'
@@ -227,7 +227,7 @@ def raw_footer():
             f'<p><strong>JSY Crystal Jewelry</strong> — natural stone bracelet manufacturer in Shanwei, China. '
             f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · '
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
-            '<p><a href="/wholesale-crystal-bracelets/">Wholesale</a> · '
+            '<p><a href="/wholesale-crystal-bracelets/">Wholesale / B2B</a> · '
             '<a href="/custom-gemstone-bracelet/">Custom &amp; OEM</a> · '
             '<a href="/private-label-jewelry/">Private label</a> · '
             '<a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · '

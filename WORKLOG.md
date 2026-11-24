@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-24 · 导航 Wholesale 改为 Wholesale / B2B
+
+主导航、手机菜单和页脚里指向 `/wholesale-crystal-bracelets/` 的 Wholesale 改成 Wholesale / B2B。没有加登录或价格。
+
+---
+
 ## 2026-11-24 · 清掉未确认的质检和批次照片说法
 
 产品页去掉 “pricing and batch photos”，改成 “We reply with a quote”。工厂页去掉 Quality control 卡片、出货前检验 FAQ，以及海外对接句子里的 inspection。可塘页去掉 “how it was treated”。叠戴、诞生石、字母、包挂等页去掉质检、分级和染色披露承诺。买家指南里 “问供应商石头是否染色” 保留，因为没有替 JSY 作承诺。OEM 页正文没动。
