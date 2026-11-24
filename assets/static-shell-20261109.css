@@ -9,7 +9,7 @@ html[data-jsy-render-mode="static"] body{background:#fdfcfa;color:#292524;font-f
 .jsx-logo img{width:48px;height:48px;border-radius:999px;background:#fff}
 .jsx-logo span{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;line-height:1.1}
 .jsx-logo small{display:block;font-family:Lato,sans-serif;font-size:.68rem;letter-spacing:.06em;color:#78716c;font-weight:400}
-.jsx-nav{display:flex;gap:22px;margin-left:auto;font-size:.875rem}
+.jsx-nav{display:flex;gap:14px;margin-left:auto;font-size:.78rem;flex-wrap:wrap;justify-content:flex-end}
 .jsx-nav a{color:#57534e;text-decoration:none;letter-spacing:.02em;padding:6px 0;border-bottom:1px solid transparent}
 .jsx-nav a:hover,.jsx-nav a[aria-current="page"]{color:#1c1917;border-bottom-color:#a8a29e}
 .jsx-cta{background:#292524;color:#fff;text-decoration:none;font-size:.8rem;padding:9px 18px;border-radius:6px;letter-spacing:.03em;white-space:nowrap}

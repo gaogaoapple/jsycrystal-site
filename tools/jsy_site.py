@@ -27,12 +27,11 @@ LOGO_TOP = "/media/jsy-crystal-jewelry-logo-top-160.webp"  # upper half of the b
 SKIP_DIRS = {".git", "tools", "assets", "media", "fonts", "manus-storage", "__manus__", "docs", "content"}
 
 NAV = [
-    ("/travel-group-gifts/", "Travel Groups"),
-    ("/corporate-gifts/", "Corporate Gifts"),
-    ("/custom-gemstone-bracelet/", "Custom Bracelets"),
-    ("/shop/", "Wholesale"),
+    ("/wholesale-crystal-bracelets/", "Wholesale"),
+    ("/custom-gemstone-bracelet/", "Custom & OEM"),
     ("/private-label-jewelry/", "Private Label"),
-    ("/contact/", "Contact"),
+    ("/custom-beaded-bag-charms-keychains/", "Bag Charms & Keychains"),
+    ("/importing-crystal-bracelets-from-china/", "Guides"),
 ]
 
 MAIL_ICON = ('<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">'
@@ -52,12 +51,10 @@ def header(current="", logo_top=False):
         f'{logo_html}'
         '<span>JSY Crystal Jewelry<small>One-stop custom bracelet partner</small></span></a>'
         f'<nav class="jsx-nav" aria-label="Main">{links}</nav>'
-        '<a class="jsx-cta jsx-cta-need" href="/inquiry/?intent=custom">Tell Us What You Need</a>'
-        '<a class="jsx-cta" href="/inquiry/">Submit Your Inquiry</a>'
+        '<a class="jsx-cta" href="/inquiry/">Get a Quote</a>'
         '<details class="jsx-mnav"><summary>Menu</summary><nav aria-label="Mobile">'
         f'<a href="/">Home</a>{mlinks}'
-        '<a href="/inquiry/?intent=custom">Tell Us What You Need</a>'
-        '<a href="/inquiry/">Submit Your Inquiry</a>'
+        '<a href="/inquiry/">Get a Quote</a>'
         f'<a href="mailto:{EMAIL}">{EMAIL}</a></nav></details>'
         '</div></header><!--/jsy:header-->')
 
@@ -68,29 +65,24 @@ def footer():
         '<div><p class="jsx-ft-name">JSY Crystal Jewelry</p>'
         '<p>One-stop custom bracelet solution supplier in Shanwei, Guangdong, China. Natural-stone beads, tags, boxes and packaging coordinated for brands, boutiques and wholesale buyers.</p>'
         f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/inquiry/#inquiry-form">Send an inquiry</a></p></div>'
-        '<div><h3>Custom for end clients</h3><ul>'
-        '<li><a href="/travel-group-gifts/">Travel &amp; tour group gifts</a></li>'
-        '<li><a href="/custom-bracelets-for-tour-groups/">Tour group ordering guide</a></li>'
-        '<li><a href="/corporate-gifts/">Corporate &amp; annual meeting gifts</a></li>'
-        '<li><a href="/custom-gemstone-bracelet/">Boutique exclusive custom</a></li>'
-        '<li><a href="/how-it-works/">How it works</a></li></ul></div>'
-        '<div><h3>Wholesale for distributors</h3><ul>'
-        '<li><a href="/shop/">Wholesale bracelets</a></li>'
-        '<li><a href="/wholesale-crystal-bracelets/">Wholesale from 10 pcs, mixed</a></li>'
-        '<li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>'
-        '<li><a href="/crystal-car-charms/">Car charms &amp; suncatchers</a></li>'
-        '<li><a href="/beaded-phone-charms-straps/">Phone charms &amp; straps</a></li>'
-        '<li><a href="/custom-beaded-chains-straps/">Beaded chains &amp; straps</a></li>'
-        '<li><a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a></li>'
-        '<li><a href="/wholesale-stackable-bracelet-sets/">Stackable bracelet sets</a></li>'
-        '<li><a href="/mixed-metal-beaded-bracelets/">Mixed metal beaded bracelets</a></li>'
-        '<li><a href="/personalized-initial-letter-bracelets/">Initial &amp; letter bracelets</a></li>'
+        '<div><h3>Wholesale</h3><ul>'
+        '<li><a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets</a></li>'
         '<li><a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a></li>'
+        '<li><a href="/wholesale-stackable-bracelet-sets/">Stackable bracelet sets</a></li>'
+        '<li><a href="/shop/">Wholesale bracelets</a></li></ul></div>'
+        '<div><h3>Custom &amp; OEM</h3><ul>'
+        '<li><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a></li>'
         '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
-        '<li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>'
-        '<li><a href="/products/amethyst-crystal-bracelet/">Amethyst bracelets</a></li>'
-        '<li><a href="/factory/">Factory</a> · <a href="/about/">About</a></li>'
-        '<li><a href="/inquiry/">Get a quote</a></li>''<li><a href="/inquiry/?intent=custom">Tell Us What You Need</a></li></ul></div>'
+        '<li><a href="/how-it-works/">How it works</a></li>'
+        '<li><a href="/private-label-jewelry/">Private label</a></li></ul></div>'
+        '<div><h3>Bag charms &amp; guides</h3><ul>'
+        '<li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>'
+        '<li><a href="/equestrian-keychains-bag-charms/">Equestrian keychains</a></li>'
+        '<li><a href="/beaded-phone-charms-straps/">Phone charms &amp; straps</a></li>'
+        '<li><a href="/importing-crystal-bracelets-from-china/">Importing guide</a></li>'
+        '<li><a href="/gemstone-bracelet-bead-size-guide/">Bead size guide</a></li>'
+        '<li><a href="/choose-gemstone-bracelet-wholesale-supplier/">Choosing a supplier</a></li>'
+        '<li><a href="/inquiry/">Get a quote</a></li></ul></div>'
         '</div><small style="max-width:1180px;margin:0 auto;padding:0 24px 24px">© 2026 JSY Crystal · 汕尾市晶燊缘珠宝有限公司</small></footer>'
         '<nav class="jsy-contact-dock" aria-label="Quick contact">'
         f'<a class="jsy-dock-email" href="mailto:{EMAIL}">{MAIL_ICON}Email us</a>'
@@ -226,7 +218,7 @@ def shell():
 
 # ---------------------------------------------------------------- raw nav for React pages
 def raw_nav():
-    links = " · ".join(f'<a href="{h}">{t}</a>' for h, t in [("/", "JSY Crystal Jewelry")] + NAV + [("/inquiry/?intent=custom", "Tell Us What You Need"), ("/inquiry/", "Submit Your Inquiry")])
+    links = " · ".join(f'<a href="{h}">{t}</a>' for h, t in [("/", "JSY Crystal Jewelry")] + NAV + [("/inquiry/", "Get a Quote")])
     return f'<!--jsy:rawnav--><header class="jsy-shell" style="padding-top:24px">{links}</header><!--/jsy:rawnav-->'
 
 
@@ -235,9 +227,12 @@ def raw_footer():
             f'<p><strong>JSY Crystal Jewelry</strong> — natural stone bracelet manufacturer in Shanwei, China. '
             f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> · '
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
-            '<p><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a> · <a href="/private-label-jewelry/">Private label</a> · '
-            '<a href="/shop/">Wholesale bracelets</a> · <a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets from 10 pcs</a> · <a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · <a href="/crystal-car-charms/">Car charms</a> · <a href="/beaded-phone-charms-straps/">Phone charms &amp; straps</a> · <a href="/custom-beaded-chains-straps/">Beaded chains &amp; straps</a> · <a href="/birthstone-bracelet-sets/">Birthstone bracelet sets</a> · <a href="/wholesale-stackable-bracelet-sets/">Stackable bracelet sets</a> · <a href="/mixed-metal-beaded-bracelets/">Mixed metal beaded bracelets</a> · <a href="/personalized-initial-letter-bracelets/">Initial &amp; letter bracelets</a> · <a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a> · <a href="/how-it-works/">How it works</a> · <a href="/factory/">Factory</a> · '
-            '<a href="/about/">About</a> · <a href="/contact/">Contact</a></p></footer><!--/jsy:rawfooter-->')
+            '<p><a href="/wholesale-crystal-bracelets/">Wholesale</a> · '
+            '<a href="/custom-gemstone-bracelet/">Custom &amp; OEM</a> · '
+            '<a href="/private-label-jewelry/">Private label</a> · '
+            '<a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · '
+            '<a href="/importing-crystal-bracelets-from-china/">Guides</a> · '
+            '<a href="/inquiry/">Get a quote</a></p></footer><!--/jsy:rawfooter-->')
 
 
 def rawshell():
