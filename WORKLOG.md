@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-11-24 · 批发页和虎眼批发页加强
+
+执行：按询盘关键词研究加强现有页，不新建 URL。Apple 已批准定制页上线之后做这一步。
+
+### 批发页 `/wholesale-crystal-bracelets/`
+Title 改为 Wholesale Crystal & Gemstone Bracelets for Shops。H1 改为 Wholesale crystal and gemstone bracelets for shops。正文覆盖 crystal bracelet wholesale、gemstone / natural stone / stone bracelets、bulk、wholesale beaded bracelets、crystal bracelet wholesale china。成品手链仍是 10 件可混。补了石种图和串珠小节。交期改成随订单确认。去掉本页的 exclusive overseas agent 和 run QC。概念图标 Concept image。
+
+### 虎眼页 `/tiger-eye-bracelets-wholesale/`
+Title 改为 Tiger Eye Bracelet Wholesale for Shops。H1 改为 Tiger eye bracelet wholesale for shops。马术 K13/K14 入口卡保留。没有写功效。交期改成随订单确认。
+
+相关页加了正文内链。没有恢复上次删掉的 NDA、样品视频、20+ 石种、分级、样品抵扣、QC 列表、100% Natural、Global Clients、8-step QC。表单地址和 `_next` 没改。
+
+---
+
 ## 2026-11-24 · 定制手链页按已批方案改版
 
 执行：Apple 2026-11-24 批准 `/custom-gemstone-bracelet/` 方案，并要求删掉她没有确认的说法。OEM 正文里的 15–30 / 7–10 / 25–35 天和 exclusive overseas agent 没有改。
