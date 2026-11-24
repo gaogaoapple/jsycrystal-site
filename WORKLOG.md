@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-11-24 · 删掉三页上未确认的批次照片、处理和质检说法
+
+Apple 没有确认这些承诺，要求删掉。只改 `/custom-gemstone-bracelet/`、`/wholesale-crystal-bracelets/`、`/tiger-eye-bracelets-wholesale/` 的正文和 JSON-LD。
+
+删掉的原句：
+- “Ask for photos of the current batch / we can send photos of the current batch”
+- “Exact sizes are measured and sent with the sample photos”
+- “cracked or cloudy beads are taken out”，以及 “quality checks” 和 “checked against the specification”
+- “If a stone is treated or dyed, we say so on the quote”
+- “we state any treatment we know of on your quotation”
+
+换成：colour and pattern vary by batch; we confirm details with you before production。
+
+7A 在 PR #9 之前就在虎眼页上，等级名称、款号和 7A 说明保留。表单地址和 `_next` 没改。
+
+---
+
 ## 2026-11-24 · 批发页和虎眼批发页加强
 
 执行：按询盘关键词研究加强现有页，不新建 URL。Apple 已批准定制页上线之后做这一步。
