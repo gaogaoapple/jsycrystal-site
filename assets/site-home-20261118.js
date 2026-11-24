@@ -357,6 +357,7 @@ export function buyerPathsHTML() {
     <p class="jsx-eyebrow">Who we work with</p>
     <h2 id="jsy-buyer-paths-title">Two clear paths to work with JSY</h2>
     <p class="jsy-buyer-paths-lead">One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards coordinated together.</p>
+    <p class="jsy-who-line">Crystal shops, boutiques, gift shops, yoga and wellness studios, online stores, and small brands.</p>
     <div class="jsy-buyer-paths-grid">
       <article class="jsy-buyer-card">
         <img src="/media/travel-group-gifts-concept.webp" alt="Natural stone bracelets prepared as travel and tour group gifts" width="640" height="400" loading="lazy" decoding="async">
@@ -435,6 +436,17 @@ export function ensureTigerEyeHomeLink(doc) {
   a.textContent = 'Tiger eye bracelets';
   li.appendChild(a);
   ul.appendChild(li);
+}
+
+export function ensureWhoWeWork(doc) {
+  const section = doc.getElementById('jsy-buyer-paths');
+  if (!section || section.querySelector('.jsy-who-line')) return;
+  const lead = section.querySelector('.jsy-buyer-paths-lead');
+  const line = doc.createElement('p');
+  line.className = 'jsy-who-line';
+  line.textContent = 'Crystal shops, boutiques, gift shops, yoga and wellness studios, online stores, and small brands.';
+  if (lead) lead.insertAdjacentElement('afterend', line);
+  else section.querySelector('.jsy-buyer-paths-inner')?.appendChild(line);
 }
 
 export function ensureBuyerPaths(doc) {
@@ -755,6 +767,7 @@ export function startPublication(win, doc, loadLegacy) {
         ensurePrimaryNav(doc);
         ensureFooterLinks(doc);
         removeCartUI(doc);
+        ensureWhoWeWork(doc);
         ensureQuickQuote(doc);
       }
     }
@@ -825,6 +838,7 @@ export function startPublication(win, doc, loadLegacy) {
         patchBuyerPathsCopy(doc);
         ensureBagCharmHomeLinks(doc);
         ensureTigerEyeHomeLink(doc);
+        ensureWhoWeWork(doc);
         ensureQuickQuote(doc);
       }
     };
