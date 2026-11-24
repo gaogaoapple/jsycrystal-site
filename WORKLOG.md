@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-24 · 四颗石产品页改成批发询盘页
+
+紫晶、粉晶、黄水晶、白水晶四个产品页改成静态批发页，网址不变。Title 形如 Amethyst Bracelet Wholesale for Shops | JSY Crystal。只用各页原来的珠径和绳线。成品手链 10 件可混，独家设计和样品费抵大货写在首屏。没有价格和 Product schema。sitemap 里这四条 lastmod 已是 2026-11-24。OEM 页正文没动。
+
+---
+
 ## 2026-11-24 · 私标页改成静态深页
 
 `/private-label-jewelry/` 不再由旧脚本整页替换。Title 仍是 Private Label Crystal Bracelets for Brands and Shops。首屏写清私标手链，三个已确认事实，概念图标 Concept image。五格可贴牌内容、四类买家、四步流程、与批发页相同的询盘表单、五条 FAQ。成品手链 10 件可混；吊牌和盒子写“告诉数量后再确认”。交期只指向 OEM 页已有数字，不在本页新写天数。OEM 页正文没动。
