@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-11-24 · 补上 Apple 已确认的四句
+
+Apple 确认这四句可以写。只加在 `/custom-gemstone-bracelet/`、`/private-label-jewelry/`、`/wholesale-crystal-bracelets/` 的正文、FAQ 和 JSON-LD，并放在询盘表单或询盘入口旁边。没有加金额、期限或其他新说法。
+
+四句原文：
+- The sample fee can be credited against the bulk order.
+- A customer design can be kept exclusive to that customer.
+- We can sign an NDA.
+- We provide resellers with a product image pack.
+
+私标页原来写“样品费抵扣要在报价里再约定”，已改成上面第一句，避免和已确认说法冲突。
+
+---
+
 ## 2026-11-24 · 主导航、首页快速报价、表单提示，并清掉未确认说法
 
 执行：对标报告的第 1、3、4 条，加上首页清理。Apple 已批准继续优化并发布。
