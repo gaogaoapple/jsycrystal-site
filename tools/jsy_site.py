@@ -63,7 +63,7 @@ def footer():
     return (
         '<!--jsy:footer--><footer class="jsx-ft"><div class="jsx-ft-in">'
         '<div><p class="jsx-ft-name">JSY Crystal Jewelry</p>'
-        '<p>One-stop custom bracelet solution in Ketang, Shanwei. One team runs your whole order: beads, findings, logo tags, cards, gift boxes and packaging.</p>'
+        '<p>We manufacture your bracelets at our factory in Ketang, Shanwei. One team runs your whole order: beads, findings, logo tags, cards, gift boxes and packaging.</p>'
         f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/inquiry/#inquiry-form">Send an inquiry</a></p></div>'
         '<div><h3>Wholesale / B2B</h3><ul>'
         '<li><a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets</a></li>'

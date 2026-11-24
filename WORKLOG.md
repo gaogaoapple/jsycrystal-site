@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-24 · 可塘工厂口径写直接
+
+买家核实工厂可以配合，所以页面可以直接写 our factory in Ketang, Shanwei、our production team、we manufacture your bracelets in Ketang。一个团队仍负责珠子、配件、吊牌、卡片、礼盒和包装。不写 factory direct、厂房规模、人数、设备、年限、参观、质检步骤或认证。OEM 页正文没动。
+
+---
+
 ## 2026-11-24 · 可塘生产口径
 
 客户可见页面不再解释工厂归谁，也不再写跨工坊协调。`/factory/` 改成 “Our production in Ketang”。一站式句子改为一个团队做珠子、配件、吊牌、卡片和礼盒。OEM 页正文没动。
