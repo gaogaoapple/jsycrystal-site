@@ -6,6 +6,21 @@
 
 ---
 
+## 2026-11-24 · 定制手链页按已批方案改版
+
+执行：Apple 2026-11-24 批准 `/custom-gemstone-bracelet/` 方案，并要求删掉她没有确认的说法。OEM 正文里的 15–30 / 7–10 / 25–35 天和 exclusive overseas agent 没有改。
+
+### 本页
+Title 改为 Custom Gemstone Bracelets Wholesale for Shops & Brands。H1 改为 Custom gemstone & crystal bracelets for your store。首屏写明成品手链 10 件可混，不接单条零售。折叠内容展开成可见 H2。Build your spec 五步：石头、珠径、配件、logo 吊牌、包装。表单在页尾。10 条 FAQ 写入 FAQPage。Service 只列定制项名称，没有价格。本页页头改用上半部日用 logo。概念图标 Concept image。没有客户 logo 的图才用；带 “YOUR BRAND” 的品牌合集图没有放上。
+
+### 抢词
+首页 title 改为 Natural Stone Bracelets Wholesale 方向。How it works 的 title 改为 How a Custom Bracelet Order Works，并去掉 meta 里的 8-step QC 和固定交期。约 15 个相关页加了正文内链。
+
+### 删掉的未确认说法
+全站可见文案里去掉：NDA available on request；样品附照片和视频；20+ natural stones；按颜色和尺寸分级；把批准样品当作返单标准；样品费抵大货；Quality checks (QC) 列表；100% Natural Gemstones；Global Clients Worldwide；8-step QC。首页信任条和 home 脚本里的对应句子一起改了。周围句子改成仍能读通。
+
+---
+
 ## 2026-11-24 · 马术页正式上线核对
 
 执行：Apple 于北京时间 2026-11-24 08:20 确认预览按该版本上线。PR https://github.com/gaogaoapple/jsycrystal-site/pull/6 已合并。审定头是 `55ffdadc6ec1fc788f4380342182d07e3a8dd8ed`。合并提交 `6f6edd18c97995b948ebb8eb52cee42b111ee336`。相对当时 main `e5b691d` 只含马术页、两张入口卡、sitemap、本日记和静态脚本里的新路径。没有改 OEM 正文交期，没有混入其他改动。
