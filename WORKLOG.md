@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-11-24 · 马术页正式上线核对
+
+执行：Apple 于北京时间 2026-11-24 08:20 确认预览按该版本上线。PR https://github.com/gaogaoapple/jsycrystal-site/pull/6 已合并。审定头是 `55ffdadc6ec1fc788f4380342182d07e3a8dd8ed`。合并提交 `6f6edd18c97995b948ebb8eb52cee42b111ee336`。相对当时 main `e5b691d` 只含马术页、两张入口卡、sitemap、本日记和静态脚本里的新路径。没有改 OEM 正文交期，没有混入其他改动。
+
+合并前该头的 check-runs 为 0，combined status 没有具体检查项。这不是 CI 通过。
+
+GitHub Pages run https://github.com/gaogaoapple/jsycrystal-site/actions/runs/45296396849 ，`conclusion: success`，headSha 就是这个合并提交。
+
+正式站 https://jsycrystal.com/equestrian-keychains-bag-charms/ 。桌面 1280×900、手机 390×844：八张马术图 naturalWidth 都大于 0；手机无横向溢出；导航贴顶。按钮点击和直接打开 `#inquiry-form` 时表单顶到导航底 16px，邮箱完整可见（桌面导航底 76、邮箱顶 121、底 171；手机导航底 69、邮箱顶 114、底 164）。包挂页和虎眼页的入口卡能打开本页。sitemap 含本页。页头是上半部日用 logo，可见文字没有 10 pcs、100、WhatsApp、Factory Direct、价格。图注仍是 Concept image。祝福刻字和 LA DE LA SUERTE 仍在。
+
+没有登录邮箱，没有发信，没有提交表单。收件未验证，不能写成询盘全链路已通。
+
+---
+
 ## 2026-11-23 · 马术钥匙扣与包挂落地页（预览分支，未合并、未发布）
 
 执行：基于 main `e5b691d` 开分支 `cursor/equestrian-keychains-8167`。只做预览，不合并，不发布，不提交测试询盘。
