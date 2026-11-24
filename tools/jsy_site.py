@@ -49,7 +49,7 @@ def header(current="", logo_top=False):
     return (
         '<!--jsy:header--><header class="jsx-hd"><div class="jsx-hd-in">'
         f'{logo_html}'
-        '<span>JSY Crystal Jewelry<small>One-stop custom bracelet partner</small></span></a>'
+        '<span>JSY Crystal Jewelry<small>One-stop custom bracelet solution</small></span></a>'
         f'<nav class="jsx-nav" aria-label="Main">{links}</nav>'
         '<a class="jsx-cta" href="/inquiry/">Get a Quote</a>'
         '<details class="jsx-mnav"><summary>Menu</summary><nav aria-label="Mobile">'
@@ -63,7 +63,7 @@ def footer():
     return (
         '<!--jsy:footer--><footer class="jsx-ft"><div class="jsx-ft-in">'
         '<div><p class="jsx-ft-name">JSY Crystal Jewelry</p>'
-        '<p>One-stop custom bracelet solution supplier in Shanwei, Guangdong, China. Natural-stone beads, tags, boxes and packaging coordinated for brands, boutiques and wholesale buyers.</p>'
+        '<p>One-stop custom bracelet solution in Ketang, Shanwei. One team runs your whole order: beads, findings, logo tags, cards, gift boxes and packaging.</p>'
         f'<p><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/inquiry/#inquiry-form">Send an inquiry</a></p></div>'
         '<div><h3>Wholesale / B2B</h3><ul>'
         '<li><a href="/wholesale-crystal-bracelets/">Wholesale crystal bracelets</a></li>'

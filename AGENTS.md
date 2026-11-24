@@ -14,9 +14,10 @@
 
 JSY Crystal Jewelry = **one-stop custom bracelet solution supplier**（一站式定制手链方案供应商）。
 
-- 合作多家汕尾可塘 **partner factories / workshops**（复数）；接海外订单后向合作工厂 sourcing / 采购；**不宣称 JSY 自有工厂**。
-- 客户只对接一家：天然石珠（主推；其他珠材可询）、吊坠/配件、刻字或 logo 吊牌、礼盒、卡片与包装；JSY 跨工厂协调、打样确认、质检、合并出货。
-- 「汕尾可塘合作工厂的独家海外代理」可保留在 About、`/factory/`、以及 “factory or trading company?” FAQ 作背景；**转化页主句突出 one-stop**，不要把“代理”当唯一卖点。
+- 客户可见文案用制造商式一站式口径：Our production in Ketang, Shanwei, China's crystal bead hub；our workshops handle stringing, finishing and packing；One team runs the whole order。`/factory/` 是 “Our production in Ketang” 页。
+- 不写所有权：不写 does not own，也不写 we own a factory / our own factory / factory direct / own mine。不写车间数量、人数、设备、参观、质检步骤或认证。
+- OEM 页正文保持原样，不把上面的口径改进去。
+- 客户只对接一家：天然石珠（主推；其他珠材可询）、吊坠/配件、刻字或 logo 吊牌、礼盒、卡片与包装。
 - 红线不变：天然石优先；不写 925 银/珍珠；不写 ethical/fair-trade/sustainable/eco/charity；无 WhatsApp/电话；客户可见文案不出现 Apple 人名；不写欧盟法规专题。
 - 不编造工厂数量、年限、产能、认证或客户名单。
 - Never offer or promise a catalog or price list on the site. 目录只在与买家多轮沟通、需求明确之后由人工发送，网站不提供、不承诺发送目录或价格表。

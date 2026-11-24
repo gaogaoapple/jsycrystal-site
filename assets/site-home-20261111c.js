@@ -339,7 +339,7 @@ export function buyerPathsHTML() {
   <div class="jsy-buyer-paths-inner">
     <p class="jsx-eyebrow">Who we work with</p>
     <h2 id="jsy-buyer-paths-title">Two clear paths to work with JSY</h2>
-    <p class="jsy-buyer-paths-lead">One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards coordinated together.</p>
+    <p class="jsy-buyer-paths-lead">One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards from one team.</p>
     <div class="jsy-buyer-paths-grid">
       <article class="jsy-buyer-card">
         <img src="/media/travel-group-gifts-concept.webp" alt="Natural stone bracelets prepared as travel and tour group gifts" width="640" height="400" loading="lazy" decoding="async">
@@ -376,7 +376,7 @@ export function buyerPathsHTML() {
 
 export function patchBuyerPathsCopy(doc) {
   const lead = doc.querySelector('.jsy-buyer-paths-lead');
-  if (lead) lead.textContent = 'One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards coordinated together.';
+  if (lead) lead.textContent = 'One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards from one team.';
   const cards = doc.querySelectorAll('.jsy-buyer-card > p');
   if (cards[0]) cards[0].textContent = 'Tour groups, company gifts and boutique exclusives — stones, tags, boxes and cards handled by one team.';
   if (cards[1]) cards[1].textContent = 'Bulk natural-stone bracelets for wholesalers who resell to retailers, with private label packaging and tags from the same one-stop partner.';
@@ -404,8 +404,8 @@ export function patchHomeHeroCopy(doc) {
   const hero = doc.querySelector('#root section.relative, #root section[class*="min-h"]');
   if (hero) {
     const ps = [...hero.querySelectorAll('p')];
-    if (ps[0] && /private label|jewelry brands|Custom programs|One partner|partner factor/i.test(ps[0].textContent || '')) {
-      ps[0].textContent = 'One partner for your custom bracelet program: natural-stone beads, charms, tags, gift boxes and cards — coordinated across our Shanwei partner factories and shipped together.';
+    if (ps[0] && /private label|jewelry brands|Custom programs|One partner/i.test(ps[0].textContent || '')) {
+      ps[0].textContent = 'One partner for your custom bracelet program: natural-stone beads, charms, tags, gift boxes and cards — made in Ketang and shipped together.';
     }
     if (ps[1] && /Serving|worldwide|brands/i.test(ps[1].textContent || '')) {
       ps[1].textContent = 'Two paths: custom for end clients, and wholesale for distributors';

@@ -356,7 +356,7 @@ export function buyerPathsHTML() {
   <div class="jsy-buyer-paths-inner">
     <p class="jsx-eyebrow">Who we work with</p>
     <h2 id="jsy-buyer-paths-title">Two clear paths to work with JSY</h2>
-    <p class="jsy-buyer-paths-lead">One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards coordinated together.</p>
+    <p class="jsy-buyer-paths-lead">One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards from one team.</p>
     <p class="jsy-who-line">Crystal shops, boutiques, gift shops, yoga and wellness studios, online stores, and small brands.</p>
     <div class="jsy-buyer-paths-grid">
       <article class="jsy-buyer-card">
@@ -398,7 +398,7 @@ export function buyerPathsHTML() {
 
 export function patchBuyerPathsCopy(doc) {
   const lead = doc.querySelector('.jsy-buyer-paths-lead');
-  if (lead) lead.textContent = 'One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards coordinated together.';
+  if (lead) lead.textContent = 'One partner for both paths: custom programs for end clients, and wholesale plus private label for distributors — beads, tags, boxes and cards from one team.';
   const cards = doc.querySelectorAll('.jsy-buyer-card > p');
   if (cards[0]) cards[0].textContent = 'Tour groups, company gifts and boutique exclusives — stones, tags, boxes and cards handled by one team.';
   if (cards[1]) cards[1].textContent = 'Bulk natural-stone bracelets for wholesalers who resell to retailers, with private label packaging and tags from the same one-stop partner.';
@@ -465,12 +465,12 @@ export function patchHomeHeroCopy(doc) {
   const hero = doc.querySelector('#root section.relative, #root section[class*="min-h"], section.relative');
   if (hero) {
     const ps = [...hero.querySelectorAll('p')];
-    if (ps[0]) ps[0].textContent = 'Ketang, Shanwei, Guangdong · Coordinated with partner factories';
+    if (ps[0]) ps[0].textContent = 'Ketang, Shanwei, Guangdong · Our production in Ketang';
     const h1 = hero.querySelector('h1');
     if (h1) {
       h1.innerHTML = 'Natural Stone Bracelets<br><em class="italic" style="color: var(--gold);">for Crystal Shops, Boutiques &amp; Gift Stores</em>';
     }
-    if (ps[1]) ps[1].textContent = 'Wholesale orders start at 10 pieces, and styles can be mixed. We are based in Ketang, Shanwei, Guangdong, and coordinate partner factories for finished natural-stone bracelets, logo tags, tassels and packaging. Minimums and feasibility for tags, packaging and other custom details are confirmed with the design.';
+    if (ps[1]) ps[1].textContent = 'Wholesale orders start at 10 pieces, and styles can be mixed. We are based in Ketang, Shanwei, Guangdong, and make finished natural-stone bracelets, logo tags, tassels and packaging. Minimums and feasibility for tags, packaging and other custom details are confirmed with the design.';
     if (ps[2]) ps[2].textContent = 'Tell us your shop type, the style you want, and your estimated quantity.';
     const img = hero.querySelector('img');
     if (img) img.alt = 'Natural stone beads and finished bracelets';
@@ -506,10 +506,10 @@ export function patchHomeHeroCopy(doc) {
     const heading = why.querySelector('h2');
     if (heading) heading.textContent = 'Why Choose JSY Crystal Jewelry';
     const cards = [
-      ['Based in Ketang', 'We are based in Ketang, Shanwei, Guangdong, a crystal industry cluster. We coordinate stone, finishing, tags and packing with local partner factories. JSY does not own those factories.'],
+      ['Based in Ketang', 'We are based in Ketang, Shanwei, Guangdong, a crystal industry cluster. Our workshops in Ketang handle stringing, finishing and packing. '],
       ['Small mixed wholesale orders', 'Finished bracelets start at 10 pieces per order, mixed across styles and stones. For other products, tell us the quantity and we will confirm.'],
-      ['Tags and packaging, confirmed by design', 'Logo hang tags, tassels and custom packaging can be coordinated with the finished bracelets. Minimums and feasibility for these custom details are confirmed with the design; we do not publish a separate number.'],
-      ['A clear role', 'JSY coordinates your order with partner factories. You work with one team on the brief, the quote and shipment.'],
+      ['Tags and packaging, confirmed by design', 'Logo hang tags, tassels and custom packaging can be made with the finished bracelets. Minimums and feasibility for these custom details are confirmed with the design; we do not publish a separate number.'],
+      ['A clear role', 'JSY makes your order in Ketang. You work with one team on the brief, the quote and shipment.'],
     ];
     [...why.querySelectorAll('h3')].forEach((h3, i) => {
       if (!cards[i]) return;
@@ -527,14 +527,14 @@ export function patchHomeHeroCopy(doc) {
     }
     const bodies = [...about.querySelectorAll('p')].filter(p => (p.className || '').includes('leading-relaxed'));
     const copy = [
-      'JSY Crystal Jewelry supplies finished natural-stone bracelets and related packing for shops and wholesale buyers. We coordinate product options, logo tags and packaging with partner factories in Ketang. JSY is not a self-owned factory.',
-      'Ketang, Shanwei, Guangdong is a crystal industry cluster with raw material, processing, trading and beading workshops nearby. That is the setting we work in; it does not mean JSY owns those workshops or every step in the area.',
+      'JSY Crystal Jewelry supplies finished natural-stone bracelets and related packing for shops and wholesale buyers. Our workshops in Ketang handle logo tags and packaging with the bracelets. ',
+      'Ketang, Shanwei, Guangdong is a crystal industry cluster with raw material, processing, trading and beading workshops nearby. That is the setting we work in; Our production is in Ketang, Shanwei, China's crystal bead hub.',
     ];
     bodies.slice(0, 2).forEach((para, i) => { para.textContent = copy[i]; });
     const points = [
       'Natural-stone finished bracelets',
       'Based in Ketang, Shanwei, Guangdong',
-      'Coordinated with partner factories',
+      'Our production in Ketang',
       'Wholesale from 10 pieces, mixed',
     ];
     const list = about.querySelector('.flex.flex-col') || about.querySelector('[class*="flex-col"]');
