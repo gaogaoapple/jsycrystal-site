@@ -173,7 +173,7 @@ export function upgradeInquiryForms(doc, win) {
       };
       if (map[intent]) buyer.value = map[intent];
     }
-    if (!form.querySelector('select[name="where_sell"]')) {
+    if (!form.dataset.jsyQuick && !form.querySelector('select[name="where_sell"]')) {
       const sell = form.ownerDocument.createElement('label');
       sell.innerHTML = 'Where do you sell? (optional)<select name="where_sell"><option value="">Select…</option><option value="store">Store</option><option value="online">Online</option><option value="both">Both</option></select>';
       const btn = form.querySelector('button[type="submit"], button.jsy-primary');
@@ -693,17 +693,18 @@ export function removeCartUI(doc) {
 }
 
 export function ensureQuickQuote(doc) {
+  const path = doc.defaultView?.location?.pathname || '/';
+  if (path !== '/' && path !== '') return;
   if (doc.getElementById('jsy-quick-quote')) return;
   const root = doc.getElementById('root') || doc.body;
-  const paths = doc.getElementById('jsy-buyer-paths');
-  const hero = root.querySelector('section');
+  const hero = root.querySelector('section.relative, section[class*="min-h"], section');
   const block = doc.createElement('section');
   block.id = 'jsy-quick-quote';
-  block.style.cssText = 'padding:48px 24px;background:#fff';
-  block.innerHTML = `<div style="max-width:640px;margin:0 auto">
+  block.style.cssText = 'padding:28px 20px 36px;background:#f7f5f2';
+  block.innerHTML = `<div style="max-width:720px;margin:0 auto;background:#fff;border:1px solid #e7e5e4;border-radius:16px;padding:22px 22px 18px">
 <p class="jsx-eyebrow">Quick quote</p>
-<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2rem;margin:0 0 8px">Tell us what you need</h2>
-<p class="jsy-quote-note">To quote quickly, tell us: your shop type and website, the style or stones, quantity, and the ship-to country and date you need it.</p>
+<h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.8rem;margin:0 0 8px">Tell us what you need</h2>
+<p class="jsy-quote-note">To quote quickly, tell us: shop type and website, style or stones, quantity, ship-to country and date.</p>
 <form class="jsy-form" data-jsy-quick="1" action="https://formsubmit.co/84de44e7c16b22f5baa08c38d60c1461" method="POST">
 <input type="hidden" name="_subject" value="Website inquiry – Home quick quote">
 <input type="hidden" name="_template" value="table">
@@ -711,14 +712,12 @@ export function ensureQuickQuote(doc) {
 <input type="hidden" name="_next" value="https://jsycrystal.com/thank-you/">
 <input type="hidden" name="source" value="home-quick-quote">
 <input type="text" tabindex="-1" autocomplete="off" class="jsy-honeypot" aria-hidden="true" name="_honey">
-<label>Your name<input name="name" maxlength="128" autocomplete="name" required></label>
-<label>Your email<input type="email" name="email" maxlength="320" autocomplete="email" required></label>
-<label>What you need<textarea name="message" maxlength="2000" rows="4" required placeholder="Shop type, stones or style, quantity, ship-to country and date"></textarea></label>
-<label>Where do you sell? (optional)<select name="where_sell"><option value="">Select…</option><option value="store">Store</option><option value="online">Online</option><option value="both">Both</option></select></label>
+<label>Your email<input type="email" name="email" required maxlength="320" autocomplete="email" placeholder="you@yourcompany.com"></label>
+<label>What you need<textarea name="message" required maxlength="2000" rows="3" placeholder="Style or stones, shop type, ship-to country and date"></textarea></label>
+<label>Quantity or shop link<input name="quantity" maxlength="256" placeholder="200 pcs, or https://yourshop.com"></label>
 <button class="jsy-primary" type="submit">Send quick quote</button>
 </form></div>`;
-  if (paths && paths.parentNode) paths.insertAdjacentElement('afterend', block);
-  else if (hero && hero.parentNode) hero.insertAdjacentElement('afterend', block);
+  if (hero && hero.parentNode) hero.insertAdjacentElement('afterend', block);
   else root.appendChild(block);
 }
 
@@ -756,6 +755,7 @@ export function startPublication(win, doc, loadLegacy) {
         ensurePrimaryNav(doc);
         ensureFooterLinks(doc);
         removeCartUI(doc);
+        ensureQuickQuote(doc);
       }
     }
   });
