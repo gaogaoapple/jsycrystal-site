@@ -507,7 +507,7 @@ export function patchHomeHeroCopy(doc) {
     if (heading) heading.textContent = 'Why Choose JSY Crystal Jewelry';
     const cards = [
       ['Based in Ketang', 'We are based in Ketang, Shanwei, Guangdong, a crystal industry cluster. We coordinate stone, finishing, tags and packing with local partner factories. JSY does not own those factories.'],
-      ['Small mixed wholesale orders', 'Wholesale bracelet orders start at 10 pieces, mixed across styles, stones and sizes. This is the confirmed starting point for finished bracelets, not an automatic minimum for logo tags or packaging.'],
+      ['Small mixed wholesale orders', 'Finished bracelets start at 10 pieces per order, mixed across styles and stones. For other products, tell us the quantity and we will confirm.'],
       ['Tags and packaging, confirmed by design', 'Logo hang tags, tassels and custom packaging can be coordinated with the finished bracelets. Minimums and feasibility for these custom details are confirmed with the design; we do not publish a separate number.'],
       ['A clear role', 'JSY coordinates your order with partner factories. You work with one team on the brief, the quote and shipment.'],
     ];
