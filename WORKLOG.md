@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-26 · 定制手链页提高点击
+
+`/custom-gemstone-bracelet/` 的 title 改为 Custom Gemstone Bracelet Manufacturer。首屏写明给美国店铺的天然石珠手链、可塘工厂制造、成品 10 件可混、EXW，并保留询盘按钮和产品图。无斜杠网址本来就会 301 到有斜杠的正式网址，canonical 仍指向带斜杠的地址。字母珠页和批发页只收紧了 title、说明和 H1。OEM 只改了 title 和说明，正文没动。
+
+---
+
 ## 2026-11-24 · 报价改为 EXW
 
 全站报价写明 EXW（可塘/汕尾）。买家或货代负责运费、进口关税和清关。可以帮忙订舱，费用另报，不作承诺。去掉 DDP、指定承运商和运输天数。OEM 页正文没有 DDP，所以没改；那里仍有 DHL/FedEx 和 7–10 / 25–35 天。
@@ -368,6 +374,12 @@ JSY 在可塘协调合作工厂，不是自有厂。没有写固定交期、公�
 - GSC：对 /mixed-metal-beaded-bracelets/ 请求编入索引。
 - 明天 11-20：/custom-beaded-chains-straps/（包链、手机链、眼镜链、挂绳；内链包挂/钥匙扣和手机挂页）。
 - 混金属新品若 Apple 确认了具体款式或系列，再回来补细节和实拍，不必另开新 URL。
+
+---
+
+## 2026-11-26 · 定制手链页提高点击
+
+`/custom-gemstone-bracelet/` 的 title 改为 Custom Gemstone Bracelet Manufacturer。首屏写明给美国店铺的天然石珠手链、可塘工厂制造、成品 10 件可混、EXW，并保留询盘按钮和产品图。无斜杠网址本来就会 301 到有斜杠的正式网址，canonical 仍指向带斜杠的地址。字母珠页和批发页只收紧了 title、说明和 H1。OEM 只改了 title 和说明，正文没动。
 
 ---
 
