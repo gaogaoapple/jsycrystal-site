@@ -6,6 +6,16 @@
 
 ---
 
+## 2026-11-27 · 让 Google 归到带斜杠的定制页，并爬到未编入的页
+
+Search Console 里无斜杠的 `/custom-gemstone-bracelet` 已是 301，Google 选定的规范网址就是带斜杠的正式页。站内链接、sitemap、canonical 都指向带斜杠。首页原先指向 `www.jsycrystal.com` 的链接改到 `https://jsycrystal.com/`。
+
+定制页、批发页、字母珠页、OEM 的 title 没有改。OEM 正文没动。店铺页加了一句指向 “custom gemstone bracelet” 和可塘的链接。页脚补了 About 和 Ketang，方便 Google 从已抓取的页找到 `/about/`、`/ketang/`、`/how-it-works/`。这三页和列出的石头产品页本来就在 sitemap 里。
+
+幻影水晶、金发晶、金曜石、银曜石四个产品页以前会再加载旧的整站脚本，把已经写好的页面换掉。现在按静态页保留原文。`/how-it-works/` 去掉了只写寄到美国地址的说法，因为报价是 EXW，客户不限美国。
+
+---
+
 ## 2026-11-27 · 去掉只写美国买家的说法
 
 Apple 确认网站面向全球客户，不是只做美国。三页把 “US shops / USA / US retailers” 改成普通店铺：定制手链首屏、字母珠 title/说明/H1、批发页说明和 “FAQ for retailers”。首页多地区服务句和 OEM 正文没动。

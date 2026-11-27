@@ -74,7 +74,9 @@ def footer():
         '<li><a href="/custom-gemstone-bracelet/">Custom gemstone bracelets</a></li>'
         '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
         '<li><a href="/how-it-works/">How it works</a></li>'
-        '<li><a href="/private-label-jewelry/">Private label</a></li></ul></div>'
+        '<li><a href="/private-label-jewelry/">Private label</a></li>'
+        '<li><a href="/about/">About JSY</a></li>'
+        '<li><a href="/ketang/">Ketang, Shanwei</a></li></ul></div>'
         '<div><h3>Bag charms &amp; guides</h3><ul>'
         '<li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>'
         '<li><a href="/equestrian-keychains-bag-charms/">Equestrian keychains</a></li>'
@@ -194,7 +196,7 @@ def clean():
 def shell():
     for p in pages():
         s = p.read_text(encoding="utf-8")
-        if not is_static(s) or 'http-equiv="refresh"' in s:
+        if not is_static(s) or 'http-equiv="refresh"' in s or '<!--jsy:rawnav-->' in s:
             continue
         o = s
         cur = url_of(p)
@@ -229,6 +231,9 @@ def raw_footer():
             '<a href="/inquiry/#inquiry-form">Send an inquiry</a></p>'
             '<p><a href="/wholesale-crystal-bracelets/">Wholesale / B2B</a> · '
             '<a href="/custom-gemstone-bracelet/">Custom &amp; OEM</a> · '
+            '<a href="/about/">About</a> · '
+            '<a href="/ketang/">Ketang</a> · '
+            '<a href="/how-it-works/">How it works</a> · '
             '<a href="/private-label-jewelry/">Private label</a> · '
             '<a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a> · '
             '<a href="/importing-crystal-bracelets-from-china/">Guides</a> · '

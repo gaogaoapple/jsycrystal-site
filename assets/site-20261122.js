@@ -29,6 +29,10 @@ export const STATIC_ROUTES = new Set([
   '/products/rose-quartz-crystal-bracelet/',
   '/products/citrine-crystal-bracelet/',
   '/products/clear-quartz-crystal-bracelet/',
+  '/products/four-seasons-phantom-quartz-crystal-bracelet/',
+  '/products/gold-rutilated-quartz-crystal-bracelet/',
+  '/products/golden-obsidian-crystal-bracelet/',
+  '/products/silver-obsidian-crystal-bracelet/',
   '/how-it-works/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
@@ -612,7 +616,7 @@ export function ensureFooterLinks(doc) {
   const row = doc.createElement('div');
   row.dataset.jsyFoot = '1';
   row.style.cssText = 'max-width:1100px;margin:0 auto;padding:4px 24px 28px;display:flex;flex-wrap:wrap;gap:12px 20px;font-size:.9rem';
-  row.innerHTML = [...PRIMARY_NAV, ['/inquiry/', 'Get a Quote']].map(([href, label]) =>
+  row.innerHTML = [...PRIMARY_NAV, ['/about/', 'About'], ['/ketang/', 'Ketang'], ['/how-it-works/', 'How it works'], ['/inquiry/', 'Get a Quote']].map(([href, label]) =>
     `<a href="${href}" style="color:inherit">${label}</a>`
   ).join('');
   footer.appendChild(row);
