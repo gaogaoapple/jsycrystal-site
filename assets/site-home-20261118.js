@@ -549,6 +549,13 @@ export function patchHomeHeroCopy(doc) {
       link.style.color = 'var(--gold)';
       link.style.fontWeight = '600';
       more.appendChild(link);
+      more.appendChild(doc.createTextNode(' · '));
+      const ketang = doc.createElement('a');
+      ketang.href = '/ketang/';
+      ketang.textContent = 'Our factory in Ketang';
+      ketang.style.color = 'var(--gold)';
+      ketang.style.fontWeight = '600';
+      more.appendChild(ketang);
       if (list && list.parentElement) list.insertAdjacentElement('afterend', more);
       else if (h2) h2.insertAdjacentElement('afterend', more);
     }
@@ -684,7 +691,7 @@ export function ensureFooterLinks(doc) {
   const row = doc.createElement('div');
   row.dataset.jsyFoot = '1';
   row.style.cssText = 'max-width:1100px;margin:0 auto;padding:4px 24px 28px;display:flex;flex-wrap:wrap;gap:12px 20px;font-size:.9rem';
-  row.innerHTML = [...PRIMARY_NAV, ['/inquiry/', 'Get a Quote']].map(([href, label]) =>
+  row.innerHTML = [...PRIMARY_NAV, ['/about/', 'About'], ['/ketang/', 'Ketang'], ['/how-it-works/', 'How it works'], ['/inquiry/', 'Get a Quote']].map(([href, label]) =>
     `<a href="${href}" style="color:inherit">${label}</a>`
   ).join('');
   footer.appendChild(row);
