@@ -30,6 +30,7 @@ NAV = [
     ("/wholesale-crystal-bracelets/", "Wholesale / B2B"),
     ("/custom-gemstone-bracelet/", "Custom & OEM"),
     ("/private-label-jewelry/", "Private Label"),
+    ("/d2c-brand-launch/", "D2C & E-Commerce Brands"),
     ("/custom-beaded-bag-charms-keychains/", "Bag Charms & Keychains"),
     ("/importing-crystal-bracelets-from-china/", "Guides"),
 ]
@@ -75,6 +76,7 @@ def footer():
         '<li><a href="/oem-crystal-bracelet-manufacturer/">OEM manufacturing</a></li>'
         '<li><a href="/how-it-works/">How it works</a></li>'
         '<li><a href="/private-label-jewelry/">Private label</a></li>'
+        '<li><a href="/d2c-brand-launch/">D2C brand launch</a></li>'
         '<li><a href="/about/">About JSY</a></li>'
         '<li><a href="/ketang/">Ketang, Shanwei</a></li></ul></div>'
         '<div><h3>Bag charms &amp; guides</h3><ul>'
@@ -270,7 +272,8 @@ def rawshell():
 
 # ---------------------------------------------------------------- sitemap
 PRIORITY = {"/corporate-gifts/": "0.9", "/": "1.0", "/custom-gemstone-bracelet/": "0.9", "/private-label-jewelry/": "0.9", "/oem-crystal-bracelet-manufacturer/": "0.9", "/wholesale-crystal-bracelets/": "0.9", "/custom-beaded-bag-charms-keychains/": "0.9", "/birthstone-bracelet-sets/": "0.9", "/tiger-eye-bracelets-wholesale/": "0.9", "/crystal-car-charms/": "0.9", "/wholesale-stackable-bracelet-sets/": "0.9", "/beaded-phone-charms-straps/": "0.9", "/mixed-metal-beaded-bracelets/": "0.9", "/custom-beaded-chains-straps/": "0.9", "/personalized-initial-letter-bracelets/": "0.9",
-            "/shop/": "0.8", "/inquiry/": "0.7", "/contact/": "0.7", "/how-it-works/": "0.7"}
+            "/shop/": "0.8", "/inquiry/": "0.7", "/contact/": "0.7", "/how-it-works/": "0.7",
+            "/d2c-brand-launch/": "0.9", "/blog/start-gemstone-bracelet-collection/": "0.7", "/blog/": "0.5"}
 
 
 def indexable(p):

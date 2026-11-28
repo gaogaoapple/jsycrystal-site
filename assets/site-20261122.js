@@ -34,6 +34,9 @@ export const STATIC_ROUTES = new Set([
   '/products/golden-obsidian-crystal-bracelet/',
   '/products/silver-obsidian-crystal-bracelet/',
   '/how-it-works/',
+  '/d2c-brand-launch/',
+  '/blog/',
+  '/blog/start-gemstone-bracelet-collection/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
 export const PAGE_ROUTES = new Set([
@@ -99,6 +102,7 @@ export const INTENT_SUBJECTS = {
   'private-label': 'Website inquiry – Private label',
   privatelabel: 'Website inquiry – Private label',
   private_label: 'Website inquiry – Private label',
+  d2c: 'Website inquiry – D2C brand launch',
 };
 
 export function subjectFor(path, intent) {
@@ -107,6 +111,7 @@ export function subjectFor(path, intent) {
   if (/corporate-gifts|company-events/i.test(path)) return INTENT_SUBJECTS.corporate;
   if (/tour-groups|travel-group/i.test(path)) return INTENT_SUBJECTS.tour;
   if (/private-label/i.test(path)) return INTENT_SUBJECTS['private-label'];
+  if (/d2c-brand-launch/i.test(path) || key === 'd2c') return INTENT_SUBJECTS.d2c;
   if (/oem-crystal|custom-gemstone/i.test(path)) return INTENT_SUBJECTS.custom;
   if (/wholesale|\/shop\/?/i.test(path)) return INTENT_SUBJECTS.wholesale;
   if (/equestrian-keychains-bag-charms/i.test(path)) return 'Website inquiry – Equestrian Collection';
@@ -140,6 +145,30 @@ function optionalFieldsHTML() {
 <option value="not sure">Not sure</option>
 </select></label>
 </div>`;
+}
+
+function ensureD2CInquiryFields(form, precheck) {
+  const doc = form.ownerDocument;
+  if (!form.querySelector('[name="d2c_brand"]')) {
+    const label = doc.createElement('label');
+    label.className = 'jsy-d2c-check';
+    label.style.cssText = 'display:flex;align-items:flex-start;gap:8px;font-weight:600';
+    label.innerHTML = '<input type="checkbox" name="d2c_brand" value="yes" style="margin-top:4px"> I am launching a new e-commerce / D2C brand';
+    const btn = form.querySelector('button[type="submit"], button.jsy-primary');
+    if (btn) btn.insertAdjacentElement('beforebegin', label);
+    else form.appendChild(label);
+  }
+  if (!form.querySelector('[name="target_market_reference_sites"]')) {
+    const label = doc.createElement('label');
+    label.innerHTML = 'Your target market / reference websites (e.g. US, UK, India)<input name="target_market_reference_sites" maxlength="300" placeholder="Optional">';
+    const btn = form.querySelector('button[type="submit"], button.jsy-primary');
+    if (btn) btn.insertAdjacentElement('beforebegin', label);
+    else form.appendChild(label);
+  }
+  if (precheck) {
+    const box = form.querySelector('[name="d2c_brand"]');
+    if (box) box.checked = true;
+  }
 }
 
 export function upgradeInquiryForms(doc, win) {
@@ -188,8 +217,12 @@ export function upgradeInquiryForms(doc, win) {
         custom: 'brand/private label',
         oem: 'brand/private label',
         'private-label': 'brand/private label',
+        d2c: 'brand/private label',
       };
       if (map[intent]) buyer.value = map[intent];
+    }
+    if (/\/inquiry\/?/.test(path) || /\/d2c-brand-launch\/?/.test(path) || intent === 'd2c') {
+      ensureD2CInquiryFields(form, /\/d2c-brand-launch\/?/.test(path) || intent === 'd2c');
     }
     if (!form.querySelector('select[name="where_sell"]')) {
       const sell = form.ownerDocument.createElement('label');
@@ -582,6 +615,7 @@ const PRIMARY_NAV = [
   ['/wholesale-crystal-bracelets/', 'Wholesale / B2B'],
   ['/custom-gemstone-bracelet/', 'Custom & OEM'],
   ['/private-label-jewelry/', 'Private Label'],
+  ['/d2c-brand-launch/', 'D2C & E-Commerce Brands'],
   ['/custom-beaded-bag-charms-keychains/', 'Bag Charms & Keychains'],
   ['/importing-crystal-bracelets-from-china/', 'Guides'],
 ];
