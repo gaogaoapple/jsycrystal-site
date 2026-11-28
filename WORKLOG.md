@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-28 · 首页改为独立珠宝品牌入口
+
+首页 title、说明和首屏改成：给独立珠宝品牌做设计向的日常天然石手链，开发并供货。没有用 luxury。首屏下面加了 “Complete your existing collection”，用现有产品图，链到 `/d2c-brand-launch/` 和 `/inquiry/`。水晶店、精品店、礼品店入口还在。询盘字段 `target_market_reference_sites` 的标签改为品牌网站或现有系列链接，字段名没变。首页快捷询盘也加了同一字段。没有删网址。
+
+---
+
 ## 2026-11-28 · D2C 页补一句出货状态
 
 `/d2c-brand-launch/` 品牌包装那一段加上：Tags attached and bracelets packed in your pouches before shipping, ready to sell. 没有写材料、费用、证书或运输天数。
