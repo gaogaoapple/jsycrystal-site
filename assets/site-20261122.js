@@ -160,7 +160,7 @@ function ensureD2CInquiryFields(form, precheck) {
   }
   if (!form.querySelector('[name="target_market_reference_sites"]')) {
     const label = doc.createElement('label');
-    label.innerHTML = 'Your target market / reference websites (e.g. US, UK, India)<input name="target_market_reference_sites" maxlength="300" placeholder="Optional">';
+    label.innerHTML = 'Your brand website / current collection link (optional)<input name="target_market_reference_sites" maxlength="300" placeholder="https://yourbrand.com">';
     const btn = form.querySelector('button[type="submit"], button.jsy-primary');
     if (btn) btn.insertAdjacentElement('beforebegin', label);
     else form.appendChild(label);

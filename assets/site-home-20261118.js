@@ -473,6 +473,36 @@ export function ensureWhoWeWork(doc) {
   else section.querySelector('.jsy-buyer-paths-inner')?.appendChild(line);
 }
 
+export function ensureCollectionFit(doc) {
+  const root = doc.getElementById('root') || doc.body;
+  const hero = root.querySelector('section.relative, section[class*="min-h"]');
+  if (!hero) return;
+  let section = doc.getElementById('complete-collection');
+  if (!section) {
+    section = doc.createElement('section');
+    section.id = 'complete-collection';
+    section.className = 'py-16 bg-white text-stone-900';
+  }
+  if (!section.querySelector('h2')) {
+    section.innerHTML = `<div class="container">
+    <p class="text-xs tracking-[0.3em] uppercase mb-3 font-sans" style="color:var(--gold)">Complete your existing collection</p>
+    <h2 class="text-3xl md:text-4xl font-light mb-4" style="font-family:'Cormorant Garamond',serif">A bracelet that fits the line you already sell</h2>
+    <p class="text-stone-600 font-sans max-w-2xl mb-8 leading-relaxed">If you already sell gold layering chains, we develop a natural stone bracelet that fits that palette and also looks good worn on its own. Start with bracelets, then add your tags, packaging or matching pieces as needed.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <figure class="m-0"><img src="/media/products/citrine-crystal-bracelet.webp" alt="Citrine bead bracelet in a warm gold colorway" width="600" height="600" loading="lazy" decoding="async" class="w-full h-auto rounded-xl"><figcaption class="text-xs font-sans text-stone-500 mt-2">Warm gold colorway</figcaption></figure>
+      <figure class="m-0"><img src="/media/products/rose-quartz-crystal-bracelet.webp" alt="Rose quartz round bead bracelet" width="600" height="600" loading="lazy" decoding="async" class="w-full h-auto rounded-xl"><figcaption class="text-xs font-sans text-stone-500 mt-2">Round beads</figcaption></figure>
+      <figure class="m-0"><img src="/media/products/amethyst-crystal-bracelet.webp" alt="Amethyst bead bracelet in purple" width="600" height="600" loading="lazy" decoding="async" class="w-full h-auto rounded-xl"><figcaption class="text-xs font-sans text-stone-500 mt-2">Purple colorway</figcaption></figure>
+      <figure class="m-0"><img src="/media/tiger-eye/t39-gold-tone-tiger-eye-gourd-charm-bracelet.webp" alt="Tiger eye bead bracelet with a gold-tone charm" width="800" height="800" loading="lazy" decoding="async" class="w-full h-auto rounded-xl"><figcaption class="text-xs font-sans text-stone-500 mt-2">Metal accent detail</figcaption></figure>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/d2c-brand-launch/" class="inline-flex items-center bg-stone-900 text-white text-sm px-5 py-3 rounded-md font-sans">Start a brand collection</a>
+      <a href="/inquiry/" class="inline-flex items-center border border-stone-300 text-stone-800 text-sm px-5 py-3 rounded-md font-sans">Send an inquiry</a>
+    </div>
+  </div>`;
+  }
+  if (hero.nextElementSibling !== section) hero.insertAdjacentElement('afterend', section);
+}
+
 export function ensureBuyerPaths(doc) {
   if (doc.getElementById('jsy-buyer-paths')) return;
   ensureBuyerPathsCss(doc);
@@ -492,10 +522,10 @@ export function patchHomeHeroCopy(doc) {
     if (ps[0]) ps[0].textContent = 'Ketang, Shanwei, Guangdong · Our factory in Ketang, Shanwei';
     const h1 = hero.querySelector('h1');
     if (h1) {
-      h1.innerHTML = 'Natural Stone Bracelets<br><em class="italic" style="color: var(--gold);">for Crystal Shops, Boutiques &amp; Gift Stores</em>';
+      h1.innerHTML = 'Natural Stone Bracelets<br><em class="italic" style="color: var(--gold);">for independent jewelry brands</em>';
     }
-    if (ps[1]) ps[1].textContent = 'Orders are a 100-piece mixed MOQ. We are based in Ketang, Shanwei, Guangdong, and make finished natural-stone bracelets, logo tags, tassels and packaging. Minimums and feasibility for tags, packaging and other custom details are confirmed with the design.';
-    if (ps[2]) ps[2].textContent = 'Tell us your shop type, the style you want, and your estimated quantity.';
+    if (ps[1]) ps[1].textContent = 'JSY develops and supplies design-led everyday stone bracelets for independent jewelry brands. Choose colorways, bead shapes and metal accent details. We make them at our factory in Ketang, Shanwei. 100 pieces mixed per order. Quotes are EXW.';
+    if (ps[2]) ps[2].textContent = 'Crystal shops, boutiques and gift stores can order from the same pages. Start with the bracelet, then add tags, packaging or matching pieces.';
     const img = hero.querySelector('img');
     if (img) img.alt = 'Natural stone beads and finished bracelets';
     for (const a of [...hero.querySelectorAll('a')]) {
@@ -552,7 +582,7 @@ export function patchHomeHeroCopy(doc) {
     const bodies = [...about.querySelectorAll('p')].filter(p => (p.className || '').includes('leading-relaxed'));
     const copy = [
       'JSY Crystal Jewelry supplies finished natural-stone bracelets and related packing for shops and wholesale buyers. Our production team handles logo tags and packaging with the bracelets at our factory in Ketang, Shanwei. ',
-      'Ketang, Shanwei, Guangdong is a crystal industry cluster with raw material, processing, trading and beading workshops nearby. That is the setting we work in; Our factory is in Ketang, Shanwei, China's crystal bead hub.',
+      'Ketang, Shanwei, Guangdong is a crystal industry cluster with raw material, processing, trading and beading workshops nearby. That is the setting we work in; Our factory is in Ketang, Shanwei, the crystal bead hub.',
     ];
     bodies.slice(0, 2).forEach((para, i) => { para.textContent = copy[i]; });
     const points = [
@@ -759,6 +789,7 @@ export function ensureQuickQuote(doc) {
 <label>Your email<input type="email" name="email" required maxlength="320" autocomplete="email" placeholder="you@yourcompany.com"></label>
 <label>What you need<textarea name="message" required maxlength="2000" rows="3" placeholder="Style or stones, shop type, ship-to country and date"></textarea></label>
 <label>Quantity or shop link<input name="quantity" maxlength="256" placeholder="200 pcs, or https://yourshop.com"></label>
+<label>Your brand website / current collection link (optional)<input name="target_market_reference_sites" maxlength="300" placeholder="https://yourbrand.com"></label>
 <button class="jsy-primary" type="submit">Send quick quote</button>
 </form></div>`;
   if (hero && hero.parentNode) hero.insertAdjacentElement('afterend', block);
@@ -802,6 +833,7 @@ export function startPublication(win, doc, loadLegacy) {
         ensureWhoWeWork(doc);
         ensureD2CBrandCard(doc);
         ensureQuickQuote(doc);
+        ensureCollectionFit(doc);
       }
     }
   });
@@ -874,6 +906,7 @@ export function startPublication(win, doc, loadLegacy) {
         ensureWhoWeWork(doc);
         ensureD2CBrandCard(doc);
         ensureQuickQuote(doc);
+        ensureCollectionFit(doc);
       }
     };
     polish();
