@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-11-28 · D2C 页补一句出货状态
+
+`/d2c-brand-launch/` 品牌包装那一段加上：Tags attached and bracelets packed in your pouches before shipping, ready to sell. 没有写材料、费用、证书或运输天数。
+
+---
+
 ## 2026-11-28 · 全站起订改为 100 件可混
 
 Apple 确认起订改为全站每一单 100 件、可混，不再区分成品手链 10 件。页面、FAQ、说明、标题、JSON-LD、首页脚本、产品页、博客和 llms.txt 里的 10 件起订都改成 100 pieces mixed per order。定制页和 D2C 页不再写“现货款仍 10 件起”。珠径 10 mm、运输 7–10 天、款号 M-10 没有改。没有提交测试询盘。
