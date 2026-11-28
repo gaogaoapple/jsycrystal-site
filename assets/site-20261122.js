@@ -132,8 +132,8 @@ function optionalFieldsHTML() {
 </select></label>
 <label>Quantity band (optional)<select name="quantity_band">
 <option value="">Select…</option>
-<option value="10-49">10–49</option>
-<option value="50-199">50–199</option>
+<option value="100-199">100–199</option>
+
 <option value="200-999">200–999</option>
 <option value="1000+">1000+</option>
 </select></label>

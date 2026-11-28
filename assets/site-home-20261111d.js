@@ -363,7 +363,7 @@ export function buyerPathsHTML() {
         <p>Bulk natural-stone bracelets for wholesalers who resell to retailers, with private label packaging and tags from the same one-stop partner.</p>
         <ul>
           <li><a href="/shop/">Wholesale bracelets</a></li>
-          <li><a href="/wholesale-crystal-bracelets/">Wholesale from 10 pcs, mixed</a></li>
+          <li><a href="/wholesale-crystal-bracelets/">100 pieces mixed per order</a></li>
           <li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>
           <li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>
         </ul>

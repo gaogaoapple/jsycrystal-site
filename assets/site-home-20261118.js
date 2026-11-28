@@ -112,8 +112,8 @@ function optionalFieldsHTML() {
 </select></label>
 <label>Quantity band (optional)<select name="quantity_band">
 <option value="">Select…</option>
-<option value="10-49">10–49</option>
-<option value="50-199">50–199</option>
+<option value="100-199">100–199</option>
+
 <option value="200-999">200–999</option>
 <option value="1000+">1000+</option>
 </select></label>
@@ -383,7 +383,7 @@ export function buyerPathsHTML() {
         <p>Bulk natural-stone bracelets for wholesalers who resell to retailers, with private label packaging and tags from the same one-stop partner.</p>
         <ul>
           <li><a href="/shop/">Wholesale bracelets</a></li>
-          <li><a href="/wholesale-crystal-bracelets/">Wholesale from 10 pcs, mixed</a></li>
+          <li><a href="/wholesale-crystal-bracelets/">100 pieces mixed per order</a></li>
           <li><a href="/tiger-eye-bracelets-wholesale/">Tiger eye bracelets</a></li>
           <li><a href="/custom-beaded-bag-charms-keychains/">Bag charms &amp; keychains</a></li>
           <li><a href="/private-label-jewelry/">Private label &amp; packaging</a></li>
@@ -494,7 +494,7 @@ export function patchHomeHeroCopy(doc) {
     if (h1) {
       h1.innerHTML = 'Natural Stone Bracelets<br><em class="italic" style="color: var(--gold);">for Crystal Shops, Boutiques &amp; Gift Stores</em>';
     }
-    if (ps[1]) ps[1].textContent = 'Wholesale orders start at 10 pieces, and styles can be mixed. We are based in Ketang, Shanwei, Guangdong, and make finished natural-stone bracelets, logo tags, tassels and packaging. Minimums and feasibility for tags, packaging and other custom details are confirmed with the design.';
+    if (ps[1]) ps[1].textContent = 'Orders are a 100-piece mixed MOQ. We are based in Ketang, Shanwei, Guangdong, and make finished natural-stone bracelets, logo tags, tassels and packaging. Minimums and feasibility for tags, packaging and other custom details are confirmed with the design.';
     if (ps[2]) ps[2].textContent = 'Tell us your shop type, the style you want, and your estimated quantity.';
     const img = hero.querySelector('img');
     if (img) img.alt = 'Natural stone beads and finished bracelets';
@@ -531,7 +531,7 @@ export function patchHomeHeroCopy(doc) {
     if (heading) heading.textContent = 'Why Choose JSY Crystal Jewelry';
     const cards = [
       ['Based in Ketang', 'We are based in Ketang, Shanwei, Guangdong, a crystal industry cluster. Our production team handles stringing, finishing and packing at our factory in Ketang, Shanwei. '],
-      ['Small mixed wholesale orders', 'Finished bracelets start at 10 pieces per order, mixed across styles and stones. For other products, tell us the quantity and we will confirm.'],
+      ['Small mixed wholesale orders', '100 pieces mixed per order.'],
       ['Tags and packaging, confirmed by design', 'Logo hang tags, tassels and custom packaging can be made with the finished bracelets. Minimums and feasibility for these custom details are confirmed with the design; we do not publish a separate number.'],
       ['A clear role', 'JSY makes your order in Ketang. You work with one team on the brief, the quote and shipment.'],
     ];
@@ -559,7 +559,7 @@ export function patchHomeHeroCopy(doc) {
       'Natural-stone finished bracelets',
       'Based in Ketang, Shanwei, Guangdong',
       'Our factory in Ketang, Shanwei',
-      'Wholesale from 10 pieces, mixed',
+      'Wholesale 100 pieces mixed per order',
     ];
     const list = about.querySelector('.flex.flex-col') || about.querySelector('[class*="flex-col"]');
     const spans = list ? [...list.querySelectorAll('span')] : [];
