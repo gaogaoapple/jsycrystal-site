@@ -17,6 +17,9 @@ export const STATIC_ROUTES = new Set([
   '/birthstone-bracelet-sets/',
   '/tiger-eye-bracelets-wholesale/',
   '/shop/',
+  '/d2c-brand-launch/',
+  '/blog/',
+  '/blog/start-gemstone-bracelet-collection/',
 ]);
 export const FORM_NEXT = 'https://jsycrystal.com/thank-you/';
 export const PAGE_ROUTES = new Set([
@@ -438,6 +441,27 @@ export function ensureTigerEyeHomeLink(doc) {
   ul.appendChild(li);
 }
 
+export function ensureD2CBrandCard(doc) {
+  for (const h3 of [...doc.querySelectorAll('h3')]) {
+    if ((h3.textContent || '').replace(/\s+/g, ' ').trim() !== 'Jewelry Brands') continue;
+    const box = h3.parentElement;
+    if (!box) continue;
+    const p = [...box.querySelectorAll('p')].find(el => /brand/i.test(el.textContent || ''));
+    if (p && !/100-piece mixed first orders for new brands/.test(p.textContent || '')) {
+      const text = (p.textContent || '').replace(/\s+/g, ' ').trim().replace(/\.\s*$/, '');
+      p.textContent = text + '. 100-piece mixed first orders for new brands.';
+    }
+    const linked = box.closest('a[href="/d2c-brand-launch/"]') || box.querySelector('a[href="/d2c-brand-launch/"]');
+    if (!linked && box.parentNode) {
+      const a = doc.createElement('a');
+      a.href = '/d2c-brand-launch/';
+      a.style.cssText = 'text-decoration:none;color:inherit;display:block';
+      box.parentNode.insertBefore(a, box);
+      a.appendChild(box);
+    }
+  }
+}
+
 export function ensureWhoWeWork(doc) {
   const section = doc.getElementById('jsy-buyer-paths');
   if (!section || section.querySelector('.jsy-who-line')) return;
@@ -657,6 +681,7 @@ const PRIMARY_NAV = [
   ['/wholesale-crystal-bracelets/', 'Wholesale / B2B'],
   ['/custom-gemstone-bracelet/', 'Custom & OEM'],
   ['/private-label-jewelry/', 'Private Label'],
+  ['/d2c-brand-launch/', 'D2C & E-Commerce Brands'],
   ['/custom-beaded-bag-charms-keychains/', 'Bag Charms & Keychains'],
   ['/importing-crystal-bracelets-from-china/', 'Guides'],
 ];
@@ -775,6 +800,7 @@ export function startPublication(win, doc, loadLegacy) {
         ensureFooterLinks(doc);
         removeCartUI(doc);
         ensureWhoWeWork(doc);
+        ensureD2CBrandCard(doc);
         ensureQuickQuote(doc);
       }
     }
@@ -846,6 +872,7 @@ export function startPublication(win, doc, loadLegacy) {
         ensureBagCharmHomeLinks(doc);
         ensureTigerEyeHomeLink(doc);
         ensureWhoWeWork(doc);
+        ensureD2CBrandCard(doc);
         ensureQuickQuote(doc);
       }
     };

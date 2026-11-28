@@ -6,6 +6,16 @@
 
 ---
 
+## 2026-11-28 · D2C / 电商品牌入口
+
+新页 `/d2c-brand-launch/`：给新电商品牌的天然石手链首单。品牌定制或客制首单 100 件可混款；现货款成品手链仍是 10 件起、可混。报价 EXW。导航和页脚加了入口。首页 Who We Serve 的 Jewelry Brands 卡片写了 “100-piece mixed first orders for new brands”，并链到新页。
+
+`/inquiry/` 增加可选项：勾选 `d2c_brand`（我在做新的电商 / D2C 品牌），以及 `target_market_reference_sites`（目标市场和参考网站）。FormSubmit 地址和感谢页没变。带 `?intent=d2c` 时勾选会预先选上。没有提交测试询盘。
+
+新文章 `/blog/start-gemstone-bracelet-collection/`，并加了 `/blog/` 索引。七种石头按颜色和搭配来写。没有用脉轮、疗愈或产地国。没有产品价格、交期、证书。sitemap 已包含两个新网址。
+
+---
+
 ## 2026-11-27 · 让 Google 归到带斜杠的定制页，并爬到未编入的页
 
 Search Console 里无斜杠的 `/custom-gemstone-bracelet` 已是 301，Google 选定的规范网址就是带斜杠的正式页。站内链接、sitemap、canonical 都指向带斜杠。首页原先指向 `www.jsycrystal.com` 的链接改到 `https://jsycrystal.com/`。
